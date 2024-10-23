@@ -1,0 +1,75 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.moretext {
+  position: relative;
+  margin-top: 0.5rem;
+
+  & > div {
+    transition: ease all 2s;
+    -webkit-line-clamp: 1000;
+    max-height: 50rem;
+  }
+}
+
+.readmore {
+  max-height: 50rem;
+}
+
+.readless {
+  & > div {
+    transition: ease all 6s;
+    display: -webkit-box;
+    max-width: 100%;
+    line-height: 21px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-height: 3.938rem;
+  }
+}
+
+.text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: $gray-600;
+
+  button {
+    font-size: 0.875rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  strong {
+    font-family: $font-bold;
+  }
+}
+
+.tncText {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  color: $dark;
+
+  a {
+    text-decoration: underline;
+    color: $sonicSilver;
+    font-size: 0.75rem;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.descriptionText {
+  font-size: 0.75rem;
+  color: $sonicSilver;
+  margin-left: 0.75rem;
+
+  li {
+    list-style-type: disc;
+  }
+}

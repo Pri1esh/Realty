@@ -1,0 +1,306 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.testimonialBox {
+  background-color: $aliceBlue2;
+  padding: 0;
+  text-align: center;
+  border-radius: 0.5rem;
+  color: $darkGunmetal1;
+  height: 60vh;
+  position: relative;
+  min-height: 30rem;
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    height: 40vh;
+    min-height: 30rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 58vh;
+    min-height: 28rem;
+    padding: 1.125rem;
+  }
+
+  @media screen and (max-width: 576px) {
+    min-height: 20rem;
+    height: 50vh;
+  }
+
+  .testimonialBoxinner {
+    width: 100%;
+    @include center(vertical);
+
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      padding: 0 1.5rem;
+    }
+
+    @media screen and (max-width: 767px) {
+      position: relative;
+    }
+  }
+
+  h3 {
+    color: $gray-600;
+    padding-bottom: 2rem;
+    font-weight: bold;
+
+    @media (min-width: 992px) {
+      max-width: 70%;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    @media screen and (max-width: 767px) {
+      padding-bottom: 1rem;
+      font-size: 1.125rem;
+      text-align: left;
+    }
+  }
+
+  p {
+    max-width: 90%;
+    margin: 0 auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    @media screen and (max-width: 767px) {
+      text-align: left;
+      max-width: 100%;
+      font-size: 0.938rem;
+    }
+  }
+
+  .userthumb {
+    width: 4.875rem;
+    height: 4.875rem;
+    margin: 0 auto 1.25rem;
+    border-radius: 100%;
+    display: none;
+
+    @media screen and (max-width: 767px) {
+      margin: 0 0 2rem 0;
+      width: 3.875rem;
+      height: 3.875rem;
+    }
+  }
+
+  .username {
+    color: $richBlack;
+    padding-top: 2.75rem;
+    font-family: $font-medium;
+
+    @media screen and (max-width: 767px) {
+      padding-top: 3.813rem;
+      text-align: left;
+      font-size: 0.938rem;
+    }
+  }
+
+  .propertylocation {
+    color: $dark;
+    font-size: 0.875rem;
+
+    @media screen and (max-width: 767px) {
+      text-align: left;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.videotestimonial {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+
+  video {
+    object-fit: cover;
+    max-height: 29.25rem;
+
+    @media screen and (max-width: 767px) {
+      min-height: 80vh;
+    }
+  }
+}
+
+.propertylogo {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  height: 3.625rem;
+  width: 3.625rem;
+  background: $white;
+  border-radius: 100%;
+
+  img {
+    max-width: 95%;
+    @include center(both);
+  }
+}
+
+.realtylogo {
+  img {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+  }
+}
+
+.videocontainer {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  height: 60vh;
+  min-height: 30rem;
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    height: 40vh;
+    min-height: 30rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 58vh;
+    min-height: 28rem;
+  }
+
+  @media screen and (max-width: 576px) {
+    min-height: 20rem;
+    height: 50vh;
+  }
+
+  .videocontainerframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: $borderRadius;
+
+    @media screen and (max-width: 767px) {
+      @include toRem(max-height, 768);
+      height: 58vh;
+      min-height: 28rem;
+    }
+
+    @media screen and (max-width: 576px) {
+      min-height: auto;
+      height: 100%;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    &::before {
+      content: '';
+      background: transparent;
+      width: 38%;
+      height: 42%;
+      min-height: 1px;
+      position: absolute;
+      top: 15%;
+      left: 0;
+      z-index: 1;
+    }
+
+    &::after {
+      content: '';
+      background: transparent;
+      width: 38%;
+      height: 42%;
+      min-height: 1px;
+      position: absolute;
+      top: 15%;
+      right: 0;
+      z-index: 1;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    &::before {
+      content: '';
+      background: transparent;
+      width: 20%;
+      height: 70%;
+      min-height: 1px;
+      position: absolute;
+      top: 15%;
+      left: 0;
+      z-index: 1;
+    }
+
+    &::after {
+      content: '';
+      background: transparent;
+      width: 20%;
+      height: 70%;
+      min-height: 1px;
+      position: absolute;
+      top: 15%;
+      right: 0;
+      z-index: 1;
+    }
+  }
+}
+
+.sectionTestimonial {
+  @media (max-width: 767px) {
+    @include toRem(max-height, 768);
+    overflow: hidden;
+  }
+
+  :global(.slick-slider) {
+    :global(.slick-prev) {
+      position: absolute;
+      left: auto;
+      right: 3.438rem;
+      top: -3rem;
+      opacity: 1;
+    }
+
+    :global(.slick-next) {
+      position: absolute;
+      top: -3rem;
+      opacity: 1;
+      right: 0.625rem;
+    }
+
+    :global(.slick-dots) {
+      bottom: 1rem;
+    }
+
+    :global(.slick-slide) {
+      padding: 0;
+
+      @media (min-width: 768px) {
+        padding: 0;
+      }
+
+      @media (min-width: 991px) {
+        padding: 0 0.625rem;
+      }
+    }
+
+    :global(.slick-track) {
+      padding: 0;
+    }
+  }
+
+  :global(.mobSlider) {
+    > div {
+      flex-basis: 100%;
+
+      @media (max-width: 767px) {
+        flex-basis: 90.5%;
+      }
+    }
+  }
+
+  :global(.slick-arrow) {
+    &::before {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import '/src/scss/partials/mixins';
+@import '/src/scss/partials/variable';
+
+.datePicker {
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+
+  &:focus {
+    background-color: transparent;
+  }
+}

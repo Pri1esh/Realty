@@ -1,0 +1,27 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.PageContent {
+  border: solid 0.0625rem $brightGray;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  color: $davyGray;
+  font-size: 0.875rem;
+  width: 100%;
+  font-weight: 500;
+
+  @media screen and (max-width: 991px) {
+    border: none;
+    padding: 0;
+    margin-top: 2rem;
+
+    p,
+    li {
+      font-size: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

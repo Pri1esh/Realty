@@ -1,0 +1,27 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.faqSection {
+  h3 {
+    margin-bottom: 1.875rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: $secondary;
+
+    @media screen and (max-width: 991px) {
+      margin-bottom: 1.25rem;
+      font-size: 1.375rem;
+    }
+  }
+
+  ul {
+    margin-top: 0.5rem;
+
+    li {
+      list-style-type: disc;
+      padding-left: 0.5rem;
+      margin-left: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+}

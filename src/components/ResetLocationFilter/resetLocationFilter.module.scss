@@ -1,0 +1,42 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.resetLocationFilterContainer {
+  margin: 5rem 0;
+  text-align: center;
+  color: $gray-600;
+  font-size: 1rem;
+
+  @media screen and (max-width: 767px) {
+    margin: 2rem 0;
+  }
+
+  h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: $gray-600;
+    line-height: 2.25rem;
+
+    @media (max-width: 991px) {
+      font-size: 1.25rem;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  p {
+    text-align: center;
+
+    @media (max-width: 991px) {
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  button {
+    margin-top: 1.688rem;
+
+    @media (max-width: 991px) {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components": ["src/components"],
+      "@icons": ["src/icons"],
+      "@api-manager": ["src/api-manager"],
+      "@utils": ["src/utils"],
+      "@interfaces": ["src/api-manager/interfaces"],
+      "@context": ["src/context"],
+      "@enum": ["src/api-manager/enum"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"],
+  "typeRoots": ["./typings", "../node_modules/@types"]
+}

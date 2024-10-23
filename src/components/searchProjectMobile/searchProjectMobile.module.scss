@@ -1,0 +1,82 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+@media screen and (max-width: 991px) {
+  .searchbox {
+    @include center(both);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $white;
+    border-radius: 3.125rem;
+    overflow: hidden;
+    padding: 0;
+    top: 5.5rem;
+    z-index: 999;
+    max-width: 12rem;
+    width: 100%;
+
+    a {
+      padding: 0.2rem 1rem 0.2rem 2.5rem;
+    }
+
+    .mobilesearch {
+      button {
+        font-size: 0.875rem;
+        width: 100%;
+        text-align: left;
+        padding: 0.7rem 0.5rem 0.7rem 1.5rem;
+        border-color: $white;
+        background: $white;
+        color: $philippineGray;
+        font-family: $font-regular;
+        min-width: 16.5rem;
+        position: relative;
+        transform: scale(1);
+
+        i {
+          max-width: 1.5rem;
+          max-width: 1rem;
+          margin-right: 1rem;
+          opacity: 0.4;
+          @include center(vertical);
+          left: 0;
+          color: $davyGray1;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.stickySearchWidgetMob {
+  @media (max-width: 991px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1040;
+
+    & > div {
+      top: -0.063rem;
+      transform: unset;
+      left: 0;
+      max-width: 100%;
+      padding: 0.6rem 0;
+      border-radius: 0;
+
+      button {
+        &:global(.btn) {
+          background: $surface;
+          padding: 0.7rem 0.5rem 0.7rem 2.75rem;
+          color: $philippineGray;
+
+          i {
+            left: 1.2rem;
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+}

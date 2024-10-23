@@ -1,0 +1,20 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.sectionHeader {
+  @include toRem(margin-bottom, 24);
+
+  h1,
+  h2 {
+    @include toRem(font-size, 22);
+    color: $secondary;
+    font-family: $font-bold;
+  }
+
+  @media (min-width: 992px) {
+    h1,
+    h2 {
+      @include toRem(font-size, 28);
+    }
+  }
+}

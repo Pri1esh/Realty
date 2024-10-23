@@ -1,0 +1,57 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.cardHeader {
+  text-align: center;
+  position: relative;
+  margin-bottom: 2rem;
+
+  @media screen and (max-width: 767px) {
+    @include toRem(margin-bottom, 60);
+  }
+
+  h3 {
+    font-family: $font-bold;
+    font-size: 2.6rem;
+    line-height: 1.62;
+    max-width: 50rem;
+    margin: auto;
+
+    @media screen and (max-width: 767px) {
+      @include toRem(font-size, 24);
+      @include toRem(line-height, 28);
+    }
+  }
+
+  .headericon1 {
+    img:nth-child(1) {
+      position: absolute;
+      top: -1rem;
+      left: 0;
+      width: 5rem;
+    }
+
+    img:nth-child(2) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 6.2rem;
+    }
+  }
+
+  .headericon2 {
+    img:nth-child(1) {
+      position: absolute;
+      top: 0;
+      left: 2rem;
+      width: 7rem;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .headericon1,
+  .headericon2 {
+    display: none;
+  }
+}

@@ -1,0 +1,119 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.modalHeader {
+  .filterPopup {
+    margin-top: 3.125rem;
+
+    label {
+      padding-bottom: 0.9375rem;
+      font-weight: bold;
+
+      span {
+        color: $spanishGray;
+      }
+    }
+
+    ul {
+      display: flex;
+    }
+
+    input[type='range'] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+
+      &::-webkit-slider-runnable-track {
+        background-color: $brightGray;
+        height: 0.313rem;
+      }
+
+      &::-moz-range-track {
+        background-color: $brightGray;
+        height: 0.313rem;
+      }
+
+      &::-ms-track {
+        background-color: $brightGray;
+        height: 0.313rem;
+      }
+
+      &::-moz-range-thumb {
+        border-radius: 100%;
+        height: 1.875rem;
+        width: 1.875rem;
+        background: none;
+        background-color: $white;
+        border: solid 2px $denim;
+      }
+
+      &::-webkit-slider-thumb {
+        border-radius: 100%;
+        height: 1.875rem;
+        width: 1.875rem;
+        background: none;
+        background-color: $white;
+        border: solid 2px $denim;
+        position: relative;
+        top: -0.6rem;
+      }
+
+      &::-ms-fill-lower {
+        background: $brightGray;
+      }
+
+      &::-ms-fill-upper {
+        background: $denim;
+      }
+
+      &:focus::-ms-fill-lower {
+        background: $brightGray;
+      }
+
+      &:focus::-ms-fill-upper {
+        background: $denim;
+      }
+    }
+
+    button {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8rem;
+      border-color: $silverSand;
+      line-height: 1;
+      color: $secondary;
+
+      &:hover {
+        border-color: $blue;
+        background-color: $aliceBlue1;
+        color: $secondary;
+      }
+
+      &.active {
+        border-color: $blue;
+        background-color: $aliceBlue1;
+      }
+    }
+
+    .rangeLabels {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 3rem;
+
+      span {
+        font-size: 1.125rem;
+        font-weight: bold;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  .footerSection {
+    text-align: center;
+    justify-content: center;
+    padding-top: 0;
+
+    button {
+      padding: 0.625rem 4rem;
+    }
+  }
+}

@@ -1,0 +1,131 @@
+@import '/src/scss/partials/mixins';
+@import '/src/scss/partials/variable';
+
+.inputBlock {
+  position: relative;
+
+  :global(.form-control) {
+    @include toRem(font-size, 16);
+    font-weight: 500;
+    width: 100%;
+    padding: 1.5rem 1rem 0.5rem;
+    border-radius: 0.5rem;
+    outline: none;
+    color: $secondary;
+    opacity: 1;
+
+    &:invalid,
+    &.is-invalid {
+      background: none;
+    }
+
+    ~ :global(.form_label) {
+      align-items: center;
+      background: none;
+      color: $dark;
+      display: flex;
+      font-family: $font-regular;
+      font-size: 1rem;
+      left: 1.0625rem;
+      line-height: normal;
+      pointer-events: none;
+      position: absolute;
+      top: 1.35rem;
+      transform-origin: 0 0;
+      transition: all 0.2s;
+    }
+  }
+
+  // to be removed
+  .css-1s2u09g-control {
+    position: relative;
+    @include toRem(top, 8);
+  }
+
+  :global(.css-13cymwt-control),
+  :global(.css-t3ipsp-control),
+  .css-tlfecz-indicatorContainer,
+  .css-1gtu0rj-indicatorContainer,
+  .css-1pahdxg-control,
+  .css-qc6sy-singleValue {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none;
+    min-height: inherit;
+    height: inherit;
+    box-shadow: none;
+    overflow: inherit;
+    line-height: normal;
+
+    &:hover,
+    &:focus {
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+      border: none;
+    }
+
+    .css-qc6sy-singleValue {
+      @include toRem(margin-top, 5);
+    }
+
+    :global(.css-1u9des2-indicatorSeparator) {
+      display: none;
+    }
+
+    .css-2613qy-menu {
+      border: 1px solid #eeeeee;
+    }
+  }
+
+  //  This will be removed in future -- end
+
+  &.focus-input .formLabel {
+    @include toRem(top, 10);
+    @include toRem(font-size, 16);
+    color: $dark;
+  }
+
+  input[type='date']:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+  }
+
+  input:focus {
+    color: $gray-600;
+    border-color: $gray-600;
+  }
+
+  input:focus + .formLabel {
+    color: $blue;
+  }
+
+  span.formLabel {
+    @include toRem(top, 10);
+    @include toRem(font-size, 12);
+    @include toRem(left, 17);
+    position: absolute;
+    font-family: $font-regular;
+    color: $dark;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+    transform-origin: 0% 0%;
+    background: none;
+    pointer-events: none;
+    line-height: normal;
+  }
+
+  .err-msg {
+    @include toRem(font-size, 14);
+    @include toRem(margin-top, 4);
+    width: 100%;
+    color: $error;
+  }
+
+  &:global(.focus-input) {
+    :global(.form_label) {
+      font-size: 0.75rem;
+      top: 0.625rem;
+    }
+  }
+}

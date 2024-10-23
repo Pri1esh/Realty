@@ -1,0 +1,76 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.achievements {
+  border-top: 0.0625rem solid $platinum2;
+
+  &.bdrNone {
+    border: none;
+  }
+
+  ul {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+
+    @media (max-width: 991px) {
+      padding-top: 0;
+    }
+
+    li {
+      flex-grow: 1;
+      margin: 1px;
+      padding-top: 2.688rem;
+      width: 19.6%;
+
+      i {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        display: block;
+        fill: $gray-600;
+        line-height: 1;
+
+        @media screen and (max-width: 767px) {
+          position: absolute;
+          left: 0;
+        }
+      }
+
+      @media screen and (max-width: 991px) {
+        width: 19%;
+        padding: 2rem 1rem 1rem;
+
+        @media screen and (max-width: 767px) {
+          &:first-child {
+            padding: 3.5rem 1rem 1rem 4rem;
+          }
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        padding: 2rem 0 1rem 4rem;
+        text-align: left;
+        position: relative;
+      }
+
+      strong {
+        display: block;
+        color: $gray-600;
+        font-size: 1.75rem;
+
+        @media (max-width: 991px) {
+          font-size: 1.25rem;
+        }
+      }
+
+      small {
+        color: $gray-600;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.wrapper {
+  @include toRem(padding-top, 60);
+  @include toRem(padding-bottom, 16);
+  background-color: $footer-bg;
+
+  .preFooter {
+    h6 {
+      @include toRem(margin-bottom, 12);
+      @include toRem(font-size, 16);
+      font-family: $font-medium;
+      color: $gray-600;
+
+      a {
+        color: $gray-600;
+      }
+    }
+
+    .item {
+      padding: 0.5rem 0;
+      @include toRem(font-size, 15);
+      display: inline;
+      color: $dark;
+
+      &:last-child {
+        span {
+          display: none;
+        }
+      }
+
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      span {
+        padding: 0 0.5rem;
+      }
+    }
+  }
+}

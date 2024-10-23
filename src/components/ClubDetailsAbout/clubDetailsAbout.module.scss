@@ -1,0 +1,72 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+@media (min-width: 992px) {
+  .clubaboutmain {
+    margin-bottom: 5rem;
+
+    .clubabout {
+      h1 {
+        font-family: $font-bold;
+        font-size: 2.625rem;
+
+        @media screen and (max-width: 767px) {
+          font-size: 1.375rem;
+        }
+      }
+    }
+  }
+}
+
+.clubabout {
+  position: relative;
+  margin: 2.5rem auto 0 auto;
+
+  @media screen and (min-width: 768px) {
+    text-align: center;
+    min-height: 15rem;
+    margin: 4rem auto 0 auto;
+  }
+
+  h1 {
+    font-family: $font-bold;
+    font-size: 2.625rem;
+    margin-bottom: 1.813rem;
+    color: $gray-600;
+
+    @media screen and (max-width: 767px) {
+      font-size: 1.375rem;
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  p {
+    color: $gray-600;
+    width: 75%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 991px) {
+      width: 100%;
+    }
+  }
+
+  .clubBg {
+    position: absolute;
+    bottom: -9rem;
+    width: 100%;
+    height: 17.5rem;
+    left: 0;
+
+    img {
+      max-width: 100%;
+    }
+
+    @media only screen and (min-width: 991px) and (max-width: 1199px) {
+      bottom: -11rem;
+    }
+
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
+  }
+}

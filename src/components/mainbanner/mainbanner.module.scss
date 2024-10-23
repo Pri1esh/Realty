@@ -1,0 +1,503 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+@media (min-width: 992px) {
+  .mainbanner {
+    height: 100vh;
+
+    .pageheading {
+      top: 0;
+      left: 0;
+      bottom: unset;
+      height: 100%;
+
+      & > div {
+        @include center(vertical);
+        width: 100%;
+        padding-left: 5%;
+      }
+
+      h2 {
+        font-size: 2.625rem;
+        text-align: left;
+        margin-bottom: 2.5rem;
+      }
+
+      p {
+        text-align: left;
+        font-size: 1.5rem;
+        max-width: 25rem;
+        margin: 0.5rem 0 1rem 0;
+
+        @media screen and (max-width: 1366px) {
+          max-width: 50%;
+        }
+      }
+    }
+  }
+}
+
+.mainbanner {
+  position: relative;
+
+  .gradientBorder {
+    background: linear-gradient(to right, #1c84a6, #386bb2 25%, #7356a3 49%, #903b94 72%, #c54961);
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+
+    @media (max-width: 991px) {
+      bottom: 0.375rem;
+    }
+
+    left: 0;
+    width: 100%;
+    height: 0.375rem;
+    z-index: 2;
+  }
+
+  .pageheading {
+    @media (max-width: 991px) {
+      & > div {
+        top: unset;
+        transform: unset;
+        bottom: 10rem;
+        left: 0;
+        width: 100%;
+        padding: 0 0.75rem;
+      }
+    }
+  }
+
+  video {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+
+    @media screen and (min-device-width: 768px) and (max-device-width: 991px) {
+      height: calc(100vh - 80px);
+    }
+
+    @media screen and (max-width: 767px) {
+      height: 70vh;
+      min-height: 30rem;
+    }
+
+    @media screen and (max-width: 576px) {
+      height: calc(100vh - 145px);
+      min-height: unset;
+    }
+  }
+
+  img {
+    min-height: 80vh;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.pageheading {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: $white;
+  height: 100%;
+
+  @media (max-width: 767px) {
+    opacity: 1;
+  }
+
+  > div {
+    z-index: 1;
+
+    > a {
+      text-decoration: none;
+      color: $white;
+    }
+
+    @media screen and (max-width: 991px) {
+      position: absolute;
+      @include center(horizontal);
+    }
+  }
+
+  &:before {
+    content: '';
+    opacity: 0.15;
+    background: $gray-600;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    height: 99vh;
+    width: 100%;
+
+    @media screen and (max-width: 991px) {
+      min-width: 15rem;
+      min-height: 15rem;
+      left: 0;
+      z-index: 0;
+      top: 0;
+      height: 98%;
+    }
+  }
+
+  h2 {
+    font-size: 2.625rem;
+    position: relative;
+    font-family: $font-medium;
+
+    @media (max-width: 992px) {
+      font-size: 1.875rem;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 1.5rem;
+      text-align: left;
+    }
+
+    span {
+      position: relative;
+    }
+  }
+
+  p {
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: unset;
+    margin: 0.6rem auto 0 auto;
+    position: relative;
+
+    @media (max-width: 991px) {
+      text-align: left;
+      max-width: 70%;
+      margin-left: 0;
+      margin-bottom: 1rem;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 1rem;
+    }
+  }
+
+  a {
+    &:hover {
+      background: $antiFlashWhiteHover;
+      border-color: $antiFlashWhiteHover;
+      transition: ease all 0.3s;
+    }
+
+    @media screen and (max-width: 991px) {
+      font-size: 0.875rem;
+      background: transparent;
+      border: 0;
+      padding: 0;
+      text-decoration: underline;
+      color: $white;
+      text-align: left;
+
+      &:hover,
+      &:focus {
+        background: transparent;
+      }
+    }
+  }
+}
+
+.imageitem {
+  overflow-x: hidden;
+  background: $lavender;
+  height: 100vh;
+  position: relative;
+  min-height: 100vh;
+
+  &:after {
+    content: '';
+    background: linear-gradient(to right, #1c84a6, #386bb2 25%, #7356a3 49%, #903b94 72%, #c54961);
+    position: absolute;
+    height: 0.375rem;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    opacity: 0;
+  }
+
+  @media screen and (min-device-width: 768px) and (max-device-width: 991px) {
+    height: calc(100vh - 80px);
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 70vh;
+    min-height: 30rem;
+  }
+
+  @media screen and (max-width: 576px) {
+    height: calc(100vh - 145px);
+    text-align: center;
+    min-height: unset;
+  }
+
+  .imageitemcontent {
+    width: 100%;
+    color: $dark;
+    @include center(vertical);
+
+    @media screen and (min-width: 992px) {
+      padding-left: 5%;
+    }
+
+    @media screen and (max-width: 991px) {
+      top: unset;
+      transform: unset;
+      bottom: 1rem;
+      padding: 4rem 1rem;
+      text-align: center;
+      text-align: left;
+    }
+
+    div {
+      > a {
+        opacity: 1;
+        text-decoration: none;
+
+        button {
+          color: $gray-600;
+          background-color: $white;
+          border-color: $white;
+          padding: 0.563rem 1rem;
+          border-radius: 1.62rem;
+          min-width: 9.375rem;
+          text-align: center;
+          display: inline-block;
+          font-weight: bold;
+          transition: ease all 0.3s;
+          margin-top: 2.5rem;
+
+          &:hover {
+            background: $antiFlashWhiteHover;
+            border-color: $antiFlashWhiteHover;
+            transition: ease all 0.3s;
+          }
+
+          @media screen and (max-width: 991px) {
+            font-size: 0.875rem;
+            background: transparent;
+            border: 0;
+            padding: 0;
+            text-decoration: underline;
+            color: $white;
+            text-align: left;
+            margin-top: 1.5rem;
+
+            &:hover,
+            &:focus {
+              background: transparent;
+            }
+          }
+        }
+      }
+    }
+
+    .projectlogo {
+      z-index: 1;
+      height: 5rem;
+      width: 5rem;
+      border-radius: 100%;
+      position: relative;
+      margin-bottom: 1.25rem;
+      background-color: $white;
+
+      @media screen and (max-width: 991px) {
+        height: 4.5rem;
+        width: 4.5rem;
+      }
+
+      img {
+        min-height: unset;
+        width: unset;
+        max-width: 100%;
+        @include center(both);
+      }
+    }
+
+    h2 {
+      max-width: 30rem;
+      font-size: 2.625rem;
+      margin-bottom: 1rem;
+      font-family: $font-medium;
+      color: $white;
+
+      @media screen and (max-width: 1366px) {
+        max-width: 50%;
+        font-size: 2.25rem;
+      }
+
+      @media screen and (max-width: 991px) {
+        font-size: 1.875rem;
+        text-align: left;
+        margin: 0 auto 1rem auto;
+        max-width: unset;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    p {
+      max-width: 30rem;
+      font-size: 1.5rem;
+      color: $white;
+      word-break: break-all;
+
+      span {
+        color: $white;
+        font-size: 1rem;
+        margin-top: 1rem;
+        display: block;
+
+        b {
+          &:after {
+            content: '|';
+            margin: 0 0.3rem;
+            font-family: $font-medium;
+            font-weight: 100;
+          }
+        }
+      }
+
+      @media screen and (max-width: 1366px) {
+        max-width: 70%;
+      }
+
+      @media screen and (max-width: 991px) {
+        font-size: 1.25rem;
+        max-width: 20rem;
+        text-align: left;
+
+        span {
+          @include toRem(font-size, 14);
+          margin-top: 1rem;
+          display: block;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .imageitemthumb {
+    height: 100%;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      background: rgb(0 0 0 / 50%);
+      background: linear-gradient(90deg, rgb(0 0 0 / 50%) 0%, rgb(0 0 0 / 20%) 47%, rgba(255, 255, 255, 0) 71%);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+
+      @media screen and (max-width: 991px) {
+        background: rgb(0 0 0 / 50%);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 50%, rgba(255, 255, 255, 0) 71%);
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @media screen and (min-width: 992px) {
+        height: 100vh;
+      }
+
+      @media screen and (max-width: 767px) {
+        min-height: auto;
+      }
+    }
+  }
+}
+
+.reranumber {
+  position: absolute;
+  bottom: 18rem;
+  right: 1.5rem;
+  font-size: 0.8rem;
+  color: $white;
+  text-shadow: 0 0 2rem black;
+  transform: rotate(-90deg);
+  transform-origin: right;
+}
+
+.imgtype {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2.5rem;
+  font-size: 0.75rem;
+  color: $white;
+  text-shadow: 0 0 2.5rem $black;
+  z-index: 1;
+
+  @media (max-width: 991px) {
+    font-size: 0.688rem;
+    right: 1rem;
+    bottom: 0.625rem;
+  }
+}
+
+.videotype {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2.5rem;
+  font-size: 0.75rem;
+  color: $white;
+  text-shadow: 0 0 2.5rem $black;
+  z-index: 1;
+
+  @media (max-width: 991px) {
+    font-size: 0.688rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
+
+@media only screen and (min-device-width: 992px) and (max-device-width: 1366px) {
+  .mainbanner {
+    .pageheading {
+      & > div {
+        max-width: 85%;
+        @include center(both);
+      }
+    }
+
+    .imageitem {
+      .imageitemcontent {
+        max-width: 85%;
+        @include center(both);
+      }
+    }
+  }
+}
+
+.bannerWrapper {
+  :global(.slick-slide) {
+    -webkit-transition: all 0.6s cubic-bezier(0.7, 0, 0.3, 1);
+    transition: all 0.6s cubic-bezier(0.7, 0, 0.3, 1);
+  }
+
+  :global(.slick-slider) {
+    :global(.slick-list) {
+      -webkit-transition: all 0.6s cubic-bezier(0.7, 0, 0.3, 1);
+      transition: all 0.6s cubic-bezier(0.7, 0, 0.3, 1);
+    }
+  }
+}

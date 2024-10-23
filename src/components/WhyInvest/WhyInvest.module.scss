@@ -1,0 +1,65 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.investmentBenefits {
+  margin-top: 2.5rem;
+
+  &.bdrNone {
+    border: none;
+  }
+
+  .block {
+    padding: 1.5rem 0.5rem 1.5rem 1rem;
+    width: calc(25% - 18px);
+    border: 1px solid $gainsboro;
+    border-radius: 0.75rem;
+    height: 100%;
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      position: relative;
+      margin-bottom: 1.25rem;
+    }
+
+    span {
+      width: 3.75rem;
+      height: 3.75rem;
+      border-radius: 50%;
+      border: 1px solid $gainsboro;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0 1.5rem;
+
+      i {
+        font-size: 2.25rem;
+        color: $gray-600;
+      }
+    }
+
+    h3 {
+      display: block;
+      color: $gray-600;
+      font-size: 1.125rem;
+      font-weight: 600;
+      @include toRem(min-height, 39);
+
+      @media screen and (max-width: 991px) and (min-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+
+    small {
+      color: $gray-600;
+      font-size: 0.875rem;
+    }
+  }
+
+  :global(.slick-list) {
+    display: flex;
+
+    :global(.slick-slide) > div {
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,654 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.forminner {
+  input {
+    &[type='text'] {
+      padding-right: 3rem;
+    }
+  }
+}
+
+.enquirenow {
+  @media (max-width: 991px) {
+    padding-bottom: 1.25rem;
+  }
+
+  .checkData {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    @media (min-width: 768px) {
+      &:hover {
+        input {
+          border: 0.0625rem solid $secondary;
+        }
+      }
+    }
+
+    label {
+      padding-left: 0.75rem;
+      font-size: 0.75rem;
+      line-height: 1rem;
+      text-align: justify;
+      color: $dark;
+    }
+
+    div {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+    }
+
+    input[type='checkbox'] {
+      min-width: 1.375rem;
+    }
+  }
+
+  .invalid-feedback {
+    display: none;
+  }
+
+  .subheading {
+    font-size: 1rem;
+    color: $dark;
+    margin-bottom: 1.5rem;
+  }
+
+  .inputGroup {
+    margin-bottom: 1.2rem;
+
+    .countryPin {
+      width: 40%;
+      margin-right: 4%;
+    }
+
+    .phnNumber {
+      flex-grow: 1;
+      width: 50%;
+    }
+
+    &.marginNone {
+      margin: 0;
+    }
+  }
+
+  .selectType {
+    margin-bottom: 1rem;
+
+    @media (max-width: 991px) {
+      margin-bottom: 0.75rem;
+
+      .timeslotLabel {
+        font-size: 1rem;
+        font-family: $font-bold;
+      }
+    }
+
+    .btnGroup {
+      display: flex;
+      flex-wrap: wrap;
+
+      &.btnGroupCheck {
+        .customCheck {
+          padding-left: 2rem;
+        }
+      }
+
+      .customCheck {
+        border-color: $americanSilver;
+        font-size: 1rem;
+        margin-right: 0.4rem;
+        margin-bottom: 0.75rem;
+        padding: 0.5rem 0.75rem;
+        position: relative;
+        transition-duration: 0.15s;
+        transition-property: transform, background-color, border-color;
+        transition-timing-function: ease-in-out;
+        color: $black;
+        cursor: pointer;
+
+        &:hover {
+          @media (min-width: 992px) {
+            background-color: $white;
+            border-color: $secondary;
+            color: $secondary;
+          }
+        }
+
+        &.active {
+          display: inline-flex;
+          background-color: $antiFlashWhiteHover;
+          border-color: $secondary;
+          box-shadow: 0 0 0 0.0625rem $secondary !important;
+          font-weight: 500;
+          color: $gray-600;
+        }
+
+        &.disabled {
+          pointer-events: none;
+          opacity: 0.5;
+        }
+
+        input {
+          display: none;
+        }
+
+        label {
+          cursor: pointer;
+        }
+      }
+
+      button {
+        padding: 0.55rem 1.1rem;
+        margin: 0 0.25rem 0.5rem 0;
+        font-size: 0.813rem;
+        border-color: $silverSand;
+        color: $secondary;
+        line-height: 1;
+
+        @media screen and (max-width: 992px) {
+          margin: 0 0.2rem 0.5rem 0;
+        }
+
+        &.active {
+          border-color: $blue;
+          background-color: $aliceBlue1;
+          color: $blue;
+        }
+
+        &:hover {
+          background-color: $antiFlashWhiteHover;
+        }
+      }
+
+      &.timeslot {
+        button {
+          padding: 0.75rem 1.1rem;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .banquetFields {
+    ul {
+      display: flex;
+    }
+  }
+
+  form {
+    .borderleft {
+      position: relative;
+
+      @media screen and (min-width: 992px) {
+        .forminner {
+          float: right;
+          width: 93%;
+        }
+      }
+
+      &:before {
+        content: '';
+        border-left: 0.031rem solid $platinum;
+        position: absolute;
+        left: 0.813rem;
+        top: 0;
+        height: 91%;
+
+        @media screen and (max-width: 992px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .submit {
+    min-width: 55%;
+    font-size: 1rem;
+
+    @media screen and (max-width: 992px) {
+      width: 100%;
+    }
+  }
+}
+
+.selectDropdown {
+  input[type='text'] {
+    color: transparent !important;
+  }
+
+  &:focus {
+    box-shadow: unset;
+  }
+
+  border: 0;
+  padding: 0 !important;
+  min-height: 1.5rem;
+  border-color: transparent;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    margin-top: -0.5rem;
+    color: $gray-600;
+  }
+
+  > div {
+    &[class=' css-t3ipsp-control'] {
+      padding: 1.4rem 1rem 0.4rem !important;
+      top: 0;
+      border-radius: $borderRadius;
+    }
+
+    &[class=' css-13cymwt-control'] {
+      padding: 1.4rem 1rem 0.4rem !important;
+      top: 0;
+      border-radius: $borderRadius;
+      cursor: pointer;
+    }
+
+    &[class=' css-26l3qy-menu'] {
+      div {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.CitySearch {
+  padding: 1.4rem 1.5rem 1.6rem;
+  border: 1px solid $gainsboro;
+  border-radius: 0.75rem;
+
+  > div {
+    > div {
+      > div {
+        &.selectDropdown {
+          border: 0.063rem solid #ced4da;
+
+          > div {
+            > div {
+              padding-left: 0 !important;
+
+              > div {
+                margin-left: 0;
+              }
+            }
+          }
+
+          &.invalidInput {
+            border-color: $error;
+          }
+
+          &:hover,
+          &:focus {
+            border-color: $secondary;
+          }
+        }
+      }
+    }
+  }
+
+  input {
+    &[type='text'] {
+      padding-right: 3rem;
+    }
+  }
+
+  .inputGroup {
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .selectType {
+    margin-bottom: 1rem;
+
+    label {
+      font-size: 0.9rem;
+      color: $secondary;
+      margin-bottom: 0rem;
+    }
+
+    .btnGroup {
+      display: flex;
+      flex-wrap: wrap;
+
+      button {
+        padding: 0.75rem 1.1rem;
+        margin: 0 0.5rem 0.5rem 0;
+        font-size: 0.9rem;
+        border-color: $silverSand;
+        color: $secondary;
+        line-height: 1;
+
+        &:hover,
+        &.active {
+          border-color: $blue;
+          background-color: $aliceBlue1;
+        }
+      }
+    }
+  }
+
+  .QueryText h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.375rem;
+  }
+
+  .GalleryText {
+    color: $dark;
+    line-height: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .checkData {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    &:hover {
+      input {
+        border: 0.0625rem solid $secondary;
+      }
+    }
+
+    label {
+      padding-left: 0.75rem;
+      font-size: 0.75rem;
+      line-height: 1rem;
+      text-align: justify;
+      color: $secondary;
+    }
+
+    div {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+    }
+
+    input[type='checkbox'] {
+      min-width: 1.375rem;
+    }
+  }
+
+  button[type='submit'] {
+    margin-top: 1rem;
+    z-index: 0;
+  }
+
+  @media screen and (max-width: 991px) {
+    padding: 0 0 1.25rem 0;
+    border: 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  @supports (position: sticky) {
+    .stickyWrapper {
+      position: sticky;
+      top: 6rem;
+    }
+  }
+}
+
+.btnGroup {
+  display: flex;
+  flex-wrap: wrap;
+
+  .customCheck {
+    border: 0.063rem solid $americanSilver;
+    font-size: 0.875rem;
+    margin-right: 0.75rem;
+    padding: 0.5rem 1.25rem;
+    position: relative;
+    transition-duration: 0.15s;
+    transition-property: transform, background-color, border-color;
+    transition-timing-function: ease-in-out;
+    color: $gray-600;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 1.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.5rem;
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+      padding: 0.3rem 0.8rem;
+      font-size: 0.65rem;
+    }
+
+    &:hover {
+      background-color: $white;
+      border-color: $secondary;
+      color: $secondary;
+    }
+
+    &.active {
+      background-color: $antiFlashWhiteHover;
+      border-color: $secondary;
+      box-shadow: 0 0 0 0.0625rem $secondary !important;
+      font-weight: 500;
+      color: $gray-600;
+      display: inline-flex;
+    }
+
+    input {
+      display: none;
+    }
+
+    label {
+      cursor: pointer;
+    }
+  }
+
+  button {
+    padding: 0.55rem 1.1rem;
+    margin: 0 0.25rem 0.5rem 0;
+    font-size: 0.813rem;
+    border-color: $silverSand;
+    color: $secondary;
+    line-height: 1;
+
+    @media screen and (max-width: 992px) {
+      margin: 0 0.2rem 0.5rem 0;
+    }
+
+    &.active {
+      border-color: $blue;
+      background-color: $aliceBlue1;
+      color: $blue;
+    }
+
+    &:hover {
+      background-color: $antiFlashWhiteHover;
+    }
+  }
+
+  &.timeslot {
+    button {
+      padding: 0.75rem 1.1rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  div {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .agreeCheck {
+    padding-top: 0.5rem;
+  }
+}
+
+.btnGroupCheck {
+  padding: 0.25rem 0;
+
+  > div {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .customCheck {
+    &.active {
+      background-color: $antiFlashWhiteHover;
+      border-color: $secondary;
+      box-shadow: 0 0 0 0.0625rem $secondary !important;
+      font-weight: 500;
+      color: $gray-600;
+
+      &:before {
+        content: '\2713';
+        width: 1rem;
+        background-repeat: no-repeat;
+        margin-right: 0;
+        left: 1rem;
+        @include center(vertical);
+      }
+
+      > div {
+        &:before {
+          content: '';
+          display: none;
+        }
+      }
+    }
+
+    border: 0.063rem solid $gray-600;
+    border-radius: 1.5rem;
+    font-size: 0.875rem;
+    margin: 0 0.5rem 0.5rem 0;
+    padding: 0.5rem 1rem 0.5rem 2rem;
+    position: relative;
+    transition-duration: 0.15s;
+    transition-property: transform, background-color, border-color;
+    transition-timing-function: ease-in-out;
+    display: inline-block;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $white;
+      border-color: $secondary;
+      color: $secondary;
+      cursor: pointer;
+    }
+
+    input {
+      display: none;
+    }
+
+    label {
+      cursor: pointer;
+      padding-bottom: 0;
+    }
+
+    &:before {
+      content: '\002B';
+      background-repeat: no-repeat;
+      margin-right: 0.5rem;
+      left: 1rem;
+      @include center(vertical);
+    }
+
+    > div {
+      opacity: 1;
+    }
+  }
+}
+
+.invalidErrorText {
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: red;
+}
+
+.agreeTxt {
+  font-size: 0.875rem;
+  color: $gray-600;
+
+  a {
+    font-family: $font-bold;
+    color: $secondary;
+
+    &:hover {
+      color: $dark;
+    }
+  }
+}
+
+.completedPopup {
+  @media screen and (min-width: 992px) {
+    padding: 0 2.5rem;
+  }
+
+  .heading {
+    @include toRem(font-size, 22);
+    @include toRem(margin-bottom, 25);
+    font-family: $font-bold;
+    color: $gray-600;
+
+    @media screen and (min-width: 768px) {
+      @include toRem(font-size, 32);
+    }
+
+    span {
+      @include toRem(margin-right, 12);
+
+      @media screen and (min-width: 768px) {
+        @include toRem(margin-right, 25);
+      }
+    }
+  }
+
+  .mpdalBody {
+    p {
+      @include toRem(font-size, 16);
+      @include toRem(margin-bottom, 40);
+      color: $secondary;
+      text-shadow: 0.02rem 0 #333;
+    }
+  }
+
+  .modalFooter {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 991px) {
+      @include toRem(margin-bottom, 20);
+    }
+
+    button {
+      @include toRem(padding-top, 10);
+      @include toRem(padding-bottom, 10);
+      font-family: $font-bold;
+      width: 48%;
+
+      &.cancelButton {
+        border-color: $gray-600;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.isInvalid {
+  border-color: $error;
+}
+
+.textarea {
+  @include toRem(min-height, 180);
+
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  & ~ label {
+    z-index: 0;
+  }
+}

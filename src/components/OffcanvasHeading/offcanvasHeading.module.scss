@@ -1,0 +1,9 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.heading {
+  font-size: 1.375rem;
+  font-family: $font-bold;
+  text-decoration: none;
+  width: 100%;
+}

@@ -1,0 +1,144 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.EmployeeCardBody {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto;
+  @include toRem(width, 375);
+  @include toRem(height, 375);
+  max-width: 100%;
+  transition: all linear 0.6s 0s;
+
+  @media screen and (max-width: 767px) {
+    height: auto;
+  }
+
+  &:nth-of-type(2) {
+    transform: translate(-50%, -3%) rotate(5deg);
+  }
+
+  &:nth-of-type(3) {
+    transform: translate(-50%, 3%) rotate(-5deg);
+  }
+
+  &:nth-of-type(4) {
+    transform: translate(-50%, 3%) rotate(8deg);
+  }
+
+  &:nth-of-type(5) {
+    transform: translate(-50%, -3%) rotate(-8deg);
+  }
+
+  img {
+    margin: 0 auto;
+  }
+
+  .CardIcon {
+    margin: auto;
+  }
+
+  .slideData {
+    text-align: center;
+    @include center(both);
+
+    .CardIcon {
+      object-fit: cover;
+      height: 15rem;
+
+      @media screen and (max-width: 767px) {
+        height: 11rem;
+      }
+    }
+
+    h4 {
+      margin-top: 2.25rem;
+      margin-bottom: 2rem;
+      font-size: 1.125em;
+      color: $gray-600;
+
+      @media (max-width: 480px) {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        margin: 1rem 0;
+      }
+    }
+
+    p {
+      font-size: 1.16875rem;
+      color: $gray-600;
+      max-width: 14.313rem;
+    }
+
+    @media screen and (max-width: 991px) {
+      left: 50%;
+      width: 60%;
+    }
+  }
+}
+
+.cardWrap {
+  position: relative;
+  @include toRem(height, 416);
+
+  @media (max-width: 480px) {
+    width: 80%;
+    margin: 0 auto 3rem;
+    height: auto;
+
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+  }
+
+  .nextslide,
+  .prevslide {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    @include toRem(width, 32);
+    @include toRem(height, 32);
+    border: 1px solid $gainsboro;
+    border-radius: 50%;
+    z-index: 9;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+
+    &:hover {
+      background-color: $antiFlashWhiteHover;
+    }
+
+    i {
+      @include toRem(font-size, 20);
+      color: $gray-600;
+    }
+  }
+
+  .nextslide {
+    right: 5px;
+
+    i {
+      position: relative;
+      transform: rotate(180deg);
+    }
+
+    @media (max-width: 480px) {
+      right: -3rem;
+    }
+  }
+
+  .prevslide {
+    left: 5px;
+
+    @media (max-width: 480px) {
+      left: -3rem;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.communicationBanner {
+  h1 {
+    max-width: 90%;
+  }
+
+  p {
+    @include toRem(font-size, 14);
+    margin-top: 0.5rem;
+    color: $gray-600;
+
+    .category {
+      font-weight: 700;
+      color: $gray-600;
+
+      &:before {
+        content: ',';
+        margin-right: 0.25rem;
+      }
+
+      &:first-child {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .blogBannerWrapper {
+    height: 26.8rem;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+
+    @media screen and (max-width: 767px) {
+      height: 16rem;
+    }
+
+    .imgType {
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      padding: 0.25rem 0.8rem;
+      border-radius: 1rem;
+      color: $white;
+      font-size: 0.75rem;
+      z-index: 1;
+    }
+
+    img {
+      border-radius: 0.5rem;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  div {
+    border: none;
+    border-radius: 1.25rem;
+
+    @media screen and (max-width: 767px) {
+      border-radius: 0.75rem;
+    }
+  }
+}

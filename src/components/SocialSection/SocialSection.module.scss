@@ -1,0 +1,41 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.socialSection {
+  position: relative;
+
+  .socialGrids {
+    z-index: 9;
+  }
+
+  .bgImage {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    bottom: 0;
+
+    span {
+      position: absolute;
+      bottom: -10rem;
+      width: 100%;
+      left: 0;
+
+      @media (max-width: 767px) {
+        bottom: unset;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      img {
+        width: 100%;
+        height: 31.688rem;
+        object-fit: cover;
+
+        @media (max-width: 767px) {
+          height: 15rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,297 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.defaulthidden {
+  display: none;
+
+  :global(.stickyMenu) {
+    display: none;
+
+    :global(.stickySearchWidget) {
+      :global(.headersearch) {
+        display: none;
+      }
+
+      :global(.searchwidget) {
+        opacity: 1;
+
+        form {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.isActive {
+  opacity: 1;
+}
+
+.menu {
+  position: fixed;
+  bottom: 0;
+  z-index: 1051;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  visibility: hidden;
+  background: $surface;
+  background-clip: padding-box;
+  outline: 0;
+  transition: transform 0.3s ease-in-out;
+  top: 0;
+  left: 0;
+  width: 400px;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  transform: translateX(-100%);
+
+  @media (min-width: 992px) {
+    :global(.menu_item) {
+      line-height: 1.5rem;
+    }
+
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  &.show {
+    transform: translateX(0);
+  }
+}
+
+.businessHeader {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  font-size: 0.875rem;
+  display: flex;
+  color: $secondary;
+  align-self: center;
+  padding-right: 0.675rem;
+
+  &:after {
+    display: none;
+  }
+
+  svg {
+    width: 0.75rem !important;
+    margin-top: 0.25rem;
+    margin-right: 0.5rem;
+  }
+}
+
+.fatNavSectionItem {
+  color: $gray-600;
+  font-size: 0.85rem;
+  padding: 0.4rem 1rem;
+  font-weight: 600;
+  cursor: default;
+}
+
+.headerLogo {
+  height: 1.75rem;
+  width: 8.75rem;
+}
+
+.headerWrapper {
+  &:global(.floatingHeader) {
+    button {
+      &:global(.basicDropdown) {
+        color: $white;
+        display: flex;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  :global(.icon-HamburgerIcon) {
+    font-size: 1.1875rem;
+  }
+}
+
+.hamburger {
+  .hamburgerSection {
+    background-color: $white;
+    margin-bottom: 0.5rem;
+    padding: 1.5rem 0 1rem;
+
+    h5 {
+      color: $color-999;
+      font-size: 0.75rem;
+      margin: 0;
+      padding: 0 0 0.75rem 1.5rem;
+      text-transform: uppercase;
+    }
+
+    ul {
+      li {
+        position: relative;
+
+        :global(.submenu) {
+          :global(.submenu) {
+            :global(.menu_item) {
+              padding-left: 5.9375rem;
+
+              &:global(.linkHeading) {
+                font-weight: bold;
+              }
+            }
+          }
+
+          :global(.menu_item) {
+            min-height: 3rem;
+            padding-bottom: 0.75rem;
+            padding-left: 60px;
+            padding-top: 0.75rem;
+          }
+        }
+      }
+    }
+
+    :global(.menu_item) {
+      align-items: center;
+      color: $gray-600;
+      cursor: pointer;
+      display: flex;
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+
+      &:hover {
+        background: $antiFlashWhiteHover;
+      }
+
+      &:global(.active) {
+        background-color: rgba(13, 103, 202, 0.05);
+      }
+
+      &[aria-expanded='true'] {
+        .icon {
+          transform: rotate(180deg);
+          transition: ease transform 0.2s;
+        }
+      }
+
+      .icon {
+        fill: $davyGray;
+        margin-left: auto;
+        font-size: 0.75rem;
+
+        &:global(.icon) {
+          fill: $dark;
+          width: 0.8125rem;
+          margin: 0 0 0 auto;
+          transition: transform 0.3s;
+        }
+      }
+
+      label {
+        cursor: pointer;
+        line-height: normal;
+
+        &.cursorDefault {
+          cursor: default;
+        }
+      }
+
+      &.cursorDefault {
+        cursor: default;
+      }
+
+      :global(.iconBox) {
+        @include toRem(margin-right, 18);
+        @include toRem(line-height, 26);
+        @include toRem(max-height, 24);
+        color: $davyGray;
+      }
+    }
+
+    &:global(.single_item) {
+      padding: 0;
+
+      :global(.submenu) {
+        padding-bottom: 1rem;
+
+        :global(.tick) {
+          height: 1rem;
+          margin-left: auto;
+          margin-right: 0;
+        }
+
+        svg {
+          width: 1.35rem;
+        }
+      }
+
+      :global(.menu_item) {
+        align-items: center;
+        color: $gray-600;
+        cursor: pointer;
+        display: flex;
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+        text-decoration: none;
+
+        &[aria-expanded='true'] {
+          :global(.icon) {
+            transform: rotate(180deg);
+          }
+        }
+
+        svg {
+          fill: $davyGray;
+          width: 1rem;
+          margin-right: 1.125rem;
+
+          &:global(.icon) {
+            fill: $dark;
+            width: 0.8125rem;
+            margin: 0 0 0 auto;
+            transition: transform 0.3s;
+          }
+        }
+
+        label {
+          cursor: pointer;
+          line-height: normal;
+        }
+
+        .tick {
+          margin-left: auto;
+          font-size: 0.8rem;
+          color: $gray-600;
+        }
+      }
+
+      &:global(.single_item) {
+        padding: 0;
+
+        :global(.menu_item) {
+          min-height: 4.5rem;
+        }
+      }
+
+      :global(#adani_businesses) {
+        :global(.menu_item) {
+          padding-left: 3.75rem;
+          min-height: 3rem;
+        }
+      }
+    }
+
+    :global(.icon-certificate) {
+      font-size: 1.125rem;
+    }
+  }
+
+  footer {
+    padding: 1rem 1.5rem 1.5rem;
+
+    img {
+      width: 7.5rem;
+    }
+  }
+}

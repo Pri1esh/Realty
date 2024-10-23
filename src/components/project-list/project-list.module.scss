@@ -1,0 +1,39 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.projectlist {
+  margin-top: 2.5rem;
+
+  h6 {
+    margin-bottom: 0.75rem;
+    font-family: $font-medium;
+  }
+
+  a {
+    color: $dark;
+    display: inline-block;
+    padding: 0.5rem 0;
+    font-size: 0.875rem;
+
+    &:hover {
+      color: $secondary;
+      text-decoration: underline;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    div {
+      margin-bottom: 2rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .projectlist {
+    display: flex;
+  }
+}

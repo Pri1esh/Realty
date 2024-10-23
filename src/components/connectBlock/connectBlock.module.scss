@@ -1,0 +1,126 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.connectmain {
+  border-radius: $borderRadius;
+
+  ul {
+    div {
+      &:last-child {
+        li {
+          &:last-child {
+            border-bottom: 0rem solid $platinum;
+          }
+        }
+      }
+    }
+
+    li {
+      a {
+        padding: 1rem;
+        padding-left: 3rem;
+        position: relative;
+        display: block;
+        z-index: 1;
+      }
+
+      .icon {
+        width: 2rem;
+        height: 2rem;
+        display: inline-block;
+        border-radius: 100%;
+        position: absolute;
+        left: 0;
+        animation: unset;
+        @include center(vertical);
+
+        i {
+          right: 0;
+          max-width: 1.25rem;
+          @include center(both);
+          width: 100%;
+          font-size: 1.25rem;
+          color: $secondary;
+        }
+      }
+
+      p {
+        font-size: 0.85rem;
+        color: $dark;
+        text-align: left;
+
+        b {
+          color: $black;
+          font-weight: 600;
+          font-size: 1.05rem;
+        }
+      }
+
+      svg {
+        max-height: 1.25rem;
+        position: absolute;
+        right: 1rem;
+        @include center(vertical);
+      }
+
+      &.state-active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.blocktollfree {
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+
+  .blocktollfreeinner {
+    position: absolute;
+    width: 100%;
+    bottom: 5rem;
+    padding: 2rem;
+
+    a {
+      background: $white;
+      color: $blue;
+      border-color: $white;
+      border-radius: $borderRadius;
+      width: 100%;
+      margin-top: 0.8rem;
+      text-align: left;
+      font-size: 1.4rem;
+    }
+
+    button {
+      font-size: 1.4rem;
+      margin-top: 0.8rem;
+      width: 100%;
+      background: $white;
+      color: $blue;
+      border-color: $white;
+      border-radius: $borderRadius;
+
+      span {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.connectus {
+  li {
+    &.state-active {
+      > div {
+        position: fixed;
+        max-height: 100vh;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $popup-box-body-shadow;
+        z-index: 1;
+      }
+    }
+  }
+}

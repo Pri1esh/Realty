@@ -1,0 +1,243 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.errorContainer {
+  p {
+    opacity: 1;
+  }
+
+  .dropdown_toggle {
+    border-color: $error;
+  }
+
+  .errorMessage {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: $error;
+  }
+}
+
+.disabledContainer {
+  background-color: $antiFlashWhiteHover;
+  border-radius: 0.5rem;
+
+  .dropdown_toggle {
+    background-color: $bright-Gray;
+    opacity: 1;
+  }
+}
+
+.dropdown {
+  button {
+    background: transparent;
+    border-color: $lightGray;
+
+    &:hover,
+    &:focus {
+      border-color: $secondary;
+    }
+  }
+}
+
+.dropdown_toggle,
+.dropdown_toggle:hover,
+.dropdown_toggle:focus {
+  width: 100%;
+  @include toRem(height, 60);
+  color: $secondary;
+  background-color: $white;
+  border: solid 1px #cacaca;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  transform: none;
+
+  &.errorState {
+    border-color: $error;
+  }
+}
+
+.dropdown_toggle::after {
+  display: none;
+}
+
+.dropdown_toggle_open,
+.dropdown_toggle_open:focus,
+.dropdown_toggle_open:hover {
+  border-color: $gray-600;
+
+  &.errorState {
+    border-color: $error;
+  }
+
+  .show {
+    opacity: 1;
+  }
+}
+
+.dropdown_menu {
+  background-color: $white;
+  border: solid 1px #dadce0;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 1.25rem 0 rgba(136, 136, 136, 0.2);
+  margin-top: 0.2rem;
+  padding: 0.5rem 0;
+  max-height: 21.875rem;
+  overflow-y: auto;
+  min-width: 13.7rem;
+
+  @media (max-width: 576px) {
+    width: 100%;
+  }
+}
+
+.dropdown_menu_item {
+  @include toRem(font-size, 14);
+  color: $secondary;
+  line-height: 1.5;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  & > div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  b {
+    margin-right: 0.6rem;
+    font-family: $font-medium;
+    font-weight: 100;
+  }
+
+  span {
+    color: $spanishGray;
+  }
+
+  &:hover {
+    background-color: $lightgrayCultured;
+  }
+
+  &[aria-selected='true'] {
+    background-color: $white;
+  }
+}
+
+.downArrow,
+.upArrow {
+  @include toRem(width, 13);
+  display: none;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+}
+
+.upArrow {
+  transform: rotate(180deg);
+}
+
+.floating_label {
+  transition: ease all 0.3s;
+  @include toRem(top, 17);
+  font-size: 0.8rem;
+  color: $dark;
+  font-family: $font-regular;
+}
+
+.dropdown_option {
+  width: 100%;
+  color: $gray-600;
+  display: flex;
+  column-gap: 0.4rem;
+  white-space: normal;
+  text-align: left;
+  line-height: 1.4;
+
+  div:first-child {
+    text-overflow: ellipsis;
+    max-width: 9rem;
+    white-space: nowrap;
+    overflow: hidden;
+
+    @media (max-width: 767px) {
+      max-width: 9rem;
+    }
+  }
+}
+
+.dropdown_option_location {
+  font-size: 0.813rem;
+  line-height: 1.5rem;
+  color: $spanishGray;
+  max-width: 9rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: $font-regular;
+}
+
+.floating_label_float {
+  font-size: 0.8rem;
+  color: $gray-600;
+  transition: ease all 0.3s;
+  font-family: $font-regular;
+
+  @media screen and (max-width: 767px) {
+    font-size: 1rem;
+  }
+}
+
+.tick {
+  @include toRem(width, 22);
+  @include toRem(height, 22);
+
+  line {
+    stroke-width: 2;
+    stroke: #000;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  margin-left: auto;
+}
+
+.textActive {
+  font-weight: 500;
+}
+
+.flightLogo {
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.placeholder {
+  color: $gray-600;
+  font-size: 0.875rem;
+  opacity: 0.5;
+  font-family: $font-regular;
+
+  span {
+    @include toRem(min-height, 26.4);
+    display: inline-block;
+    padding-top: 0.15rem;
+  }
+
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+}
+
+.dropdownArrow {
+  span {
+    i {
+      font-size: 1rem;
+      line-height: 1;
+      color: $secondary;
+    }
+  }
+}

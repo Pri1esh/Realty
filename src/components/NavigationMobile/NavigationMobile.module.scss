@@ -1,0 +1,62 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.MobileNav {
+  display: none;
+
+  @media screen and (min-width: 992px) {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      a {
+        padding: 0;
+        font-size: 2rem;
+        color: $gray-600;
+
+        i {
+          height: 2.5rem;
+          margin-top: -0.25rem;
+        }
+      }
+
+      @media screen and (max-width: 991px) {
+        a {
+          padding: 0;
+          font-size: 1.5rem;
+
+          i {
+            height: 1.5rem;
+          }
+        }
+      }
+
+      &.shareIcons {
+        a {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    padding-bottom: 1.25rem;
+  }
+}
+
+.downloadCanvas {
+  font-weight: 600;
+  display: block;
+
+  i {
+    float: right;
+  }
+}
+
+.mobileButtons {
+  padding: 0;
+}

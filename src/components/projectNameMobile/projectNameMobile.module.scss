@@ -1,0 +1,46 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.projectName {
+  padding: 1rem 0 0 0;
+
+  h3 {
+    font-size: 1.75rem;
+    font-family: $font-bold;
+  }
+
+  p {
+    margin-top: 0.625rem;
+
+    a {
+      &:not([href]) {
+        text-decoration: underline;
+      }
+    }
+
+    span {
+      font-size: 0.938rem;
+      color: $gray-600;
+      display: block;
+      margin-top: 0.625rem;
+
+      sup {
+        vertical-align: super;
+        top: 0;
+        display: inline-block;
+      }
+    }
+
+    small {
+      margin: 0 11px;
+      color: $philippineGray1;
+    }
+  }
+
+  svg {
+    margin-right: 0.5rem;
+    display: none;
+    max-width: 0.8rem;
+    stroke: $gray-600;
+  }
+}

@@ -1,0 +1,94 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.arrowScrollDown {
+  width: 1.188rem;
+  height: 27px;
+  margin: auto;
+  position: absolute;
+  bottom: 1.2rem;
+  left: 0;
+  right: 0;
+  border: 0.0625rem solid $white;
+  border-radius: 1.219rem;
+  cursor: pointer;
+  text-align: center;
+
+  svg {
+    fill: $white;
+    -webkit-animation: mouse-wheel 1.6s linear infinite;
+    -moz-animation: mouse-wheel 1.6s linear infinite;
+    animation: mouse-wheel 1.6s linear infinite;
+    position: relative;
+    transition: ease all 0.6s;
+    width: 0.5rem;
+    width: 0.75rem;
+    stroke: $white;
+  }
+
+  @-webkit-keyframes mouse-wheel {
+    0% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+    }
+
+    100% {
+      opacity: 0;
+      -webkit-transform: translateY(6px);
+      -ms-transform: translateY(6px);
+      transform: translateY(6px);
+    }
+  }
+
+  @keyframes mouse-wheel {
+    0% {
+      top: -0.313rem;
+    }
+
+    10% {
+      top: -0.25rem;
+    }
+
+    20% {
+      top: -0.188rem;
+    }
+
+    30% {
+      top: -0.125rem;
+    }
+
+    40% {
+      top: -0.0625rem;
+    }
+
+    50% {
+      top: 0;
+    }
+
+    60% {
+      top: 0.0625rem;
+    }
+
+    70% {
+      top: 0.125rem;
+    }
+
+    80% {
+      top: 0.188rem;
+    }
+
+    90% {
+      top: 0.25rem;
+    }
+
+    100% {
+      top: 0.313rem;
+    }
+  }
+
+  @media (max-width: 1194px) {
+    display: none;
+  }
+}

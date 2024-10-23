@@ -1,0 +1,443 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.stickySearchWidgetActive {
+  -webkit-animation-name: 'stickySearchWidgetActive';
+  animation-name: 'stickySearchWidgetActive';
+  -webkit-animation-duration: 0s;
+  animation-duration: 0s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+
+  .headersearch {
+    top: 1.3rem;
+    transition: ease top 0s;
+  }
+
+  .dropdown {
+    .dropdown-toggle {
+      border-color: transparent;
+    }
+  }
+}
+
+@keyframes stickySearchWidgetActive {
+  0% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes stickySearchWidgetActive {
+  0% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.stickySearchWidget {
+  &.stickySearchWidgetInner {
+    .searchwidget {
+      opacity: 0;
+
+      &.showWidget {
+        top: 5rem;
+        opacity: 1;
+        max-width: 55rem;
+
+        &:before {
+          content: '';
+          position: fixed;
+          top: -150%;
+          left: 0;
+          width: 100%;
+          height: 0%;
+        }
+      }
+    }
+  }
+
+  > :global(.container-fluid) {
+    height: 0;
+  }
+
+  :global(.searchwidget) {
+    position: absolute;
+    transition: ease all 1.6s;
+    z-index: 0;
+    top: 4.5rem;
+
+    &:global(.showWidget) {
+      position: fixed;
+      top: 5rem;
+      bottom: unset;
+      transition: ease all 0s;
+      width: 100%;
+      max-width: 55rem;
+      border-radius: 0;
+      min-height: 4.8rem;
+      z-index: 1042;
+
+      :global(.isVisible) {
+        :global(.row) {
+          :global(.col-md-3) {
+            &:first-child {
+              :global(.dropdown-toggle) {
+                &:before {
+                  content: '';
+                  background: $surface;
+                }
+              }
+
+              :global(.dropdownMenu) {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+      :global(.dropdown-toggle) {
+        background: $white;
+      }
+
+      form {
+        max-width: 55rem;
+        opacity: 1;
+        bottom: 0;
+
+        > div {
+          background: $white;
+          border-radius: 2.375rem;
+        }
+      }
+    }
+
+    :global(.btn-primary) {
+      min-width: 10rem;
+    }
+
+    &:global(.hideWidget) {
+      :global(.col-lg-3) {
+        width: 0;
+        transition: ease all 1s;
+
+        :global(.dropdown) {
+          overflow: hidden;
+
+          :global(.dropdown-toggle) {
+            background: transparent;
+            border-color: transparent;
+
+            div {
+              color: transparent;
+            }
+          }
+        }
+
+        :global(.btn-lg) {
+          overflow: hidden;
+          width: 0;
+          min-width: 0;
+          padding: 0;
+          transition: ease all 0.5s;
+          position: relative;
+        }
+      }
+    }
+
+    form {
+      max-width: 0;
+      background: transparent;
+      -webkit-animation-name: 'search-form-inner';
+      animation-name: 'search-form-inner';
+      -webkit-animation-duration: 0.5s;
+      animation-duration: 0.5s;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-animation-direction: normal;
+      animation-direction: normal;
+      top: 0;
+      opacity: 0;
+    }
+  }
+
+  :global(.container-fluid) {
+    @media (min-width: 992px) {
+      position: relative;
+      max-width: 1600px;
+    }
+  }
+
+  & div {
+    & div {
+      a {
+        &:global(.btn) {
+          background: $lotion;
+          padding: 15px;
+        }
+      }
+    }
+  }
+
+  @keyframes hidebtn {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes hidebtn {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes showbtn {
+    0% {
+      top: 0rem;
+      opacity: 1;
+    }
+
+    100% {
+      top: 0.5rem;
+      opacity: 0;
+    }
+  }
+
+  @-webkit-keyframes showbtn {
+    0% {
+      top: 0rem;
+      opacity: 1;
+    }
+
+    100% {
+      top: 0.5rem;
+      opacity: 0;
+    }
+  }
+
+  @keyframes showbtn-active {
+    0% {
+      opacity: 0;
+    }
+
+    90% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @-webkit-keyframes showbtn-active {
+    0% {
+      opacity: 0;
+    }
+
+    90% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes search-btn {
+    0% {
+      opacity: 0;
+    }
+
+    80% {
+      opacity: 0.1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes search-btn {
+    0% {
+      opacity: 0;
+    }
+
+    80% {
+      opacity: 0.1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes search-headersearch {
+    0% {
+      opacity: 0;
+      top: 5rem;
+    }
+
+    100% {
+      opacity: 1;
+      top: 1.35rem;
+    }
+  }
+
+  @-webkit-keyframes search-headersearch {
+    0% {
+      opacity: 0;
+      top: 5rem;
+    }
+
+    100% {
+      opacity: 1;
+      top: 1.35rem;
+    }
+  }
+
+  :global(.headersearch) {
+    // max-width: 10.813rem;
+    transition: ease all 0s;
+    width: 100%;
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    border-radius: 2.375rem;
+
+    :global(.showbtn) {
+      overflow: hidden;
+      transition: ease all 0.2s;
+
+      button {
+        border-color: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: $black;
+        opacity: 0.5;
+        border-radius: 0;
+        -webkit-animation-name: 'showbtn-active';
+        animation-name: 'showbtn-active';
+        -webkit-animation-duration: 0.1s;
+        animation-duration: 0.1s;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-animation-direction: normal;
+        animation-direction: normal;
+        padding: 0;
+        transform: unset;
+        cursor: auto;
+
+        > span {
+          opacity: 0;
+          display: none;
+          -webkit-animation-name: 'showbtn';
+          animation-name: 'showbtn';
+          -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+          -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+          -webkit-animation-direction: normal;
+          animation-direction: normal;
+          width: 0;
+        }
+      }
+    }
+
+    :global(.normalSearch) {
+      @include toRem(min-width, 174);
+      font-size: 0.875rem;
+      width: 100%;
+      text-align: left;
+      padding-left: 2.25rem;
+      border-color: $platinum;
+      background: $white;
+      color: $dark;
+      transition: ease all 0s;
+      font-family: $font-regular;
+      min-height: 2.3rem;
+
+      &:active {
+        box-shadow: none;
+      }
+
+      @media (max-width: 1099px) {
+        padding-left: 2rem;
+        font-size: 0.8rem;
+      }
+
+      i {
+        width: 1rem;
+        fill: $dark;
+        position: absolute;
+        left: 0.8rem;
+        @include center(vertical);
+        font-size: 1rem;
+      }
+
+      > span {
+        background: transparent;
+      }
+    }
+  }
+}
+
+@keyframes search-form-inner {
+  0% {
+    opacity: 0;
+    height: 100%;
+  }
+
+  100% {
+    opacity: 0;
+    top: 0;
+  }
+}
+
+@-webkit-keyframes search-form-inner {
+  0% {
+    opacity: 0;
+    height: 100%;
+  }
+
+  100% {
+    opacity: 0;
+    top: 0;
+  }
+}

@@ -1,0 +1,377 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.galleryModal {
+  background-color: $black;
+  width: 100%;
+  color: $white;
+  padding-top: 1.5rem;
+  min-height: 100%;
+
+  button {
+    @media (max-width: 991px) {
+      i {
+        margin-right: 0.25rem;
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    @media (min-width: 992px) {
+      &:hover {
+        background: transparent;
+      }
+
+      width: auto;
+    }
+
+    i {
+      font-size: 1rem;
+      color: $white;
+    }
+
+    span {
+      color: $white;
+      font-size: 0.875rem;
+      text-decoration: underline;
+      padding-left: 0.688rem;
+    }
+
+    &:hover {
+      span {
+        text-decoration: none;
+      }
+
+      &:active {
+        transform: scale(0.94);
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 0;
+  }
+
+  .closeModal {
+    position: absolute;
+    color: $white;
+    font-size: 1.625rem;
+    min-width: 2rem;
+    min-height: 2rem;
+    top: 1.5rem;
+    left: 1.7rem;
+
+    @media screen and (max-width: 767px) {
+      top: 1.5rem;
+      left: 0.5rem;
+    }
+
+    &:after {
+      content: '\00d7';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: ease all 0.2s;
+    }
+
+    &:hover {
+      background: $antiFlashWhiteHover;
+      color: $gray-600;
+      transition: ease all 0.3s;
+      border-radius: 100%;
+    }
+  }
+
+  .modalHeader {
+    padding: 0 2.5rem 0.25rem 4rem;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 767px) {
+      & > div {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 80%;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      padding: 1.5rem 1rem 0 3rem;
+    }
+
+    .share {
+      text-transform: capitalize;
+      color: $white;
+      padding: 0.5rem 0;
+
+      @include toRem(font-size, 14);
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      i {
+        width: 1rem;
+        vertical-align: text-top;
+
+        path {
+          fill: $white;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 0;
+      }
+    }
+
+    @media screen and (min-width: 767px) {
+      button:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .galleryContent {
+    padding: 0;
+
+    @media screen and (max-width: 767px) {
+      padding: 1rem 0 2rem;
+    }
+
+    .galleryTabsWrap {
+      border-bottom: solid 1px #4a4a4a;
+      padding: 0 2rem;
+      overflow: auto;
+
+      @media screen and (max-width: 767px) {
+        padding: 0 1.25rem;
+        border-top: solid 1px #4a4a4a;
+      }
+    }
+
+    .galleryTabs {
+      padding: 0 0 0.75rem;
+      color: $white;
+      background-color: transparent;
+      margin-right: 1.9rem;
+      white-space: nowrap;
+
+      @media screen and (max-width: 767px) {
+        @include toRem(font-size, 14);
+        margin-right: 1.5rem;
+        padding: 0.75rem 0;
+      }
+
+      &[aria-selected='true'] {
+        border-bottom-color: $white;
+      }
+    }
+
+    .tabContent {
+      padding: 2rem 0;
+    }
+  }
+}
+
+.galleryShareModal {
+  z-index: 99999;
+}
+
+.galleryCarousel {
+  z-index: 1050;
+
+  :global(.slick-slider) {
+    touch-action: auto !important;
+    width: 100%;
+    margin: 0;
+
+    :global(.slick-prev) {
+      left: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+
+      i {
+        color: $gray-600;
+      }
+
+      &:before {
+        color: $black;
+      }
+    }
+
+    :global(.slick-next) {
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+
+      i {
+        color: $gray-600;
+      }
+
+      &:before {
+        color: $black;
+        display: none;
+      }
+    }
+  }
+
+  & + .modal-backdrop,
+  & + .offcanvas-backdrop {
+    z-index: 99999;
+  }
+
+  :global(.thumbnailSliderWrap) {
+    opacity: 1;
+    padding: 0 1rem;
+
+    :global(.slick-slider) {
+      :global(.slick-list) {
+        :global(.slick-track) {
+          margin: 0 auto;
+        }
+
+        img {
+          opacity: 0.3;
+          cursor: pointer;
+          width: 100%;
+          height: 4rem;
+          min-height: auto;
+          max-height: 5rem;
+          object-fit: cover;
+          transform: unset;
+          left: unset;
+          top: unset;
+          position: relative;
+
+          &:active {
+            opacity: 1;
+            transition: ease all 0.3s;
+            border: 0.063rem solid $platinum;
+          }
+        }
+
+        :global(.slick-current) {
+          label {
+            opacity: 1;
+          }
+
+          img {
+            padding: 0.15rem;
+            border: 0.063rem solid $platinum;
+            opacity: 1;
+            transition: ease all 0.3s;
+            position: relative;
+            top: unset;
+            left: unset;
+            transform: unset;
+          }
+        }
+      }
+    }
+
+    img {
+      padding: 0.15rem;
+      border: 0.063rem solid transparent;
+    }
+  }
+
+  :global(.slick-track) {
+    opacity: 1;
+
+    @media (max-width: 576px) {
+      padding: 0;
+    }
+
+    :global(.slick-slide) {
+      @media (min-width: 577px) {
+        padding: 0;
+
+        &:global(.slick-active) {
+          z-index: 1;
+        }
+      }
+
+      > div {
+        @media (min-width: 992px) {
+          height: 100%;
+        }
+      }
+
+      [data-type='videotour'] {
+        iframe {
+          opacity: 0;
+        }
+      }
+
+      img {
+        opacity: 0.3;
+        object-fit: cover;
+
+        @media (max-width: 767px) {
+          height: auto;
+        }
+      }
+
+      span {
+        opacity: 0;
+      }
+
+      video {
+        opacity: 0.3;
+        width: unset;
+        max-width: 100%;
+        @include center(both);
+        max-height: 90%;
+
+        @media (max-width: 767px) {
+          height: auto;
+        }
+      }
+
+      iframe {
+        opacity: 0.3;
+        height: 45vh;
+        min-height: 36.875rem;
+        width: 100%;
+
+        @media (max-width: 767px) {
+          height: auto;
+          min-height: 17.25rem;
+        }
+      }
+
+      &:global(.slick-current) {
+        img,
+        video,
+        span,
+        iframe {
+          opacity: 1;
+        }
+
+        [data-type='videotour'] {
+          & > div {
+            & > div {
+              display: none;
+            }
+          }
+
+          img {
+            opacity: 0;
+            display: none;
+          }
+
+          iframe {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

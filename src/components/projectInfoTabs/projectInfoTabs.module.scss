@@ -1,0 +1,99 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.btngroup {
+  position: relative;
+  background-color: $white;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-top: 0.45rem;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media screen and (max-width: 991px) {
+    margin: 0 -1.25rem;
+    border-bottom: 1px solid #e6e6e6;
+    overflow-y: hidden;
+  }
+
+  ul {
+    display: flex;
+    border-bottom: 1px solid #e6e6e6;
+
+    @media screen and (max-width: 991px) {
+      margin-top: 0;
+      border: 0;
+    }
+
+    li {
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -0.0625rem;
+      border-radius: 0.0625rem;
+
+      &:global(.tabActive) {
+        border-bottom: 0.12rem solid $gray-600;
+
+        @media (max-width: 991px) {
+          border-bottom: 0.19rem solid $gray-600;
+        }
+
+        a {
+          font-weight: 500;
+        }
+      }
+
+      @media screen and (max-width: 991px) {
+        &:last-child {
+          padding-right: 0.5rem;
+        }
+      }
+    }
+  }
+
+  a {
+    font-size: 1rem;
+    color: $gray-600;
+    display: block;
+    cursor: pointer;
+    padding: 0.875rem 1.25rem;
+    margin-bottom: 0.313rem;
+    border-radius: $borderRadius;
+
+    &:hover,
+    &:active {
+      background: $antiFlashWhiteHover;
+
+      @media (hover: none) and (max-width: 1366px) {
+        background: transparent;
+      }
+    }
+
+    &:hover {
+      @media (max-width: 767px) {
+        background: transparent;
+      }
+    }
+  }
+}
+
+.filtersearch {
+  border-radius: 100%;
+  margin-left: auto;
+
+  .filtersearchround {
+    border: 0.063rem solid $platinum;
+    border-radius: 100%;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: none;
+
+    svg {
+      min-width: 2rem;
+      padding: 0.4rem;
+    }
+  }
+}

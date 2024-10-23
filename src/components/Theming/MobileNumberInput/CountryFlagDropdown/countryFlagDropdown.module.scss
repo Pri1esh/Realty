@@ -1,0 +1,211 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.countryCodeLayer {
+  background-color: $white;
+  border: 0.063rem solid $gainsboro;
+  z-index: $zindex-3;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 1.25rem 0 hsl(0deg 0% 53% / 20%);
+  max-height: 20.63rem;
+  max-width: 20.63rem;
+  overflow: auto;
+  position: absolute;
+  width: 100%;
+  overflow-x: hidden;
+
+  @media (min-width: 992px) {
+    top: 4.375rem;
+  }
+
+  .searchBoxParent {
+    background-color: $white;
+    z-index: $zindex-1;
+    padding: 0rem 1rem 1rem 1rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
+    @media (min-width: 992px) {
+      padding: 1.25rem 1rem 1rem;
+    }
+  }
+
+  .searchBox {
+    color: $secondary;
+    background-color: $brightGrey;
+    align-items: center;
+    border-radius: 2rem;
+    display: flex;
+    height: 2.75rem;
+    padding: 0 1.25rem;
+    position: relative;
+    font-size: 1rem;
+
+    i {
+      fill: $secondary;
+      position: relative;
+      top: 1px;
+      margin-right: 0.3125rem;
+      line-height: 0.75;
+    }
+
+    .searchField {
+      font-family: $font-medium;
+      background: transparent;
+      flex: 1 1;
+      height: 100%;
+      padding-left: 0.3125rem;
+      padding-right: 1.5625rem;
+      border: none;
+      outline: none;
+    }
+
+    .clearIcon {
+      fill: $secondary;
+      position: absolute;
+      top: 0.2rem;
+      width: 2rem;
+      height: 2rem;
+      right: 1rem;
+      cursor: pointer;
+      background: url('../../../../assets/icons/Cross.svg');
+    }
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  .countryList {
+    background: transparent;
+    border: 0;
+    flex: 1 1;
+    height: 100%;
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 1025px) {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    li {
+      color: $secondary;
+      align-items: center;
+      cursor: pointer;
+      display: flex;
+      padding: 0.875rem 1.5rem;
+      transition: background-color 0.4s linear;
+      font-size: 1rem;
+
+      figure,
+      canvas,
+      .flag {
+        @include toRem(font-size, 24);
+        z-index: $zindex-0;
+        width: 1.5rem;
+        height: 1.125rem;
+        line-height: normal;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        transform: scale(1);
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
+        margin-left: 2.125rem;
+      }
+
+      span {
+        margin: 0;
+        margin-left: auto;
+        white-space: nowrap;
+      }
+
+      &.activeCountry {
+        background-color: #0d67ca0d;
+
+        p {
+          font-family: $font-bold;
+        }
+      }
+
+      &:hover {
+        background-color: $antiFlashWhiteHover;
+      }
+    }
+  }
+}
+
+.countriesInfo {
+  align-items: center;
+  background-color: $warning;
+  border-radius: 0.25rem;
+  color: $gray-600;
+  display: flex;
+  font-family: $font-medium;
+  font-size: 0.938rem;
+  margin: 1.25rem 1rem;
+  padding: 1.062rem 1.188rem;
+
+  svg {
+    margin-right: 0.8rem;
+    width: 6rem;
+  }
+}
+
+.offcanvas {
+  border-radius: 1.25rem 1.25rem 0 0;
+  height: 98%;
+
+  &:global(.offcanvas-bottom) {
+    height: 98%;
+  }
+
+  :global(.offcanvas-header) {
+    :global(.btn-close) {
+      @include toRem(background-size, 15);
+      opacity: 0.8;
+    }
+  }
+
+  .offcanvasHeading {
+    @include toRem(font-size, 16);
+    @include toRem(padding-top, 8);
+    @include toRem(padding-left, 4);
+    @include toRem(margin-bottom, 0);
+    color: $baastrichtblue;
+    font-family: $font-bold;
+    text-shadow: 0.025rem 0 $baastrichtblue;
+  }
+
+  .offcanvasBody {
+    padding: 0;
+
+    .countryCodeLayer {
+      border: none;
+      border-radius: none;
+      box-shadow: none;
+      max-height: calc(100% - 6rem);
+      max-width: unset;
+      padding-bottom: 2rem;
+      height: 100%;
+
+      .countryList {
+        height: unset;
+      }
+    }
+  }
+}

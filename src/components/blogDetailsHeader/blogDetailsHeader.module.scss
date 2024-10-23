@@ -1,0 +1,73 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.blogDetails {
+  margin: 0 auto;
+  position: relative;
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+
+    @media (min-width: 992px) {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      margin-top: 0.45rem;
+    }
+
+    @media (max-width: 991px) {
+      padding-left: 3rem;
+      padding-top: 1.25rem;
+    }
+
+    li {
+      @media (min-width: 992px) {
+        display: flex;
+        align-items: center;
+      }
+
+      &:last-child {
+        text-align: right;
+
+        button {
+          padding: 0;
+          font-family: $font-medium;
+          font-size: 0.875rem;
+          font-weight: 500;
+          display: inline-block;
+
+          span {
+            text-decoration: underline;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+
+          i {
+            font-size: 1rem;
+            margin-right: 0.688rem;
+          }
+        }
+      }
+
+      @media (max-width: 991px) {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  button {
+    span {
+      @include toRem(font-size, 14);
+      text-decoration: underline;
+    }
+
+    &:hover {
+      span {
+        text-decoration: none;
+      }
+    }
+  }
+}

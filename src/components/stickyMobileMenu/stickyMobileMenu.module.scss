@@ -1,0 +1,208 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.stickyMenuWrapper {
+  :global(.button-active) {
+    opacity: 1;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 0.125rem;
+      left: 0;
+      @include gradientBorder(right);
+      top: -0.1rem;
+    }
+
+    svg {
+      filter: unset;
+    }
+  }
+}
+
+.stickymenu {
+  display: none;
+  border-top: 1px solid $platinum;
+
+  @media screen and (max-width: 991px) {
+    display: block;
+    position: fixed;
+    bottom: -0.1rem;
+    width: 100%;
+    z-index: 10000;
+    background: $white;
+    transition: ease all 0.6s;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    li {
+      flex-grow: 1;
+      flex-basis: 0;
+      text-align: center;
+      font-size: 0.9rem;
+      position: relative;
+
+      a {
+        background: transparent;
+        padding: 0;
+        border: 0;
+        color: $gray-600;
+        font-size: 0.8rem;
+        overflow: unset;
+
+        @media screen and (max-width: 767px) {
+          font-size: 0.625rem;
+        }
+
+        &.active {
+          color: $secondary;
+        }
+
+        &.inactive {
+          span {
+            opacity: 0.6;
+            filter: grayscale(1) brightness(0.5) contrast(1);
+          }
+        }
+
+        &:hover {
+          background: transparent;
+          color: $black;
+        }
+      }
+
+      button,
+      a {
+        background: transparent;
+        border: 0;
+        color: $gray-600;
+        overflow: unset;
+        position: relative;
+        border-radius: 0;
+        font-size: 0.6875rem;
+        transform: scale(1);
+        display: block;
+        padding: 0.95rem 0.5rem 0.95rem 0.5rem;
+        width: 100%;
+        font-family: $font-regular;
+
+        &::before {
+          content: '';
+          @include toRem(top, -1);
+          width: 0;
+          height: 0.125rem;
+          opacity: 0;
+          @include center(horizontal);
+          background: linear-gradient(90deg, #1b86a2, #2073b8 22%, #6b5ca6 41%, #923993 70%, #cd4b59 93%, #f05636);
+          transition: ease all 0.3s;
+        }
+
+        &:hover,
+        &:focus {
+          transform: scale(1);
+          background: $white;
+          color: $black;
+          border-radius: 0;
+        }
+
+        &.active {
+          color: $secondary;
+          font-family: $font-bold;
+
+          &:before {
+            opacity: 1;
+            transition: ease all 0.3s;
+            width: 100%;
+          }
+        }
+
+        &.inactive {
+          span {
+            opacity: 0.6;
+            filter: grayscale(1) brightness(0.5) contrast(1);
+          }
+
+          &:hover {
+            filter: unset;
+          }
+        }
+      }
+
+      &.active {
+        &:before {
+          @include gradientBorder(right);
+          height: 0.2rem;
+        }
+
+        svg {
+          opacity: 1;
+        }
+      }
+
+      span {
+        display: block;
+        margin-bottom: 0.1rem;
+
+        svg,
+        img {
+          width: 100%;
+          height: 100%;
+          max-width: 1.125rem;
+          max-height: 1.125rem;
+          margin-bottom: 0.25rem;
+        }
+      }
+    }
+  }
+}
+
+.menuvisible {
+  opacity: 1;
+}
+
+.menuhidden {
+  bottom: -5rem;
+  transition: ease all 0.6s;
+}
+
+.canvasBody {
+  margin-bottom: 1.25rem;
+}
+
+.offCanvas {
+  opacity: 1;
+}
+
+.offCanvasActive {
+  opacity: 0;
+}
+
+.offCanvasHidden {
+  opacity: 1;
+  width: 100%;
+}
+
+.stickyMenuOffCanvas {
+  &:global(.offcanvas-start) {
+    width: 100%;
+
+    :global(.offcanvas-header) {
+      padding: 0;
+      display: none;
+    }
+
+    :global(.offcanvas-body) {
+      padding: 0;
+      background: $surface;
+
+      > div {
+        padding-bottom: 3rem;
+      }
+    }
+  }
+}

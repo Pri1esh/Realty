@@ -1,0 +1,85 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.cookiesLayer {
+  background: $white;
+  @include toRem(width, 380);
+  @include toRem(border-radius, 8);
+  box-shadow: rgb(0 0 0 / 15%) 0px 10px 37px;
+  border: 0.5px solid rgba(118, 118, 118, 0.28);
+  position: fixed;
+  @include toRem(left, 25);
+  @include toRem(bottom, 25);
+  @include toRem(padding, 30);
+  display: flex;
+  flex-direction: column;
+  z-index: 111;
+
+  > svg {
+    @include toRem(width, 20);
+    fill: $davyGray;
+  }
+
+  .closeIcon {
+    @include toRem(margin-left, -12);
+    @include toRem(margin-bottom, 8);
+    @include toRem(margin-top, -12);
+
+    i {
+      font-size: 1.25rem;
+      fill: davyGray;
+    }
+  }
+
+  h3 {
+    @include toRem(font-size, 20);
+    @include toRem(margin-bottom, 12);
+    font-family: $font-bold;
+  }
+}
+
+.cookiesContent {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5625rem;
+
+    button {
+      &:first-child {
+        color: $gray-600;
+        text-decoration: none;
+
+        &:hover {
+          color: $gray-600;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  p {
+    @include toRem(font-size, 15);
+  }
+
+  .btn {
+    @include toRem(font-size, 16);
+    @include toRem(margin-top, 25);
+    margin-left: auto;
+    color: $white;
+
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}
+
+:global(.offcanvas) {
+  .cookiesContent {
+    padding-bottom: 1.25rem;
+  }
+}

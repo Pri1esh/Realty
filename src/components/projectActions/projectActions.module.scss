@@ -1,0 +1,177 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.projectactions {
+  text-align: right;
+  margin-bottom: 1rem;
+  position: relative;
+  margin-top: 0.9rem;
+  z-index: 2;
+
+  @media screen and (max-width: 991px) {
+    margin-bottom: 0.9rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  li {
+    display: inline;
+    margin-left: 2.875rem;
+
+    button {
+      @media (max-width: 991px) {
+        align-items: center;
+        background-color: transparent;
+        border: 0;
+        border-radius: 1.125rem;
+        cursor: pointer;
+        display: flex;
+        height: 2.25rem;
+        justify-content: center;
+        padding: 0;
+        position: relative;
+        transition: background-color 0.5s;
+        width: 2.25rem;
+
+        span {
+          @include center(both);
+        }
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      margin-left: 0;
+
+      &:last-child {
+        margin-right: -0.5rem;
+      }
+    }
+
+    i {
+      margin-right: 0.688rem;
+      font-size: 1rem;
+      line-height: 1;
+
+      @media screen and (max-width: 991px) {
+        margin-right: 0;
+      }
+    }
+
+    .threeDot {
+      i {
+        height: 1rem;
+      }
+    }
+
+    &.hideDesktop {
+      display: none;
+    }
+
+    &.hideMobile {
+      display: inline-block;
+    }
+
+    @media screen and (max-width: 991px) {
+      &.hideMobile {
+        display: none;
+      }
+
+      &.hideDesktop {
+        display: inline-block;
+      }
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    button {
+      span {
+        text-decoration: underline;
+      }
+
+      &:hover {
+        span {
+          text-decoration: none;
+        }
+      }
+    }
+
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    a,
+    button {
+      padding: 0rem;
+      font-size: 0.875rem;
+      color: $gray-600;
+      font-weight: 500;
+      font-family: $font-medium;
+      vertical-align: middle;
+      border-radius: 0;
+      display: inline-block;
+      border: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &:active {
+        transform: scale(0.94);
+      }
+    }
+  }
+}
+
+.toastContainer {
+  top: 9rem !important;
+  z-index: 9999;
+
+  .toast {
+    width: auto;
+    font-size: 0.75rem;
+
+    border-radius: 5rem;
+
+    .toastHeader {
+      background: $gray-600;
+      color: $white;
+      border-radius: 0.5rem;
+      padding: 0.8rem 1.25rem 0.7rem;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.formOffCanvas {
+  padding: 0;
+
+  & > div {
+    & > div {
+      padding-top: 0;
+      border: none;
+    }
+  }
+}
+
+.downloadCanvas {
+  justify-content: space-between;
+
+  a {
+    padding: 1rem 1.25rem;
+    font-weight: 600;
+    display: block;
+
+    &:hover {
+      background: $antiFlashWhiteHover;
+    }
+  }
+
+  i {
+    float: right;
+    width: 1rem;
+  }
+}

@@ -1,0 +1,120 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.otpInput {
+  max-width: 25rem;
+  position: relative;
+
+  @media (max-width: 991px) {
+    padding-bottom: 1.25rem;
+  }
+
+  :global(.iconButton) {
+    @include toRem(font-size, 22);
+    top: -6.5rem;
+    position: absolute;
+    left: -0.5rem;
+  }
+
+  p {
+    color: $dark;
+
+    span {
+      color: $secondary;
+      text-decoration: underline;
+      cursor: pointer;
+      font-weight: 600;
+      margin-left: 5px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  form {
+    margin-top: 1.5rem;
+  }
+
+  .otpContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 1.25rem 0 2.5rem;
+
+    input {
+      width: 3.6rem;
+      height: 3.6rem;
+      margin-right: 1rem;
+      border: 1px solid $chineseSilver;
+      border-radius: 0.4rem;
+      text-align: center;
+      font-family: $font-regular;
+      font-weight: 600;
+      font-size: 1.5rem;
+
+      @media screen and (max-width: 767px) {
+        height: 2.8rem;
+        width: 17.5%;
+        margin-right: 3%;
+      }
+
+      &:focus {
+        border-color: $secondary;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .otpBtnContainer {
+    @media (max-width: 991px) {
+      @include toRem(min-height, 78);
+    }
+  }
+
+  .submitBtn {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .error {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: $error;
+  }
+
+  .otpError {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 1rem;
+    color: $error;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    max-width: 100%;
+    text-align: center;
+
+    .otpContainer {
+      justify-content: center;
+    }
+
+    .submitBtn {
+      width: 40%;
+    }
+  }
+
+  :global(.icon_button) {
+    top: -6.5rem;
+    position: absolute;
+    left: -0.5rem;
+
+    i {
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+  }
+}

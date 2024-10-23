@@ -1,0 +1,148 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.banner {
+  min-height: 25rem;
+  position: relative;
+  padding-bottom: 3px;
+  overflow: hidden;
+
+  @media screen and (max-width: 767px) {
+    padding-bottom: 4rem;
+    min-height: auto;
+  }
+
+  &:after {
+    @include gradientBorder(right);
+    height: 0.188rem;
+    bottom: 0;
+    top: unset;
+    z-index: 0;
+  }
+
+  .compleft {
+    position: absolute;
+    max-width: 21.5rem;
+    left: -100px;
+    transition: all linear 0.5s 0s;
+    bottom: 0;
+    opacity: 0;
+    animation: slideRight 0.5s linear 1s;
+    animation-fill-mode: forwards;
+
+    @media screen and (max-width: 767px) {
+      max-width: 7.9rem;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .compright {
+    position: absolute;
+    max-width: 21.5rem;
+    right: -100px;
+    bottom: 0;
+    opacity: 0;
+    animation: slideLeft 0.5s linear 1s;
+    animation-fill-mode: forwards;
+
+    @media screen and (max-width: 767px) {
+      max-width: 7.27rem;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .bannercontent {
+    max-width: 39.44rem;
+    text-align: center;
+    @include center(horizontal);
+    color: $gray-600;
+    bottom: 5rem;
+
+    @media screen and (max-width: 991px) {
+      width: 100%;
+      max-width: none;
+      position: static;
+      transform: translate(0);
+      padding: 1rem 1.25rem 0;
+      margin-top: 3rem;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-bottom: 1.5rem;
+      font-family: $font-bold;
+      background-image: linear-gradient(to right, #2f9ab2 6%, #9a05ce);
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+      text-shadow: 0 0 transparent;
+
+      @media screen and (max-width: 767px) {
+        margin-bottom: 1.25rem;
+        font-size: 1.75rem;
+      }
+
+      &.textGradient {
+        background: -webkit-linear-gradient(60deg, #2f9ab2, #9a05ce);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      line-height: 3.75rem;
+      margin-bottom: 0.5rem;
+      font-family: $font-bold;
+
+      @media screen and (max-width: 767px) {
+        line-height: 2rem;
+        margin: 0 auto 0.875rem;
+        font-size: 1.5rem;
+        width: 15rem;
+        text-align: center;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.625rem;
+
+      @media screen and (max-width: 767px) {
+        font-weight: 300;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@keyframes slideRight {
+  from {
+    left: -100px;
+    opacity: 0;
+  }
+
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    right: -100px;
+    opacity: 0;
+  }
+
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}

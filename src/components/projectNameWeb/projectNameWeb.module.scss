@@ -1,0 +1,110 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.projectName {
+  h3 {
+    @include toRem(font-size, 28);
+    font-family: $font-bold;
+  }
+
+  p {
+    margin-top: 10px;
+
+    @media screen and (min-width: 992px) and (max-width: 1366px) {
+      white-space: nowrap;
+    }
+
+    span {
+      font-size: 0.938rem;
+      line-height: 1rem;
+      color: $gray-600;
+      font-weight: 400;
+      margin-right: 0.5rem;
+      font-family: $font-regular;
+      cursor: pointer;
+
+      a {
+        position: relative;
+        color: $gray-600;
+        cursor: pointer;
+      }
+
+      sup {
+        vertical-align: super;
+        top: 0;
+        display: inline-block;
+      }
+
+      &.noCursor {
+        margin-left: 1rem;
+        text-align: left;
+        vertical-align: unset;
+        display: inline-block;
+        position: relative;
+        padding: 0;
+        cursor: text;
+
+        &:before {
+          content: '';
+          @include center(vertical);
+          background: $philippineGray1;
+          width: 0.25rem;
+          height: 0.25rem;
+          left: -0.9rem;
+          border-radius: 100%;
+          position: absolute;
+          display: block;
+        }
+      }
+
+      strong {
+        font-family: $font-medium;
+        font-weight: 500;
+      }
+    }
+
+    small {
+      margin: 0 11px;
+      color: $philippineGray1;
+      display: none;
+    }
+  }
+
+  svg {
+    margin-right: 0.5rem;
+    display: none;
+    max-width: 0.8rem;
+    stroke: $gray-600;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.priceTooltip {
+  margin-left: 1rem;
+  text-align: left;
+  vertical-align: unset;
+  display: inline-block;
+  position: relative;
+  padding: 0;
+
+  span {
+    &::before {
+      display: none;
+    }
+  }
+
+  &:before {
+    content: '';
+    @include center(vertical);
+    background: $philippineGray1;
+    width: 0.25rem;
+    height: 0.25rem;
+    left: -0.9rem;
+    border-radius: 100%;
+    position: absolute;
+    display: block;
+  }
+}

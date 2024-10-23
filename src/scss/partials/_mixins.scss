@@ -1,0 +1,134 @@
+@mixin imgoverlay {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 37%, $black);
+}
+
+@mixin blackfadeoverlay {
+  content: '';
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 37%, $black);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  -webkit-border-radius: calc($size / 2);
+  -moz-border-radius: calc($size / 2);
+  border-radius: calc($size / 2);
+}
+
+@mixin transition($x...) {
+  -webkit-transition: $x;
+  -moz-transition: $x;
+  -ms-transition: $x;
+  -o-transition: $x;
+  transition: $x;
+}
+
+@mixin toRem($property, $value) {
+  #{$property}: calc($value / 16) + rem;
+}
+
+@mixin center($position) {
+  position: absolute;
+
+  @if $position == 'vertical' {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  } @else if $position == 'horizontal' {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+  } @else if $position == 'both' {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+@mixin gradientBorder($direction) {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: #1b86a2;
+  background: -moz-linear-gradient(
+    to $direction,
+    #1b86a2 0%,
+    #2073b8 22%,
+    #6b5ca6 41%,
+    #923993 70%,
+    #cd4b59 93%,
+    #f05636 100%
+  );
+  background: -webkit-linear-gradient(
+    to $direction,
+    #1b86a2 0%,
+    #2073b8 22%,
+    #6b5ca6 41%,
+    #923993 70%,
+    #cd4b59 93%,
+    #f05636 100%
+  );
+  background: linear-gradient(
+    to $direction,
+    #1b86a2 0%,
+    #2073b8 22%,
+    #6b5ca6 41%,
+    #923993 70%,
+    #cd4b59 93%,
+    #f05636 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1b86a2', endColorstr='#f05636', GradientType=1);
+}
+
+@mixin screen($size) {
+  @media (min-width: #{$size}px) {
+    @content;
+  }
+}
+
+@mixin visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@mixin scale($ratio) {
+  -webkit-transform: scale($ratio);
+  -moz-transform: scale($ratio);
+  -ms-transform: scale($ratio);
+  -o-transform: scale($ratio);
+  transform: scale($ratio);
+}
+
+@mixin font-face($font-name, $font-path, $weight: normal, $style: normal, $font-display: fallback) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($font-path + '.eot');
+    src:
+      url($font-path + '.eot?#iefix') format('embedded-opentype'),
+      url($font-path + '.woff2') format('woff2'),
+      url($font-path + '.woff') format('woff'),
+      url($font-path + '.ttf') format('truetype'),
+      url($font-path + '.svg##{$font-name}') format('svg');
+    font-weight: $weight;
+    font-style: $style;
+    font-display: $font-display;
+  }
+}

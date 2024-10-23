@@ -1,0 +1,168 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.restaurantCard {
+  &:hover {
+    .restaurantImg {
+      transition: ease-in-out all 2600ms;
+      transform: scale(1.1);
+    }
+  }
+
+  a {
+    position: relative;
+    display: flex;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    border-radius: $borderRadius;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+
+    .imgType {
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      padding: 0.25rem 0.8rem;
+      border-radius: 1rem;
+      color: $white;
+      font-size: 0.75rem;
+      z-index: 1;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 0.875rem;
+    }
+  }
+
+  .restaurantImg {
+    transform: scale(1);
+    transition: ease-in-out all 2600ms;
+    @include toRem(height, 264);
+    object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+
+    @media (max-width: 991px) {
+      height: 19.25rem;
+    }
+  }
+
+  &.articlesCard {
+    .restaurantImg {
+      @media (max-width: 991px) {
+        height: 16.75rem;
+      }
+    }
+  }
+
+  .restaurantLogo {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.75rem;
+    left: 1rem;
+    padding: 0.5rem;
+    background-color: $white;
+    object-fit: contain;
+  }
+
+  .discount {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    border-radius: 0.33rem;
+    font-size: 0.875rem;
+    color: $white;
+    background: #13a180;
+    padding: 0.25rem 1rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: $gray-600;
+    font-family: $font-bold;
+    margin: 1rem 0 0.55rem 0;
+
+    @media screen and (max-width: 767px) {
+      font-size: 1rem;
+    }
+  }
+
+  .flexBox {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .price {
+    display: block;
+    color: $gray-600;
+    padding-bottom: 0.125rem;
+  }
+
+  .status {
+    display: block;
+
+    &[data-status='Closed'] {
+      color: $engineRed;
+    }
+
+    &[data-status='Open Now'] {
+      color: $green;
+    }
+
+    small {
+      font-size: 1.25rem;
+      line-height: 0;
+    }
+  }
+
+  button {
+    color: $gray-600;
+    font-weight: bold;
+    border-color: $gray-600;
+  }
+
+  p {
+    font-size: 0.75rem;
+    color: $dark;
+
+    @media screen and (max-width: 767px) {
+      font-size: 0.875rem;
+    }
+  }
+
+  &.officeCard {
+    .imgWrapper {
+      overflow: hidden;
+      position: relative;
+      border-radius: $borderRadius;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+    }
+
+    a {
+      margin-bottom: 0.875rem;
+    }
+
+    p {
+      color: $gray-600;
+      line-height: 1.25rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+
+      @media screen and (max-width: 767px) {
+        font-size: 1.125rem;
+        margin: 1.25rem 0 0.7rem;
+      }
+    }
+  }
+}

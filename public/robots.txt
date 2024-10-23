@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /sitecore/
+
+User-agent: GPTBot
+Disallow: /
+
+Sitemap: https://www.adanirealty.com/sitemap.xml

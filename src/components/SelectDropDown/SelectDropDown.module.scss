@@ -1,0 +1,182 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.errorContainer {
+  .dropdown_toggle,
+  &:focus,
+  &:hover {
+    border-color: $error;
+  }
+
+  .errorMessage {
+    color: $error;
+    font-size: 0.75rem;
+    margin: 0;
+    display: none;
+  }
+}
+
+.disabledContainer {
+  .dropdown_toggle {
+    background-color: $bright-Gray;
+    opacity: 1;
+  }
+}
+
+.dropdown_toggle,
+.dropdown_toggle:hover,
+.dropdown_toggle:focus {
+  width: 100%;
+  @include toRem(height, 76);
+  color: $secondary;
+  background-color: $white;
+  border: solid 1px transparent;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+
+  &.errorState {
+    border-color: $error;
+  }
+
+  i {
+    color: $gray-600;
+    display: none;
+
+    @media (max-width: 991px) {
+      display: inline;
+    }
+  }
+}
+
+.dropdown_toggle::after {
+  display: none;
+}
+
+.dropdown_toggle_open,
+.dropdown_toggle_open:focus,
+.dropdown_toggle_open:hover {
+  border-color: $gray-600;
+
+  &.errorState {
+    border-color: $error;
+  }
+}
+
+.dropdown_menu {
+  background-color: $white;
+  border: solid 1px $popup-box-border-color;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 1.25rem 0 rgba(136, 136, 136, 0.2);
+  margin-top: 0.2rem;
+  max-height: 21.875rem;
+  overflow-y: auto;
+  min-width: 13.7rem;
+
+  @media (max-width: 767px) {
+    min-width: 100%;
+  }
+
+  a {
+    &:hover {
+      background: $antiFlashWhiteHover;
+    }
+
+    &:first-child {
+      padding-top: 0.7rem;
+    }
+
+    &:last-child {
+      padding-bottom: 0.7rem;
+    }
+  }
+}
+
+.dropdown_menu_item {
+  @include toRem(font-size, 14);
+  color: $secondary;
+  line-height: 1.5;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $white;
+  }
+
+  &[aria-selected='true'] {
+    background-color: $white;
+  }
+}
+
+.downArrow,
+.upArrow {
+  @include toRem(width, 14);
+  @include toRem(height, 14);
+  display: none;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+}
+
+.upArrow {
+  transform: rotate(180deg);
+}
+
+.floating_label {
+  transition: ease all 0.3s;
+  @include toRem(top, 17);
+  font-size: 0.75rem;
+  color: $dark;
+}
+
+.dropdown_option {
+  color: $gray-600;
+}
+
+.floating_label_float {
+  font-size: 0.75rem;
+  color: $dark;
+  transition: ease all 0.3s;
+
+  @media (max-width: 991px) {
+    font-size: 1rem;
+  }
+}
+
+.tick {
+  @include toRem(width, 22);
+  @include toRem(height, 22);
+
+  line {
+    stroke-width: 2;
+    stroke: $black;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  margin-left: auto;
+}
+
+.textActive {
+  font-weight: 500;
+}
+
+.flightLogo {
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.placeholder {
+  color: $gray-600;
+  font-size: 0.875rem;
+  opacity: 0.5;
+
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+}

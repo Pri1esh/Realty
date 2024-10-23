@@ -1,0 +1,275 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.timelineCarouselWrap {
+  > div {
+    margin: 0;
+  }
+}
+
+.timeline {
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+
+  .timeline_thumb {
+    position: relative;
+    overflow: hidden;
+
+    .imgType {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      border-radius: 1rem;
+      color: $white;
+      font-size: 0.75rem;
+      z-index: 1;
+    }
+
+    img {
+      width: 100%;
+      min-height: 40.6rem;
+      object-fit: cover;
+      border-radius: 1rem;
+
+      @media screen and (max-width: 991px) {
+        min-height: 33rem;
+        object-position: center;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      border-radius: 1rem;
+      top: 0;
+
+      @media screen and (min-width: 992px) {
+        bottom: unset;
+      }
+
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $black;
+      opacity: 0.4;
+    }
+  }
+
+  .timeline_content {
+    color: $white;
+    width: 100%;
+    position: absolute;
+    bottom: 7.5rem;
+    left: 0;
+    padding: 1.68rem;
+
+    @media screen and (min-width: 992px) {
+      @include center(vertical);
+      max-width: 28.313rem;
+      right: 5.125rem;
+      bottom: unset;
+      left: unset;
+    }
+
+    @media screen and (max-width: 767px) {
+      padding: 0 1.4rem 0;
+    }
+
+    span {
+      font-size: 1.375rem;
+      font-family: $font-bold;
+      margin-bottom: 0.5rem;
+      display: inline-block;
+
+      @media screen and (max-width: 991px) {
+        font-size: 1rem;
+        font-family: $font-medium;
+        margin-bottom: 0.59rem;
+      }
+    }
+
+    h3 {
+      font-size: 2.25rem;
+      font-family: $font-bold;
+      line-height: 2.8rem;
+
+      @media screen and (max-width: 991px) {
+        font-size: 1.5rem;
+        margin-bottom: 0.6rem;
+        line-height: normal;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.63;
+
+      @media screen and (max-width: 991px) {
+        @include toRem(font-size, 15);
+      }
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    overflow: inherit;
+  }
+}
+
+.timelineCarousel {
+  position: relative;
+
+  :global(.slick-slider) {
+    @media screen and (max-width: 991px) {
+      :global(.slick-list) {
+        margin: 0 !important;
+
+        :global(.slick-track) {
+          padding: 0;
+        }
+      }
+    }
+
+    :global(.slick-slide) {
+      padding: 0;
+    }
+
+    :global(.slick-dots) {
+      max-width: 80%;
+      left: 3.313rem;
+      bottom: 4.8rem;
+
+      @media screen and (max-width: 991px) {
+        left: 0;
+        max-width: 100%;
+        bottom: 4rem;
+        padding: 0 2rem;
+      }
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+        background-color: $white;
+        height: 1px;
+
+        li {
+          padding: 1.5rem 0;
+          min-height: 2rem;
+          cursor: pointer;
+          width: 1rem;
+
+          &::before {
+            content: '';
+            width: 0.625rem;
+            height: 0.625rem;
+            background: $white;
+            left: 0;
+            border-radius: 100%;
+            transition: ease all 0.3s;
+            @include center(both);
+            top: 0;
+
+            @media screen and (max-width: 991px) {
+              width: 0.563rem;
+              height: 0.563rem;
+            }
+          }
+
+          & div {
+            top: -2rem;
+            left: 0;
+            position: absolute;
+            opacity: 1;
+            transition: ease all 0.3s;
+            font-size: 1rem;
+            color: $white;
+            font-weight: 500;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+
+            @media screen and (max-width: 991px) {
+              font-size: 1rem;
+              font-weight: 400;
+            }
+
+            span {
+              position: absolute;
+              left: -0.3rem;
+              top: -1rem;
+              opacity: 0;
+              @include center(horizontal);
+
+              @media screen and (max-width: 991px) {
+                left: 0;
+              }
+            }
+          }
+
+          &:hover {
+            span {
+              transition: ease all 0.3s;
+              opacity: 1;
+            }
+          }
+
+          &:global(.slick-active) {
+            &:before {
+              width: 1.875rem;
+              height: 1.875rem;
+              transition: ease all 0.3s;
+              @include center(both);
+              top: 0;
+
+              @media screen and (max-width: 991px) {
+                width: 1.125rem;
+                height: 1.125rem;
+              }
+            }
+
+            span {
+              transition: ease all 0.3s;
+              opacity: 1;
+              @include center(horizontal);
+            }
+          }
+
+          &:first-child {
+            span {
+              left: 0;
+            }
+
+            &:before {
+              left: 0;
+            }
+          }
+
+          &:last-child {
+            span {
+              left: unset;
+              right: -1.5rem;
+            }
+
+            &:before {
+              left: 70%;
+            }
+          }
+        }
+      }
+    }
+
+    :global(.slick-prev) {
+      bottom: 3rem;
+      top: unset;
+      right: 5rem;
+      left: unset;
+    }
+
+    :global(.slick-next) {
+      bottom: 3rem;
+      top: unset;
+      right: 2.25rem;
+    }
+  }
+}

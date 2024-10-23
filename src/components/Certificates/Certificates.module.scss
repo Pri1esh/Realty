@@ -1,0 +1,170 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.certificate {
+  padding-top: 3.75rem;
+
+  .wrapper {
+    h2 {
+      margin-bottom: 2rem;
+      font-size: 1.75rem;
+      font-family: $font-bold;
+
+      @media (max-width: 767px) {
+        font-size: 1.375rem;
+      }
+    }
+
+    ul {
+      display: flex;
+      border-bottom: 0.0625rem solid $brightGray;
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+
+      li {
+        &:last-child {
+          min-width: 82%;
+        }
+
+        &:first-child {
+          width: 12.5rem;
+          height: 7.5rem;
+          border: 0.0625rem solid $brightGray;
+          border-radius: $borderRadius;
+          text-align: center;
+          margin-right: 1.5rem;
+
+          img {
+            max-height: 100%;
+            padding: 0.25rem 0;
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+          }
+
+          @media (max-width: 767px) {
+            display: none;
+          }
+        }
+
+        .propertyName {
+          padding: 0 0 0.5rem 0.625rem;
+          font-size: 1.375rem;
+          font-family: $font-bold;
+          color: $gray-600;
+          line-height: 1.64;
+
+          @media (max-width: 991px) {
+            padding: 0 0 1.5rem 0;
+            font-size: 1.125rem;
+          }
+        }
+
+        h4 {
+          padding: 0 0 1.25rem 0.625rem;
+          font-size: 1rem;
+
+          @media (max-width: 1365px) {
+            padding: 0 0 0.875rem 0;
+          }
+        }
+
+        p {
+          position: relative;
+
+          @media (max-width: 1365px) {
+            margin-bottom: 0.75rem;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+
+          a {
+            padding: 0.625rem 3rem 0.625rem 0.625rem;
+            display: inline-block;
+
+            @media (max-width: 1365px) {
+              padding: 0 2rem 0 0;
+            }
+
+            &:hover {
+              background: $antiFlashWhiteHover;
+              color: $gray-600;
+
+              @media (max-width: 1365px) {
+                background: transparent;
+              }
+            }
+          }
+        }
+
+        a {
+          color: $gray-600;
+          cursor: pointer;
+          font-size: 1.125rem;
+
+          @media (max-width: 1365px) {
+            padding: 0;
+          }
+
+          &:hover {
+            color: $dark;
+
+            @media (min-width: 1366px) {
+              span {
+                i {
+                  font-size: 1rem;
+                  position: absolute;
+                  right: 1rem;
+                  top: 50%;
+                  display: block;
+                  transform: translateY(-50%);
+                }
+              }
+            }
+          }
+
+          @media (max-width: 991px) {
+            width: 100%;
+            font-size: 0.938rem;
+          }
+
+          span {
+            font-family: $font-bold;
+
+            @media (max-width: 1365px) {
+              word-break: break-all;
+
+              i {
+                font-size: 1rem;
+                position: absolute;
+                right: 0;
+                top: 0.125rem;
+              }
+            }
+
+            i {
+              @media (min-width: 1366px) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        border-bottom: none;
+        margin-bottom: 5rem;
+
+        @media (max-width: 767px) {
+          margin-bottom: 2rem;
+        }
+      }
+
+      @media (max-width: 767px) {
+        display: inherit;
+      }
+    }
+  }
+}

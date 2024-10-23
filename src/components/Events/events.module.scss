@@ -1,0 +1,61 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+@import '../src/scss/partials/mixins.scss';
+
+.tabsEvents {
+  .card {
+    &.banner-card {
+      figure {
+        position: relative;
+
+        &:after {
+          @include blackfadeoverlay;
+          min-height: 12rem;
+        }
+
+        img {
+          @media screen and (min-width: 992px) {
+            min-width: 28.125rem;
+          }
+        }
+      }
+
+      .card-body {
+        position: absolute;
+        bottom: 0;
+        color: $white;
+        width: 100%;
+        padding: 1.438rem;
+
+        .card-title {
+          font-size: 1.75rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .card-desc {
+          font-size: 1rem;
+          color: $white;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .slick-slider {
+    .slick-prev {
+      position: absolute;
+      left: auto;
+      right: 3.438rem;
+      top: -6.2rem;
+      opacity: 1;
+    }
+
+    .slick-next {
+      position: absolute;
+      top: -6.2rem;
+      opacity: 1;
+      right: 0.625rem;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.propertyMasterLayout {
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+
+  figure {
+    display: block;
+
+    img {
+      width: 100%;
+      border-radius: $borderRadius;
+      border: 0.0625rem solid $platinum;
+      min-height: 25rem;
+
+      @media (max-width: 767px) {
+        min-height: 15rem;
+      }
+    }
+  }
+}
+
+.pointer {
+  width: 1.313rem;
+  height: 1.313rem;
+  padding: 0.125rem;
+  cursor: pointer;
+  position: absolute;
+  background-color: $white;
+  border: 0.188rem solid $blue;
+  border-radius: 1rem;
+  transition: all 400ms;
+
+  &:after {
+    content: '';
+
+    @media (min-width: 992px) {
+      border: 0.063rem solid $white;
+      width: 1.313rem;
+      height: 1.313rem;
+      position: absolute;
+      @include center(both);
+      border-radius: 100%;
+    }
+  }
+}
+
+.pointer:hover {
+  transform: scale3d(1.2, 1.2, 1.2);
+}
+
+@media only screen and (max-width: 991px) {
+  .pointer {
+    width: 1.3rem;
+    height: 1.3rem;
+    border: 1px solid $white;
+    background: transparent;
+
+    &:before {
+      content: '';
+      background: $blue;
+      width: 0.8rem;
+      height: 0.8rem;
+      @include center(both);
+      border-radius: 100%;
+    }
+
+    &:after {
+      content: '';
+      background: $white;
+      width: 0.25rem;
+      height: 0.25rem;
+      @include center(both);
+      border-radius: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .tooltipStyle {
+    font-size: 0.5rem;
+  }
+}
+
+.propertyMain {
+  @media (max-width: 767px) {
+    overflow-x: auto;
+    position: relative;
+    border-radius: $borderRadius;
+  }
+
+  .propertyMasterLayout {
+    @media screen and (max-width: 767px) {
+      min-width: 200vw;
+    }
+  }
+}

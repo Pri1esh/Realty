@@ -1,0 +1,127 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.sitemap {
+  @media (max-width: 991px) {
+    padding-top: 1.5rem;
+  }
+
+  > div {
+    @media (max-width: 991px) {
+      padding-bottom: 2rem;
+    }
+  }
+
+  @media (min-width: 992px) {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -1rem;
+    margin-left: -1rem;
+  }
+
+  div {
+    @media (min-width: 992px) {
+      &[data-width='3'] {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-right: 1rem;
+        padding-left: 1rem;
+      }
+
+      &[data-width='6'] {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+      }
+
+      &[data-width='1'] {
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        a {
+          line-height: 1;
+        }
+      }
+
+      &[data-width='9'] {
+        flex: 0 0 75%;
+        max-width: 75%;
+        padding-right: 1rem;
+        padding-left: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        > div {
+          flex: 0 0 33%;
+          max-width: 33%;
+        }
+      }
+    }
+
+    margin-bottom: 2rem;
+
+    @media (min-width: 992px) {
+      margin-bottom: 2rem;
+    }
+
+    @media screen and (min-width: 992px) {
+      margin-bottom: 2.5rem;
+      align-self: flex-start;
+    }
+
+    @media (max-width: 991px) {
+      div {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  h2 {
+    border-bottom: 0.0625rem solid $platinum;
+    padding: 0 0 1rem 0;
+    margin: 0 0 1.5rem 0;
+    font-size: 1.375rem;
+    color: $gray-600;
+    font-weight: 600;
+    width: 100%;
+    font-family: $font-bold;
+  }
+
+  h3 {
+    font-size: 1.188rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+  }
+
+  a {
+    font-size: 1.063rem;
+    color: $gray-600;
+    font-weight: 500;
+    line-height: 2rem;
+    display: table;
+    text-decoration: underline;
+
+    @media (max-width: 767px) {
+      line-height: 3rem;
+    }
+  }
+}

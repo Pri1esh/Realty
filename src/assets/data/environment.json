@@ -1,0 +1,41 @@
+{
+  "data": [
+    {
+      "downloadRera": "Rera Certificates download successfully",
+      "reraHeading": "Rera Certificates",
+      "rera": [
+        {
+          "download": "",
+          "downloadurl": "https://www.uat.adanirealty.com/-/media/Project/Realty/Residential/Mumbai/Monte-South/RERA/Monte-South-P51800001585.pdf",
+          "title": "https://maharera.mahaonline.gov.in",
+          "titleLink": "https://maharera.mahaonline.gov.in",
+          "titleLinkTarget": "_blank",
+          "reraTitle": "RERA No.",
+          "reraNumber": "P51800001585",
+          "qrCodeImage": ""
+        },
+        {
+          "download": "",
+          "downloadurl": "https://www.uat.adanirealty.com/-/media/Project/Realty/Residential/Mumbai/Monte-South/RERA/Monte-South-P51800001585.pdf",
+          "title": "https://maharera.mahaonline.gov.in",
+          "titleLink": "https://maharera.mahaonline.gov.in",
+          "titleLinkTarget": "_blank",
+          "reraTitle": "RERA No.",
+          "reraNumber": "4567897657",
+          "qrCodeImage": ""
+        }
+      ],
+      "envHeading": "Environmental Clearance Certificates",
+      "downloadEnv": "Environment Certificates download successfully",
+      "envModal": [
+        {
+          "url": "",
+          "envMonth": "July 2023",
+          "download": "",
+          "downloadurl": "https://www.uat.adanirealty.com/-/media/Project/Realty/Residential/Mumbai/Ten-BKC/RERA/Ten-BKC-RERA-Certificate.pdf",
+          "envMonthTarget": "_blank"
+        }
+      ]
+    }
+  ]
+}

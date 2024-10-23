@@ -1,0 +1,25 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.disclaimer {
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $gray-600;
+    line-height: 2.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  p {
+    color: $dark;
+    line-height: 1.5rem;
+    margin-bottom: 0.25rem;
+
+    @media (max-width: 991px) {
+      font-size: 0.75rem;
+      color: $sonicSilver;
+      line-height: unset;
+      margin-bottom: 0.5rem;
+    }
+  }
+}

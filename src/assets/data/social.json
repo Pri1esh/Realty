@@ -1,0 +1,46 @@
+{
+  "params": {
+    "waveImage": "https://www.uat.adanirealty.com/-/media/Project/Realty/Home/waves",
+    "waveImageAlt": "Adani Realty"
+  },
+  "fields": {
+    "data": [
+      {
+        "src": "https://www.uat.adanirealty.com/-/media/Project/Realty/Home/whyadani.jpeg",
+        "link": "https://www.uat.adanirealty.com/why-adani",
+        "linktarget": "",
+        "imgalt": "Why Adani Realty",
+        "imgtitle": "Artistic Impression",
+        "heading": "Why Adani Realty?",
+        "columns": 1
+      },
+      {
+        "src": "https://www.uat.adanirealty.com/-/media/Project/Realty/Home/communicationcorner.png",
+        "link": "https://www.uat.adanirealty.com/blogs",
+        "linktarget": "",
+        "imgalt": "Communication Corner",
+        "imgtitle": "Artistic Impression",
+        "heading": "Communication Corner",
+        "columns": 2
+      },
+      {
+        "src": "https://www.uat.adanirealty.com/-/media/Project/Realty/Home/Accolades-thumb.jpg",
+        "link": "https://www.uat.adanirealty.com/completed-projects",
+        "linktarget": "",
+        "imgalt": "Adani Realty Completed Projects",
+        "imgtitle": "Actual Image",
+        "heading": "Completed Projects",
+        "columns": 3
+      },
+      {
+        "src": "https://www.uat.adanirealty.com/-/media/Project/Realty/Home/Accolades-thumb.jpg",
+        "link": "https://www.uat.adanirealty.com/accolades",
+        "linktarget": "",
+        "imgalt": "Adani Realty Accolades",
+        "imgtitle": "Actual Image",
+        "heading": "Accolades",
+        "columns": 4
+      }
+    ]
+  }
+}

@@ -1,0 +1,151 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.Specification {
+  .filtersLabel {
+    padding: 0.25rem 0;
+  }
+
+  .size {
+    display: flex;
+    justify-content: flex-end;
+
+    @media (min-width: 992px) {
+      padding-right: 0.875rem;
+      padding-top: 0.25rem;
+    }
+
+    button {
+      padding: 0.3rem 1rem;
+      margin: 0 0 0.5rem 0.55rem;
+      font-size: 0.8rem;
+      border-color: $gray-600;
+      color: $gray-600;
+      background: $white;
+
+      &:hover {
+        border-color: $gray-600;
+        color: $gray-600;
+        background-color: $white;
+        cursor: pointer;
+      }
+
+      &.active {
+        color: $gray-600;
+        background-color: $antiFlashWhiteHover;
+        display: inline-flex;
+        box-shadow: 0 0 0 0.0625rem $gray-600;
+      }
+    }
+  }
+
+  .propertyspecifications {
+    width: 100%;
+
+    @media (min-width: 992px) {
+      max-height: 50vh;
+      overflow: auto;
+      padding-right: 1rem;
+    }
+
+    table {
+      width: 100%;
+
+      td {
+        padding: 0.25rem 0;
+      }
+
+      label {
+        display: block;
+        text-align: left;
+        font-weight: 600;
+      }
+
+      span {
+        display: block;
+        text-align: right;
+        font-size: 0.875rem;
+      }
+    }
+
+    ul {
+      padding-right: 0.875rem;
+    }
+
+    li {
+      font-size: 0.875rem;
+      display: flex;
+      margin-bottom: 0.5rem;
+      text-align: right;
+
+      label {
+        font-size: 1rem;
+        font-weight: 500;
+        width: 70%;
+        text-align: left;
+      }
+
+      span {
+        width: 30%;
+      }
+    }
+  }
+
+  .propertyPicture {
+    border: 1px solid $silverChinese;
+    border-radius: $borderRadius;
+    padding: 0.5rem;
+    height: 100%;
+    position: relative;
+    min-height: 35rem;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 0;
+      min-height: auto;
+    }
+  }
+
+  .otherSpecification {
+    border-top: 1px solid $brightGray;
+    font-size: 0.875rem;
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+    margin-left: 0;
+
+    @media screen and (max-width: 767px) {
+      margin-top: 1.25rem;
+    }
+
+    div {
+      padding-right: 0;
+    }
+
+    label {
+      font-size: 1rem;
+      display: block;
+      font-weight: 500;
+      min-height: 2rem;
+      font-family: $font-medium;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      color: $secondary;
+      margin: 0.625rem 0 1rem 0;
+      font-weight: 600;
+
+      span {
+        color: $gray2;
+        font-size: 0.688rem;
+        vertical-align: middle;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.modalBorder {
+  height: 0.0625rem;
+  background-color: $silverChinese;
+  margin: 0 -2.5rem 1.5rem -2.5rem;
+}

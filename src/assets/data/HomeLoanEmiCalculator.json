@@ -1,0 +1,2421 @@
+{
+  "header": [
+    {
+      "uid": "3b4ad08e-c48d-4817-adb5-1a532875f2c4",
+      "componentName": "airportList",
+      "dataSource": "{8E018C34-4DBF-4EC1-A18C-A631AD9E4030}",
+      "params": {},
+      "fields": {
+        "airportList": [
+          {
+            "headerText": "Airport Home",
+            "headerLink": "https://www.adanirealty.com/",
+            "headerImage": "https://www.adanirealty.com/-/media/Project/Realty/Header/adani_realty.svg",
+            "headerLogoLink": "https://www.adanirealty.com/",
+            "headerLogoAltText": "Adani Realty",
+            "headerBackText": null,
+            "headerBackLink": null,
+            "items": []
+          }
+        ]
+      }
+    },
+    {
+      "uid": "9ab1fa41-e6ba-4221-9939-b8f7adf5edf1",
+      "componentName": "hamburgerMenu",
+      "dataSource": "{D47AC2E8-5D17-498C-B91D-55CC296455AC}",
+      "params": {},
+      "fields": {
+        "hamburgerMenu": [
+          {
+            "logosrc": "https://www.adanirealty.com/-/media/Project/Realty/Header/adani_realty.svg",
+            "logoAlt": "Adani Realty",
+            "adaniRealty": [
+              {
+                "headerText": "Adani realty",
+                "headerLink": "https://www.adanirealty.com",
+                "headerLeftIcon": "i-businesses",
+                "headerRightIcon": "",
+                "items": [
+                  {
+                    "itemText": "Home",
+                    "itemSubText": "",
+                    "itemLink": "https://www.adanirealty.com/",
+                    "target": "",
+                    "itemLeftIcon": "i-home",
+                    "itemRightIcon": "",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": null
+                  },
+                  {
+                    "itemText": "Residential",
+                    "itemSubText": "",
+                    "itemLink": "",
+                    "target": "",
+                    "itemLeftIcon": "i-residential",
+                    "itemRightIcon": "i-arrow-d icon",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": [
+                      {
+                        "itemText": "Ahmedabad",
+                        "itemSubText": "",
+                        "itemLink": "",
+                        "target": "",
+                        "itemLeftIcon": "i-ahemdabad",
+                        "itemRightIcon": "",
+                        "itemImage": null,
+                        "linkHeading": false,
+                        "collapseItems": [
+                          {
+                            "itemText": "Shantigram",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/township/shantigram-ahmedabad",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Amogha.png",
+                            "linkHeading": true,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Ikaria",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/ikaria",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Logo/The-Storeys-logo.png",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Green View",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/green-view",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Greenview-logo.png",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "The Storeys",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/the-storeys",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Logo/The-Storeys-logo.png",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "The North Park",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/the-north-park",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Logo/The-North-Park.png",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "The West Park",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/the-west-park",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Logo/the-west-park_Optimized_200x200.png",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Ambrosia",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/ambrosia",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Amogha",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/amogha",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Amogha.png",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Aster",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/aster",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Aster.png",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Paarijat",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/paarijat",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Water Lily",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/water-lily",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Water-Lily.png",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Jagatpur",
+                            "itemSubText": "",
+                            "itemLink": "#",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Atrius-New.png",
+                            "linkHeading": true,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Atrius",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/atrius",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Amogha.png",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Archway",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/archway",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Amogha.png",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "See All",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/property-in-ahmedabad?type=residential",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Amogha.png",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          }
+                        ]
+                      },
+                      {
+                        "itemText": "Gurugram",
+                        "itemSubText": "",
+                        "itemLink": "",
+                        "target": "",
+                        "itemLeftIcon": "i-gurugram",
+                        "itemRightIcon": "",
+                        "itemImage": null,
+                        "linkHeading": false,
+                        "collapseItems": [
+                          {
+                            "itemText": "Samsara Avasa",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/samsara-avasa",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Samsara Vilasa",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/samsara-vilasa",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Samsara Vilasa 2.0",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/samsara-vilasa-2.0",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Tatva Estates",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/tatva-estates",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Oyster Grande",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/oyster-grande",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Platinum Tower at Oyster Grande",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/platinum-tower",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Aangan",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/aangan",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Samsara (M Block)",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/samsara",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "See All",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/property-in-gurugram?type=residential",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          }
+                        ]
+                      },
+                      {
+                        "itemText": "Mumbai",
+                        "itemSubText": "",
+                        "itemLink": "",
+                        "target": "",
+                        "itemLeftIcon": "i-mumbai",
+                        "itemRightIcon": "",
+                        "itemImage": null,
+                        "linkHeading": false,
+                        "collapseItems": [
+                          {
+                            "itemText": "The Views",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/mumbai/the-views",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Monte South",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/mumbai/monte-south",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Ten BKC",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/mumbai/ten-bkc",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Linkbay Residences",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/mumbai/linkbay-residences",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "See All",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/property-in-mumbai?type=residential",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          }
+                        ]
+                      },
+                      {
+                        "itemText": "Pune",
+                        "itemSubText": "",
+                        "itemLink": "",
+                        "target": "",
+                        "itemLeftIcon": "i-pune",
+                        "itemRightIcon": "",
+                        "itemImage": null,
+                        "linkHeading": false,
+                        "collapseItems": [
+                          {
+                            "itemText": "Atelier Greens",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/residential-projects/pune/atelier-greens",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "See All",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/property-in-pune?type=residential",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          }
+                        ]
+                      },
+                      {
+                        "itemText": "See All",
+                        "itemSubText": "",
+                        "itemLink": "https://www.adanirealty.com/residential-projects",
+                        "target": "",
+                        "itemLeftIcon": "i-grids",
+                        "itemRightIcon": "",
+                        "itemImage": null,
+                        "linkHeading": false,
+                        "collapseItems": null
+                      }
+                    ]
+                  },
+                  {
+                    "itemText": "Commercial & Retail",
+                    "itemSubText": "",
+                    "itemLink": "https://ahmedabad.belvedereclub.in/",
+                    "target": "",
+                    "itemLeftIcon": "i-commercial",
+                    "itemRightIcon": "i-arrow-d icon",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": [
+                      {
+                        "itemText": "Ahmedabad",
+                        "itemSubText": "",
+                        "itemLink": "",
+                        "target": "",
+                        "itemLeftIcon": "i-ahemdabad",
+                        "itemRightIcon": "",
+                        "itemImage": null,
+                        "linkHeading": false,
+                        "collapseItems": [
+                          {
+                            "itemText": "Inspire Business Park",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/commercial-projects/ahmedabad/inspire-business-park",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "See All",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/property-in-ahmedabad?type=commercial",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          }
+                        ]
+                      },
+                      {
+                        "itemText": "Gurugram",
+                        "itemSubText": "",
+                        "itemLink": "",
+                        "target": "",
+                        "itemLeftIcon": "i-gurugram",
+                        "itemRightIcon": "",
+                        "itemImage": null,
+                        "linkHeading": false,
+                        "collapseItems": [
+                          {
+                            "itemText": "Miracle Mile",
+                            "itemSubText": "",
+                            "itemLink": "https://www.miraclemile.in/",
+                            "target": "_blank",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Oyster Arcade",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/commercial-projects/gurugram/oyster-arcade",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Aangan Arcade",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/commercial-projects/gurugram/aangan-arcade",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "Aangan Galleria",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/commercial-projects/gurugram/aangan-galleria",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "See All",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/property-in-gurugram?type=commercial",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          }
+                        ]
+                      },
+                      {
+                        "itemText": "Mumbai",
+                        "itemSubText": "",
+                        "itemLink": "",
+                        "target": "",
+                        "itemLeftIcon": "i-mumbai",
+                        "itemRightIcon": "",
+                        "itemImage": null,
+                        "linkHeading": false,
+                        "collapseItems": [
+                          {
+                            "itemText": "Inspire BKC",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/commercial-projects/mumbai/inspire-bkc",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          },
+                          {
+                            "itemText": "See All",
+                            "itemSubText": "",
+                            "itemLink": "https://www.adanirealty.com/property-in-mumbai?type=commercial",
+                            "target": "",
+                            "itemLeftIcon": "",
+                            "itemRightIcon": "",
+                            "itemImage": "",
+                            "linkHeading": false,
+                            "collapseItems": null
+                          }
+                        ]
+                      },
+                      {
+                        "itemText": "See All",
+                        "itemSubText": "",
+                        "itemLink": "https://www.adanirealty.com/commercial-projects",
+                        "target": "",
+                        "itemLeftIcon": "i-grids",
+                        "itemRightIcon": "",
+                        "itemImage": null,
+                        "linkHeading": false,
+                        "collapseItems": null
+                      }
+                    ]
+                  },
+                  {
+                    "itemText": "Clubs",
+                    "itemSubText": "",
+                    "itemLink": "https://www.adanirealty.com/clubs",
+                    "target": "",
+                    "itemLeftIcon": "i-clubs",
+                    "itemRightIcon": "i-arrow-d icon",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": null
+                  }
+                ]
+              }
+            ],
+            "information": [
+              {
+                "headerText": "Information",
+                "headerLink": "https://www.adanirealty.com",
+                "headerLeftIcon": "",
+                "headerRightIcon": "",
+                "items": [
+                  {
+                    "itemText": "About Us",
+                    "itemSubText": "",
+                    "itemLink": "https://www.adanirealty.com/about-us",
+                    "target": "",
+                    "itemLeftIcon": "i-about-us",
+                    "itemRightIcon": "",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": null
+                  },
+                  {
+                    "itemText": "Why Adani",
+                    "itemSubText": "",
+                    "itemLink": "https://www.adanirealty.com/why-adani",
+                    "target": "",
+                    "itemLeftIcon": "i-why-adani",
+                    "itemRightIcon": "",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": null
+                  },
+                  {
+                    "itemText": "Careers",
+                    "itemSubText": "",
+                    "itemLink": "https://www.adanirealty.com/careers",
+                    "target": "",
+                    "itemLeftIcon": "i-careers",
+                    "itemRightIcon": "",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": null
+                  },
+                  {
+                    "itemText": "Accolades",
+                    "itemSubText": "",
+                    "itemLink": "https://www.adanirealty.com/accolades",
+                    "target": "",
+                    "itemLeftIcon": "i-accolades",
+                    "itemRightIcon": "",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": null
+                  },
+                  {
+                    "itemText": "The Good Life Community",
+                    "itemSubText": "",
+                    "itemLink": "https://www.adanirealty.com/the-good-life",
+                    "target": "",
+                    "itemLeftIcon": "i-good-life",
+                    "itemRightIcon": "",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": null
+                  },
+                  {
+                    "itemText": "NRI Corner",
+                    "itemSubText": "",
+                    "itemLink": "https://www.adanirealty.com/nri-corner",
+                    "target": "",
+                    "itemLeftIcon": "i-nri-corner",
+                    "itemRightIcon": "",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": null
+                  },
+                  {
+                    "itemText": "Certifications",
+                    "itemSubText": "",
+                    "itemLink": "https://www.adanirealty.com/certifications",
+                    "target": "",
+                    "itemLeftIcon": "i-certificate",
+                    "itemRightIcon": "",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": null
+                  },
+                  {
+                    "itemText": "Communication Corner",
+                    "itemSubText": "",
+                    "itemLink": "https://www.adanirealty.com/blogs",
+                    "target": "",
+                    "itemLeftIcon": "i-communication-corner",
+                    "itemRightIcon": "",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": null
+                  },
+                  {
+                    "itemText": "Media Coverage",
+                    "itemSubText": "",
+                    "itemLink": "https://www.adanirealty.com/news-and-media",
+                    "target": "",
+                    "itemLeftIcon": "i-media-coverage",
+                    "itemRightIcon": "",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": null
+                  }
+                ]
+              }
+            ],
+            "adaniBusinesses": [
+              {
+                "headerText": "Adani Businesses",
+                "headerLink": "https://www.adanirealty.com",
+                "headerLeftIcon": "i-businesses",
+                "headerRightIcon": "i-arrow-d icon",
+                "collapseItems": [
+                  {
+                    "itemText": "Airports",
+                    "itemSubText": "",
+                    "itemLink": "https://www.adanione.com/",
+                    "target": "_blank",
+                    "itemLeftIcon": "i-airport",
+                    "itemRightIcon": "",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": null
+                  },
+                  {
+                    "itemText": "Adani Capital",
+                    "itemSubText": "",
+                    "itemLink": "https://www.adanicapital.in/",
+                    "target": "_blank",
+                    "itemLeftIcon": "i-capital",
+                    "itemRightIcon": "",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": null
+                  },
+                  {
+                    "itemText": "Adani Electricity",
+                    "itemSubText": "",
+                    "itemLink": "https://www.adanielectricity.com/",
+                    "target": "_blank",
+                    "itemLeftIcon": "i-electricity",
+                    "itemRightIcon": "",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": null
+                  },
+                  {
+                    "itemText": "Adani Housing Finance",
+                    "itemSubText": "",
+                    "itemLink": "https://www.adanihousing.in/",
+                    "target": "_blank",
+                    "itemLeftIcon": "i-housing",
+                    "itemRightIcon": "",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": null
+                  },
+                  {
+                    "itemText": "Adani Realty",
+                    "itemSubText": "",
+                    "itemLink": "https://www.adanirealty.com/",
+                    "target": "_blank",
+                    "itemLeftIcon": "i-realty",
+                    "itemRightIcon": "",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": null
+                  },
+                  {
+                    "itemText": "Adani Total Gas",
+                    "itemSubText": "",
+                    "itemLink": "https://www.adanigas.com/",
+                    "target": "_blank",
+                    "itemLeftIcon": "i-gas",
+                    "itemRightIcon": "",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": null
+                  },
+                  {
+                    "itemText": "Adani Wilmar",
+                    "itemSubText": "",
+                    "itemLink": "https://www.adaniwilmar.com/",
+                    "target": "_blank",
+                    "itemLeftIcon": "i-wilmar",
+                    "itemRightIcon": "",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": null
+                  }
+                ]
+              }
+            ],
+            "helpandsupport": [
+              {
+                "headerText": "Help & Support",
+                "headerLink": "https://www.adanirealty.com",
+                "headerLeftIcon": "i-businesses",
+                "headerRightIcon": "",
+                "items": [
+                  {
+                    "itemText": "Connect",
+                    "itemSubText": "",
+                    "itemLink": "",
+                    "target": "",
+                    "itemLeftIcon": "i-enquire-now",
+                    "itemRightIcon": "",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": [
+                      {
+                        "itemText": "Request a Call Back",
+                        "itemSubText": "We will get back to you",
+                        "itemLink": "https://www.adanirealty.com/contact-us",
+                        "target": "",
+                        "itemLeftIcon": "i-callback",
+                        "itemRightIcon": "",
+                        "itemImage": null,
+                        "linkHeading": false,
+                        "collapseItems": null
+                      },
+                      {
+                        "itemText": "WhatsApp",
+                        "itemSubText": "Send us your queries on 9676798989",
+                        "itemLink": "http://+916359977405",
+                        "target": "",
+                        "itemLeftIcon": "i-whatsapp",
+                        "itemRightIcon": "",
+                        "itemImage": null,
+                        "linkHeading": false,
+                        "collapseItems": null
+                      },
+                      {
+                        "itemText": "Toll-Free",
+                        "itemSubText": "1800 108 0009",
+                        "itemLink": "tel: 1801089898",
+                        "target": "",
+                        "itemLeftIcon": "i-toll-free",
+                        "itemRightIcon": "",
+                        "itemImage": null,
+                        "linkHeading": false,
+                        "collapseItems": null
+                      },
+                      {
+                        "itemText": "Share with us",
+                        "itemSubText": "share@adanirealty.com",
+                        "itemLink": "mailto:share@adanirealty.com",
+                        "target": "",
+                        "itemLeftIcon": "i-email-helpdesk",
+                        "itemRightIcon": "",
+                        "itemImage": null,
+                        "linkHeading": false,
+                        "collapseItems": null
+                      },
+                      {
+                        "itemText": "Partner with Us",
+                        "itemSubText": "partner@adanirealty.com",
+                        "itemLink": "mailto:partner@adanirealty.com",
+                        "target": "",
+                        "itemLeftIcon": "i-partner",
+                        "itemRightIcon": "",
+                        "itemImage": null,
+                        "linkHeading": false,
+                        "collapseItems": null
+                      }
+                    ]
+                  },
+                  {
+                    "itemText": "Contact Us",
+                    "itemSubText": "",
+                    "itemLink": "https://www.adanirealty.com/contact-us",
+                    "target": "",
+                    "itemLeftIcon": "i-call",
+                    "itemRightIcon": "",
+                    "itemImage": null,
+                    "linkHeading": false,
+                    "collapseItems": null
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "uid": "bc16392b-3ace-4c9f-a550-41ea13f79a10",
+      "componentName": "primaryHeaderMenus",
+      "dataSource": "{65BB7F5F-B700-4F44-AFC6-8BD73794DCCC}",
+      "params": {},
+      "fields": {
+        "data": [
+          {
+            "headerText": "Residential",
+            "headerLink": "https://www.adanirealty.com/residential-projects",
+            "headerLeftIcon": "",
+            "headerRightIcon": "",
+            "fatNav": true,
+            "defaultImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Pune/Atelier-Greens/Carousel-Images/Atilier-Green-(1).jpg",
+            "defaultLogo": "",
+            "headerCallback": false,
+            "items": [
+              {
+                "sectionTitle": null,
+                "fatNavSectionLink": "All Projects",
+                "sectionPromoImages": [
+                  {
+                    "promoImage": "https://www.adanirealty.com/-/media/Project/Realty/header-logo/Realty-header-image.jpg",
+                    "promoLogo": "https://www.adanirealty.com/-/media/Project/Realty/Restaurant/cafelogo3.png",
+                    "promoLink": "#",
+                    "promoAltText": "AllProjects"
+                  }
+                ],
+                "itemText": null,
+                "itemSubText": null,
+                "itemLink": null,
+                "itemLeftIcon": null,
+                "itemRightIcon": null,
+                "items": [
+                  {
+                    "sectionTitle": "Ahmedabad",
+                    "sectionTitleLink": "https://www.adanirealty.com/property-in-ahmedabad?type=residential",
+                    "sectionImage": "https://www.adanirealty.com/-/media/Project/Realty/City/Ahmedabad-new.jpg",
+                    "sectionLogo": "",
+                    "sectionItems": [
+                      {
+                        "itemText": "Shantigram",
+                        "itemLink": "https://www.adanirealty.com/township/shantigram-ahmedabad",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Shantigram.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Shantigram/Shantigram-thumb.jpg",
+                        "linkHeading": true
+                      },
+                      {
+                        "itemText": "Ikaria",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/ikaria",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Ikaria-new-logo.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Ikaria/Carousel-Image/updated-ikaria-image/EasylivingIMPACT3D15thumb.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Ambrosia",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/ambrosia",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Abrosia-logo-01.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Ambrosia/Thumbnails/3_500-x-500.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Green View",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/green-view",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Greenview-logo.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Green-View/Thumbnails/Thumbnail.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Paarijat",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/paarijat",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/PAARIJAT-LOGO.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Paarijat/Thumbnails/Thumbnail.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "The Storeys",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/the-storeys",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/The-Storeys-logo.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/The-Storeys/Thumbnail/Thumbnail.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "The North Park",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/the-north-park",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/The-North-Park.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/The-North-Park/Thumbnail.jpeg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "The West Park",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/the-west-park",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/the-west-park_Optimized_200x200.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/West-Park/Thumb/West-Park-Entrance.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Amogha",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/amogha",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Amogha.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Amogha/Thumbnails/Amogha.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Aster",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/aster",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Aster.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Aster/Carousel-Images/Aster_Cover_Image_Thumbnail-(1).jpeg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Water Lily",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/water-lily",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Water-Lily.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Water-Lily/Thumbnail.jpeg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Jagatpur",
+                        "itemLink": "",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Progressive-Amd.jpg",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Atrius/Thumbnail/Atrius.jpg",
+                        "linkHeading": true
+                      },
+                      {
+                        "itemText": "Atrius",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/atrius",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Atrius-New.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Atrius/Thumbnail/Thumbnail.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Archway",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/archway",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Archway-new-logo.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Archway/Thumbnails/Thumbnail.jpg",
+                        "linkHeading": false
+                      }
+                    ]
+                  },
+                  {
+                    "sectionTitle": "Gurugram",
+                    "sectionTitleLink": "https://www.adanirealty.com/property-in-gurugram?type=residential",
+                    "sectionImage": "https://www.adanirealty.com/-/media/Project/Realty/City/Gurgaon-old.jpg",
+                    "sectionLogo": "",
+                    "sectionItems": [
+                      {
+                        "itemText": "Samsara Avasa",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/samsara-avasa",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Samsara-Avasa-Logo.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Gurugram/Samsara-Avasa/Thumb/Samsara-Avasa-Thumb.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Samsara Vilasa",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/samsara-vilasa",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Samsara-Vilasa.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Gurugram/Samsara-Vilasa/Thumbnail.jpeg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Samsara Vilasa 2.0",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/samsara-vilasa-2.0",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/S-20.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Gurugram/Samsara-Vilasa-2/Thumbnail/Villa-144145-View.jfif",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Tatva Estates",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/tatva-estates",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/New_Tatva_logo-04.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Gurugram/Tatva-Eastate/Thumb/Thumb.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Oyster Grande",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/oyster-grande",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Oyster-Grande.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Gurugram/Oyster-Grande/Thumbnail.jpeg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Platinum Tower at Oyster Grande",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/platinum-tower",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Platinum-Towers.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Gurugram/Platinum-Tower/Thumbnail.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Aangan",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/aangan",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Aangan.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Gurugram/Aangan/Thumbnail.jpeg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Samsara (M Block)",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/samsara",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Samsara.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Samsara/Samsara.png",
+                        "linkHeading": false
+                      }
+                    ]
+                  },
+                  {
+                    "sectionTitle": "Mumbai",
+                    "sectionTitleLink": "https://www.adanirealty.com/property-in-mumbai?type=residential",
+                    "sectionImage": "https://www.adanirealty.com/-/media/Project/Realty/Home/Mumbai.jpeg",
+                    "sectionLogo": "",
+                    "sectionItems": [
+                      {
+                        "itemText": "Ten BKC",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/mumbai/ten-bkc",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Ten-BKC.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Mumbai/Ten-BKC/Thumbnail/Tower-View-thumb.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Linkbay Residences",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/mumbai/linkbay-residences",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Linkbay-Residences.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Mumbai/Linkbay-Residences/Thumbnail/Thumbnail.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "The Views",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/mumbai/the-views",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/The-Views.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Mumbai/The-Views/The-Views-Thumb/The-Views.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Monte South",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/mumbai/monte-south",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Monte-South.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Mumbai/Monte-South/Monte-South-Image.jpg",
+                        "linkHeading": false
+                      }
+                    ]
+                  },
+                  {
+                    "sectionTitle": "Pune",
+                    "sectionTitleLink": "https://www.adanirealty.com/property-in-pune?type=residential",
+                    "sectionImage": "https://www.adanirealty.com/-/media/Project/Realty/Home/Pune.jpg",
+                    "sectionLogo": "",
+                    "sectionItems": [
+                      {
+                        "itemText": "Atelier Greens",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/pune/atelier-greens",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Atelier-Greens.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Pune/Atelier-Greens/Carousel-Images/Thumbnail-image/Atelier-Green-thumnail.jpg",
+                        "linkHeading": false
+                      }
+                    ]
+                  }
+                ],
+                "sectionItems": null
+              },
+              {
+                "sectionTitle": null,
+                "fatNavSectionLink": "Ready To Move",
+                "sectionPromoImages": [
+                  {
+                    "promoImage": "https://www.adanirealty.com/-/media/Project/Realty/Home/TheNorthPark.png",
+                    "promoLogo": "https://www.adanirealty.com/-/media/Project/Realty/Restaurant/cafelogo2.png",
+                    "promoLink": "#",
+                    "promoAltText": ""
+                  }
+                ],
+                "itemText": null,
+                "itemSubText": null,
+                "itemLink": null,
+                "itemLeftIcon": null,
+                "itemRightIcon": null,
+                "items": [
+                  {
+                    "sectionTitle": "Ahmedabad",
+                    "sectionTitleLink": "https://www.adanirealty.com/property-in-ahmedabad?type=residential&status=ready_to_move",
+                    "sectionImage": "https://www.adanirealty.com/-/media/Project/Realty/City/Ahmedabad-new.jpg",
+                    "sectionLogo": "",
+                    "sectionItems": [
+                      {
+                        "itemText": "Shantigram",
+                        "itemLink": "https://www.adanirealty.com/township/shantigram-ahmedabad",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Shantigram.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Shantigram/Shantigram-thumb.jpg",
+                        "linkHeading": true
+                      },
+                      {
+                        "itemText": "The North Park",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/the-north-park",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/The-North-Park.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/The-North-Park/Thumbnail.jpeg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Water Lily",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/water-lily",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Water-Lily.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Water-Lily/Thumbnail.jpeg",
+                        "linkHeading": false
+                      }
+                    ]
+                  },
+                  {
+                    "sectionTitle": "Gurugram",
+                    "sectionTitleLink": "https://www.adanirealty.com/property-in-gurugram?type=residential&status=ready_to_move",
+                    "sectionImage": "https://www.adanirealty.com/-/media/Project/Realty/City/Gurgaon-old.jpg",
+                    "sectionLogo": "",
+                    "sectionItems": [
+                      {
+                        "itemText": "Oyster Grande",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/oyster-grande",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Oyster-Grande.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Gurugram/Oyster-Grande/Thumbnail.jpeg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Samsara (M Block)",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/samsara",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Samsara.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Samsara/Samsara.png",
+                        "linkHeading": false
+                      }
+                    ]
+                  }
+                ],
+                "sectionItems": null
+              },
+              {
+                "sectionTitle": null,
+                "fatNavSectionLink": "Under Construction",
+                "sectionPromoImages": [
+                  {
+                    "promoImage": "https://www.adanirealty.com/-/media/Project/Realty/Restaurant/cafelogo2.png",
+                    "promoLogo": "https://www.adanirealty.com/-/media/Project/Realty/Restaurant/cafelogo1.png",
+                    "promoLink": "https://www.adanirealty.com",
+                    "promoAltText": ""
+                  }
+                ],
+                "itemText": null,
+                "itemSubText": null,
+                "itemLink": null,
+                "itemLeftIcon": null,
+                "itemRightIcon": null,
+                "items": [
+                  {
+                    "sectionTitle": "Ahmedabad",
+                    "sectionTitleLink": "https://www.adanirealty.com/property-in-ahmedabad?type=residential&status=under_construction",
+                    "sectionImage": "https://www.adanirealty.com/-/media/Project/Realty/City/Ahmedabad-new.jpg",
+                    "sectionLogo": "",
+                    "sectionItems": [
+                      {
+                        "itemText": "Shantigram",
+                        "itemLink": "https://www.adanirealty.com/township/shantigram-ahmedabad",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Shantigram.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Shantigram/Shantigram-thumb.jpg",
+                        "linkHeading": true
+                      },
+                      {
+                        "itemText": "Ikaria",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/ikaria",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Ikaria-new-logo.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Ikaria/Carousel-Image/updated-ikaria-image/EasylivingIMPACT3D15thumb.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "The West Park",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/the-west-park",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/the-west-park_Optimized_200x200.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/West-Park/Thumb/West-Park-Entrance.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Green View",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/green-view",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Greenview-logo.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Green-View/Thumbnails/Thumbnail.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "The Storeys",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/the-storeys",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/The-Storeys-logo.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/The-Storeys/Thumbnail/Thumbnail.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Ambrosia",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/ambrosia",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Abrosia-logo-01.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Ambrosia/Thumbnails/3_500-x-500.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Amogha",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/amogha",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Amogha.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Amogha/Thumbnails/Amogha-new-old.jpeg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Aster",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/aster",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Aster.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Aster/Carousel-Images/Aster_Cover_Image_Thumbnail-(1).jpeg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Paarijat",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/paarijat",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/PAARIJAT-LOGO.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Paarijat/Thumbnails/Thumbnail.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Jagatpur",
+                        "itemLink": "",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Atrius-New.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Atrius/Thumbnail/Atrius.jpg",
+                        "linkHeading": true
+                      },
+                      {
+                        "itemText": "Atrius",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/atrius",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Atrius-New.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Atrius/Thumbnail/Thumbnail.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Archway",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/ahmedabad/archway",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Archway-new-logo.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Ahmedabad/Archway/Thumbnails/Thumbnail.jpg",
+                        "linkHeading": false
+                      }
+                    ]
+                  },
+                  {
+                    "sectionTitle": "Gurugram",
+                    "sectionTitleLink": "https://www.adanirealty.com/property-in-gurugram?type=residential&status=under_construction",
+                    "sectionImage": "https://www.adanirealty.com/-/media/Project/Realty/City/Gurgaon-old.jpg",
+                    "sectionLogo": "",
+                    "sectionItems": [
+                      {
+                        "itemText": "Samsara Avasa",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/samsara-avasa",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Samsara-Avasa-Logo.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Gurugram/Samsara-Avasa/Thumb/Samsara-Avasa-Thumb.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Samsara Vilasa",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/samsara-vilasa",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Samsara-Vilasa.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Gurugram/Samsara-Vilasa/Thumbnail.jpeg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Samsara Vilasa 2.0",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/samsara-vilasa-2.0",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/S-20.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Gurugram/Samsara-Vilasa-2/Thumbnail/Villa-144145-View.jfif",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Tatva Estates",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/tatva-estates",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/New_Tatva_logo-04.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Gurugram/Tatva-Eastate/Thumb/Thumb.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Platinum Tower at Oyster Grande",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/platinum-tower",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Platinum-Towers.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Gurugram/Platinum-Tower/Thumbnail.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Aangan",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/gurugram/aangan",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Aangan.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Gurugram/Aangan/Thumbnail.jpeg",
+                        "linkHeading": false
+                      }
+                    ]
+                  },
+                  {
+                    "sectionTitle": "Mumbai",
+                    "sectionTitleLink": "https://www.adanirealty.com/property-in-mumbai?type=residential&status=under_construction",
+                    "sectionImage": "https://www.adanirealty.com/-/media/Project/Realty/Home/Mumbai.jpeg",
+                    "sectionLogo": "",
+                    "sectionItems": [
+                      {
+                        "itemText": "Ten BKC",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/mumbai/ten-bkc",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Ten-BKC.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Mumbai/Ten-BKC/Thumbnail/Tower-View-thumb.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Linkbay Residences",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/mumbai/linkbay-residences",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Linkbay-Residences.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Mumbai/Linkbay-Residences/Thumbnail/Thumbnail.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "The Views",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/mumbai/the-views",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/The-Views.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Mumbai/The-Views/The-Views-Thumb/The-Views.jpg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Monte South",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/mumbai/monte-south",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Monte-South.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Mumbai/Monte-South/Monte-South-Image.jpg",
+                        "linkHeading": false
+                      }
+                    ]
+                  },
+                  {
+                    "sectionTitle": "Pune",
+                    "sectionTitleLink": "https://www.adanirealty.com/property-in-pune?type=residential&status=under_construction",
+                    "sectionImage": "https://www.adanirealty.com/-/media/Project/Realty/Home/Pune.jpg",
+                    "sectionLogo": "",
+                    "sectionItems": [
+                      {
+                        "itemText": "Atelier Greens",
+                        "itemLink": "https://www.adanirealty.com/residential-projects/pune/atelier-greens",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Atelier-Greens.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Residential/Pune/Atelier-Greens/Carousel-Images/Thumbnail-image/Atelier-Green-thumnail.jpg",
+                        "linkHeading": false
+                      }
+                    ]
+                  }
+                ],
+                "sectionItems": null
+              }
+            ]
+          },
+          {
+            "headerText": "Commercial & Retail",
+            "headerLink": "https://www.adanirealty.com/commercial-projects",
+            "headerLeftIcon": "",
+            "headerRightIcon": "",
+            "fatNav": true,
+            "defaultImage": "https://www.adanirealty.com/-/media/Project/Realty/Commercial/Ahmedabad/Inspire-Business-Park/Carousel-Images/Thumbnail-Image/Thumbnail.jpeg",
+            "defaultLogo": "",
+            "headerCallback": false,
+            "items": [
+              {
+                "sectionTitle": null,
+                "fatNavSectionLink": "All Projects",
+                "sectionPromoImages": [
+                  {
+                    "promoImage": "https://www.adanirealty.com/-/media/Project/Realty/Home/OysterArcade.png",
+                    "promoLogo": "https://www.adanirealty.com/-/media/Project/Realty/Restaurant/cafelogo3.png",
+                    "promoLink": "#",
+                    "promoAltText": "AllProjects"
+                  }
+                ],
+                "itemText": null,
+                "itemSubText": null,
+                "itemLink": null,
+                "itemLeftIcon": null,
+                "itemRightIcon": null,
+                "items": [
+                  {
+                    "sectionTitle": "Ahmedabad",
+                    "sectionTitleLink": "https://www.adanirealty.com/property-in-ahmedabad?type=commercial",
+                    "sectionImage": "https://www.adanirealty.com/-/media/Project/Realty/City/Ahmedabad-new.jpg",
+                    "sectionLogo": "",
+                    "sectionItems": [
+                      {
+                        "itemText": "Inspire Business Park",
+                        "itemLink": "https://www.adanirealty.com/commercial-projects/ahmedabad/inspire-business-park",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Inspire-Business-park.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Commercial/Ahmedabad/Inspire-Business-Park/Carousel-Images/Thumbnail-Image/Thumbnail.jpeg",
+                        "linkHeading": false
+                      }
+                    ]
+                  },
+                  {
+                    "sectionTitle": "Mumbai",
+                    "sectionTitleLink": "https://www.adanirealty.com/property-in-mumbai?type=commercial",
+                    "sectionImage": "https://www.adanirealty.com/-/media/Project/Realty/Home/Mumbai.jpeg",
+                    "sectionLogo": "",
+                    "sectionItems": [
+                      {
+                        "itemText": "Inspire BKC",
+                        "itemLink": "https://www.adanirealty.com/commercial-projects/mumbai/inspire-bkc",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Inspire-BKC.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Commercial/Mumbai/Inspire-BKC/Thumbnail/Inspire-BKC2.jpeg",
+                        "linkHeading": false
+                      }
+                    ]
+                  },
+                  {
+                    "sectionTitle": "Gurugram",
+                    "sectionTitleLink": "https://www.adanirealty.com/property-in-gurugram?type=commercial",
+                    "sectionImage": "https://www.adanirealty.com/-/media/Project/Realty/City/Gurgaon-old.jpg",
+                    "sectionLogo": "",
+                    "sectionItems": [
+                      {
+                        "itemText": "Miracle Mile",
+                        "itemLink": "https://www.miraclemile.in/",
+                        "target": "_blank",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Miracle-Mile.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Commercial/Gurugram/MIRACLE-MILE/CAROUSEL-IMAGES/Thumbnail/Miracle-Mile-old.jpeg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Oyster Arcade",
+                        "itemLink": "https://www.adanirealty.com/commercial-projects/gurugram/oyster-arcade",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Oyster-Arcade.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Commercial/Gurugram/Oyster-Arcade/Thumbnail/Oyster-Arcade-old.jpeg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Aangan Arcade",
+                        "itemLink": "https://www.adanirealty.com/commercial-projects/gurugram/aangan-arcade",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Aangan-Arcade.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Commercial/Gurugram/Aangan-Arcade/Thumbnail/Aangan.png",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Aangan Galleria",
+                        "itemLink": "https://www.adanirealty.com/commercial-projects/gurugram/aangan-galleria",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Aangan-Galleria.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Commercial/Gurugram/Aangan-Galleria/Galleria.jpeg",
+                        "linkHeading": false
+                      }
+                    ]
+                  }
+                ],
+                "sectionItems": null
+              },
+              {
+                "sectionTitle": null,
+                "fatNavSectionLink": "Ready To Move",
+                "sectionPromoImages": [
+                  {
+                    "promoImage": "https://www.adanirealty.com/-/media/Project/Realty/Home/TheNorthPark.png",
+                    "promoLogo": "https://www.adanirealty.com/-/media/Project/Realty/Restaurant/cafelogo2.png",
+                    "promoLink": "#",
+                    "promoAltText": ""
+                  }
+                ],
+                "itemText": null,
+                "itemSubText": null,
+                "itemLink": null,
+                "itemLeftIcon": null,
+                "itemRightIcon": null,
+                "items": [
+                  {
+                    "sectionTitle": "Ahmedabad",
+                    "sectionTitleLink": "https://www.adanirealty.com/property-in-ahmedabad?type=commercial&status=ready_to_move",
+                    "sectionImage": "https://www.adanirealty.com/-/media/Project/Realty/City/Ahmedabad-new.jpg",
+                    "sectionLogo": "",
+                    "sectionItems": [
+                      {
+                        "itemText": "Inspire Business Park",
+                        "itemLink": "https://www.adanirealty.com/commercial-projects/ahmedabad/inspire-business-park",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Inspire-Business-park.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Commercial/Ahmedabad/Inspire-Business-Park/Carousel-Images/Thumbnail-Image/Thumbnail.jpeg",
+                        "linkHeading": false
+                      }
+                    ]
+                  },
+                  {
+                    "sectionTitle": "Mumbai",
+                    "sectionTitleLink": "https://www.adanirealty.com/property-in-mumbai?type=commercial&status=ready_to_move",
+                    "sectionImage": "https://www.adanirealty.com/-/media/Project/Realty/Home/Mumbai.jpeg",
+                    "sectionLogo": "",
+                    "sectionItems": [
+                      {
+                        "itemText": "Inspire BKC",
+                        "itemLink": "https://www.adanirealty.com/commercial-projects/mumbai/inspire-bkc",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Inspire-BKC.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Commercial/Mumbai/Inspire-BKC/Thumbnail/Inspire-BKC2.jpeg",
+                        "linkHeading": false
+                      }
+                    ]
+                  }
+                ],
+                "sectionItems": null
+              },
+              {
+                "sectionTitle": null,
+                "fatNavSectionLink": "Under Construction",
+                "sectionPromoImages": [
+                  {
+                    "promoImage": "https://www.adanirealty.com/-/media/Project/Realty/Restaurant/cafelogo2.png",
+                    "promoLogo": "https://www.adanirealty.com/-/media/Project/Realty/Restaurant/cafelogo1.png",
+                    "promoLink": "https://www.adanirealty.com",
+                    "promoAltText": ""
+                  }
+                ],
+                "itemText": null,
+                "itemSubText": null,
+                "itemLink": null,
+                "itemLeftIcon": null,
+                "itemRightIcon": null,
+                "items": [
+                  {
+                    "sectionTitle": "Gurugram",
+                    "sectionTitleLink": "https://www.adanirealty.com/property-in-gurugram?type=commercial&status=under_construction",
+                    "sectionImage": "https://www.adanirealty.com/-/media/Project/Realty/City/Gurgaon-old.jpg",
+                    "sectionLogo": "",
+                    "sectionItems": [
+                      {
+                        "itemText": "Miracle Mile",
+                        "itemLink": "https://www.miraclemile.in/",
+                        "target": "_blank",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Miracle-Mile.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Commercial/Gurugram/MIRACLE-MILE/CAROUSEL-IMAGES/Thumbnail/Miracle-Mile-old.jpeg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Oyster Arcade",
+                        "itemLink": "https://www.adanirealty.com/commercial-projects/gurugram/oyster-arcade",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Oyster-Arcade.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Commercial/Gurugram/Oyster-Arcade/Thumbnail/Oyster-Arcade-old.jpeg",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Aangan Arcade",
+                        "itemLink": "https://www.adanirealty.com/commercial-projects/gurugram/aangan-arcade",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Aangan-Arcade.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Commercial/Gurugram/Aangan-Arcade/Thumbnail/Aangan.png",
+                        "linkHeading": false
+                      },
+                      {
+                        "itemText": "Aangan Galleria",
+                        "itemLink": "https://www.adanirealty.com/commercial-projects/gurugram/aangan-galleria",
+                        "target": "",
+                        "itemLogo": "https://www.adanirealty.com/-/media/Project/Realty/Logo/Aangan-Galleria.png",
+                        "itemImage": "https://www.adanirealty.com/-/media/Project/Realty/Commercial/Gurugram/Aangan-Galleria/Galleria.jpeg",
+                        "linkHeading": false
+                      }
+                    ]
+                  }
+                ],
+                "sectionItems": null
+              }
+            ]
+          },
+          {
+            "headerText": "Clubs",
+            "headerLink": "https://www.adanirealty.com/clubs",
+            "headerLeftIcon": "",
+            "headerRightIcon": "",
+            "fatNav": false,
+            "defaultImage": "https://www.adanirealty.com/-/media/Project/Realty/Club/ClubBanner/Banner.jpg",
+            "defaultLogo": "https://www.adanirealty.com/-/media/Project/Realty/Club/ClubBanner/belvedere.png",
+            "headerCallback": false,
+            "items": null
+          },
+          {
+            "headerText": "Connect",
+            "headerLink": "#",
+            "headerLeftIcon": "",
+            "headerRightIcon": "i-arrow-down",
+            "fatNav": false,
+            "defaultImage": "",
+            "defaultLogo": "",
+            "headerCallback": false,
+            "items": [
+              {
+                "sectionTitle": null,
+                "fatNavSectionLink": null,
+                "sectionPromoImages": null,
+                "itemText": "Request a Call Back",
+                "itemSubText": "We will get back to you",
+                "itemLink": "https://www.adanirealty.com/contact-us",
+                "itemLeftIcon": "i-callback",
+                "itemRightIcon": "i-callback",
+                "items": null,
+                "sectionItems": null
+              },
+              {
+                "sectionTitle": null,
+                "fatNavSectionLink": null,
+                "sectionPromoImages": null,
+                "itemText": "WhatsApp",
+                "itemSubText": "Send us your queries on +91 6359977405",
+                "itemLink": "https://wa.me/+916359977405",
+                "itemLeftIcon": "i-whatsapp",
+                "itemRightIcon": "",
+                "items": null,
+                "sectionItems": null
+              },
+              {
+                "sectionTitle": null,
+                "fatNavSectionLink": null,
+                "sectionPromoImages": null,
+                "itemText": "Toll-Free",
+                "itemSubText": "1800 108 0009",
+                "itemLink": "tel:18001080009",
+                "itemLeftIcon": "i-toll-free",
+                "itemRightIcon": "",
+                "items": null,
+                "sectionItems": null
+              },
+              {
+                "sectionTitle": null,
+                "fatNavSectionLink": null,
+                "sectionPromoImages": null,
+                "itemText": "Share with us",
+                "itemSubText": "share@adanirealty.com",
+                "itemLink": "mailto:share@adanirealty.com",
+                "itemLeftIcon": "i-email-helpdesk",
+                "itemRightIcon": "",
+                "items": null,
+                "sectionItems": null
+              },
+              {
+                "sectionTitle": null,
+                "fatNavSectionLink": null,
+                "sectionPromoImages": null,
+                "itemText": "Partner with Us",
+                "itemSubText": "partner@adanirealty.com",
+                "itemLink": "mailto:partner@adanirealty.com",
+                "itemLeftIcon": "i-partner",
+                "itemRightIcon": "",
+                "items": null,
+                "sectionItems": null
+              }
+            ]
+          },
+          {
+            "headerText": "Enquire Now",
+            "headerLink": "https://ahmedabad.belvedereclub.in/",
+            "headerLeftIcon": "",
+            "headerRightIcon": "",
+            "fatNav": false,
+            "defaultImage": "",
+            "defaultLogo": "",
+            "headerCallback": true,
+            "items": null
+          }
+        ]
+      }
+    },
+    {
+      "uid": "cc6d07d6-c866-4df1-b518-a4dd468ac9f3",
+      "componentName": "searchSuggesters",
+      "dataSource": "{C030640A-BAE4-4A1E-8935-82FC2DF881B5}",
+      "params": {},
+      "fields": {
+        "data": [
+          {
+            "headerText": "Maharaja Hamburger",
+            "headerLink": "https://ahmedabad.belvedereclub.in/",
+            "headerLeftIcon": "",
+            "headerRightIcon": "",
+            "fatNav": false,
+            "defaultImage": "",
+            "defaultLogo": "",
+            "headerCallback": false,
+            "items": null
+          },
+          {
+            "headerText": "Dine In options",
+            "headerLink": "https://ahmedabad.belvedereclub.in/",
+            "headerLeftIcon": "",
+            "headerRightIcon": "",
+            "fatNav": false,
+            "defaultImage": "",
+            "defaultLogo": "",
+            "headerCallback": false,
+            "items": null
+          },
+          {
+            "headerText": "Hamburger",
+            "headerLink": "https://ahmedabad.belvedereclub.in/",
+            "headerLeftIcon": "",
+            "headerRightIcon": "",
+            "fatNav": false,
+            "defaultImage": "",
+            "defaultLogo": "",
+            "headerCallback": false,
+            "items": null
+          },
+          {
+            "headerText": "Liqour",
+            "headerLink": "https://ahmedabad.belvedereclub.in/",
+            "headerLeftIcon": "",
+            "headerRightIcon": "",
+            "fatNav": false,
+            "defaultImage": "",
+            "defaultLogo": "",
+            "headerCallback": false,
+            "items": null
+          }
+        ]
+      }
+    },
+    {
+      "uid": "bc5f60af-321e-4620-a4bf-4a5c78e1b71a",
+      "componentName": "topNavigation",
+      "dataSource": "{E480FD2E-85C4-4F8B-B7CC-8B06B89DCA4F}",
+      "params": {},
+      "fields": {
+        "topNavigation": [
+          {
+            "headerText": "Businesses",
+            "headerLink": "https://www.adanirealty.com",
+            "headerLeftIcon": "i-businesses",
+            "headerRightIcon": "",
+            "items": [
+              {
+                "itemText": "Airports",
+                "itemSubText": "",
+                "itemLink": "https://www.adanione.com/",
+                "target": "_blank",
+                "itemLeftIcon": "i-airport",
+                "itemRightIcon": "",
+                "itemImage": null,
+                "linkHeading": false,
+                "collapseItems": null
+              },
+              {
+                "itemText": "Adani Capital",
+                "itemSubText": "",
+                "itemLink": "https://www.adanicapital.in/",
+                "target": "_blank",
+                "itemLeftIcon": "i-capital",
+                "itemRightIcon": "",
+                "itemImage": null,
+                "linkHeading": false,
+                "collapseItems": null
+              },
+              {
+                "itemText": "Adani Electricity",
+                "itemSubText": "",
+                "itemLink": "https://www.adanielectricity.com/",
+                "target": "_blank",
+                "itemLeftIcon": "i-electricity",
+                "itemRightIcon": "",
+                "itemImage": null,
+                "linkHeading": false,
+                "collapseItems": null
+              },
+              {
+                "itemText": "Adani Housing Finance",
+                "itemSubText": "",
+                "itemLink": "https://www.adanihousing.in/",
+                "target": "_blank",
+                "itemLeftIcon": "i-housing",
+                "itemRightIcon": "",
+                "itemImage": null,
+                "linkHeading": false,
+                "collapseItems": null
+              },
+              {
+                "itemText": "Adani Realty",
+                "itemSubText": "",
+                "itemLink": "https://www.adanirealty.com/",
+                "target": "_blank",
+                "itemLeftIcon": "i-realty",
+                "itemRightIcon": "",
+                "itemImage": null,
+                "linkHeading": false,
+                "collapseItems": null
+              },
+              {
+                "itemText": "Adani Total Gas",
+                "itemSubText": "",
+                "itemLink": "https://www.adanigas.com/",
+                "target": "_blank",
+                "itemLeftIcon": "i-gas",
+                "itemRightIcon": "",
+                "itemImage": null,
+                "linkHeading": false,
+                "collapseItems": null
+              },
+              {
+                "itemText": "Adani Wilmar",
+                "itemSubText": "",
+                "itemLink": "https://www.adaniwilmar.com/",
+                "target": "_blank",
+                "itemLeftIcon": "i-wilmar",
+                "itemRightIcon": "",
+                "itemImage": null,
+                "linkHeading": false,
+                "collapseItems": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "breadCrumbList": {
+    "uid": "5dada965-bb7e-4af5-bf06-43501ceb7725",
+    "componentName": "breadCrumbList",
+    "dataSource": "{04A25CE0-A35E-4CCD-A08A-DF565224B7BA}",
+    "params": {},
+    "fields": [
+      {
+        "active": false,
+        "href": "https://www.uat.adanirealty.com",
+        "linkProps": {
+          "itemProp": "item"
+        },
+        "label": "Home"
+      },
+      {
+        "active": true,
+        "href": "/url",
+        "linkProps": {
+          "itemProp": "item"
+        },
+        "label": "Home Loan Emi Calculator"
+      }
+    ]
+  },
+  "emiCalculatorData": {
+    "heading": "EMI Calculator",
+    "rs": "₹",
+    "lakhs": "Lac",
+    "loanAmountLabel": "Loan Amount",
+    "minLoanAmountLabel": "1 Lac",
+    "maxLoanAmountLabel": "8 Cr",
+    "minLoanAmount": "100000",
+    "maxLoanAmount": "80000000",
+    "percent": "%",
+    "interestRateLabel": "Interest Rate (% P. A.)",
+    "minInterestRateLabel": "1%",
+    "maxInterestRateLabel": "30%",
+    "minInterestRate": "1",
+    "maxInterestRate": "30",
+    "loanTenureLabel": "Loan Tenure",
+    "years": "Years",
+    "minLoanTenureLabel": "1 Year",
+    "maxLoanTenureLabel": "30 Years",
+    "minLoanTenure": "1",
+    "maxLoanTenure": "30",
+    "interestAmountLabel": "Interest Amount",
+    "interestAmountMobileLabel": "Interest",
+    "principalAmountLabel": "Principal Amount",
+    "principalAmountMobileLabel": "Principal",
+    "totalPayableAmountLabel": "Total Payable Amount",
+    "totalPayableAmountMobileLabel": "Total Payable",
+    "defaultLoanAmount": "8000000",
+    "defaultInterestRate": "6.75",
+    "defaultLoanTenure": "20",
+    "ourBankingPartnersLabel": "",
+    "bankingPartnersData": []
+  },
+  "GetInTouch": {
+    "uid": "4da3c83f-fd05-488e-82cc-938276d175fe",
+    "componentName": "GetInTouch",
+    "dataSource": "{EFF27177-832D-4912-BF56-CC46B9E95DC2}",
+    "params": {},
+    "fields": {
+      "getInTouch": [
+        {
+          "heading": "Looking for dream spaces, not sure where to start?",
+          "desc": "Leave us a query and our representative will get back to you.",
+          "button": "Get in touch",
+          "enquireNowLabel": "Enquire Now",
+          "buttonLink": "https://www.uat.adanirealty.com/AdaniRealty/Home/Common Data"
+        }
+      ]
+    }
+  },
+  "Achievements": [
+    {
+      "icon": "BadgeIcon",
+      "iconsrc": "",
+      "count": "12+",
+      "desc": "Years Young",
+      "start": "0",
+      "delay": "3",
+      "src": "",
+      "imgalt": "",
+      "imgtitle": ""
+    },
+    {
+      "icon": "PropertyIcon",
+      "iconsrc": "",
+      "count": "15 ",
+      "desc": "Mn. Sq. Ft. Area Developed",
+      "start": "0",
+      "delay": "1.5",
+      "src": "",
+      "imgalt": "",
+      "imgtitle": ""
+    },
+    {
+      "icon": "UnderDevelopment",
+      "iconsrc": "",
+      "count": "18.8",
+      "desc": "Mn. Sq. Ft. Area Under Development",
+      "start": "0",
+      "delay": "1.5",
+      "src": "https://www.uat.adanirealty.com/-/media/Project/Realty/Home/1226-Lac-sq-mtrs-Under-Development.svg",
+      "imgalt": "",
+      "imgtitle": ""
+    },
+    {
+      "icon": "AwardIcon",
+      "iconsrc": "",
+      "count": "40+",
+      "desc": "Awards Won",
+      "start": "0",
+      "delay": "2.5",
+      "src": "",
+      "imgalt": "",
+      "imgtitle": ""
+    },
+    {
+      "icon": "FamilyIcon",
+      "iconsrc": "",
+      "count": "7000+",
+      "desc": "Happy Families",
+      "start": "0",
+      "delay": "4",
+      "src": "",
+      "imgalt": "",
+      "imgtitle": ""
+    }
+  ],
+  "AboutAdaniHome": {
+    "uid": "0f5a2f73-0aaa-41a0-b82b-676c1fbb19b8",
+    "componentName": "AboutAdaniHome",
+    "dataSource": "{55F741F8-F1A9-45D7-98CD-8113433AEC96}",
+    "params": {
+      "ReadLessKeyword": "Read Less",
+      "ReadMoreKeyword": "Read More",
+      "ComponentTitle": "About Adani Reality"
+    },
+    "fields": [
+      {
+        "location": null,
+        "heading": "Looking for Flats in Gurugram",
+        "about": "With real estate skyrocketing, this is the right time to buy flats in Gurgaon! Gurugram in Haryana is the second-largest information technology hub and the country's third-largest banking and financial hub. Serving as a headquarters for many companies, Gurugram has emerged as a leader in the manufacturing and real estate sectors. This rapid development in the real estate sector has led to a sharp rise in commercial and residential housing. Following this, there has been an increase in property dealings in Gurugram. Gurgaon is one of the largest cities in Haryana that houses a considerable modern population from all over India and abroad. The city is a key BPO and IT business centre, where a range of renowned MNCs currently operate. This makes Gurugram a popular and profitable investment hub.\n",
+        "readMore": "<p><b>Why Buy a Property in Gurugram?</b></p>\n<p>Due to its thriving nightlife options and good employment prospects, Gurgaon is known to attract potential homebuyers from around the country. The city has seen a boom in the realty sector, mostly post-COVID-19. The city is home to various multinational corporations, Fortune 500 companies, start-ups and businesses that have catalysed the migration of people from states across India. The rapid commercial development has further prompted migrants to settle down here and provided a boost to residential real estate. \n</p>\n<p><b>Real Estate Boom in Gurugram</b></p>\n<p>With the real estate sector witnessing a boom in Gurugram, Adani Realty has emerged as one of the top players in the residential, commercial, and retail spaces categories. Adani Realty focuses on creating spaces that offer state-of-the-art facilities and are in harmony with nature. Adani Realty has several flats in Gurugram, which are among the most sought-after in the city. These projects offer residents great living spaces! From ready-to-move residential flats to villas and penthouses in Gurugram, Adani has something for everyone.\n </p>\n<p>If you plan to buy a 3 or 4 BHK apartment in Gurugram, you will have a host of properties to choose from, such as Samsara at Golf Course Extension Road. Samsara is a spectacular property located in what is considered one of the prestigious townships in Gurugram. The phase I of Samsara is ready-to-move in, and phase II of the project, Samsara Vilasa 2.0 is currently under construction. \n</p>\n<p>These 3 & 4 BHK residences are part of the joint venture between Adani Realty and Brahma Group. These apartments in Gurugram offer modern amenities. For someone who wants to buy a flat in Gurugram, Samsara by Adani Realty is an option worth considering!\n</p>\n\n\n",
+        "links": "https://www.uat.adanirealty.com/terms-and-conditions",
+        "terms": "*# Please refer to the corresponding property page for ",
+        "detailLink": "T&C",
+        "extrCharges": "",
+        "readMoreLabel": "",
+        "readLessLabel": ""
+      }
+    ]
+  },
+  "Faq": {
+    "uid": "91a5a020-b2fc-4a1d-a8c2-e24665f5ccf5",
+    "componentName": "Faq",
+    "dataSource": "{D5D6B740-6BF8-455F-A00E-8B8A0BCE5308}",
+    "params": {
+      "ComponentTitle": "",
+      "SeeAllKeyword": ""
+    },
+    "fields": {
+      "faqLink": "https://web-dev.adanidigitallabs.com/realty/faqs",
+      "faqItems": [
+        {
+          "location": null,
+          "title": "Does Adani Realty offer flats in Gurgaon?",
+          "body": "Yes, Adani Realty offers many options for flats in Gurgaon. Samsara Vilasa, Samsara Vilasa 2.0, Oyster Grande, Platinum Tower at Oyster Grande, Aangan, and Samsara (M Block) by Adani Realty offer luxurious flats in Gurgaon."
+        },
+        {
+          "location": null,
+          "title": "Which are RERA-approved projects in Gurgaon by Adani Realty?",
+          "body": "Samsara Vilasa, Samsara Vilasa 2.0, Oyster Grande, Platinum Tower at Oyster Grande, Aangan, and Samsara (M Block) by Adani Realty are Haryana RERA approved projects offering flats in Gurgaon."
+        },
+        {
+          "location": null,
+          "title": "What are the popular residential projects in Gurgaon?",
+          "body": "There are many residential projects in Gurgaon which offer apartments in popular localities with good infrastructure and connectivity. Samsara Vilasa, Samsara Vilasa 2.0, Oyster Grande, Platinum Tower at Oyster Grande, Aangan, and Samsara (M Block) by Adani Realty offer luxurious apartments in Gurgaon."
+        },
+        {
+          "location": null,
+          "title": "What is the price of flats in Gurgaon?",
+          "body": "The price of flats in Gurgaon depends on the builder's reputation, project typology, configuration, locality, amenities, construction quality, stamp duty and registration charges, brokerage fee, and other additional costs. You can easily find your dream home within your budget in Gurgaon.\n"
+        },
+        {
+          "location": null,
+          "title": "Are there any new launch residential projects in Gurgaon?",
+          "body": "Yes, Gurgaon offers a variety of new launch projects. Samsara Vilasa, Samsara Vilasa 2.0, Oyster Grande, Platinum Tower at Oyster Grande, Aangan, and Samsara (M Block) are newly launched residential projects by Adani Realty."
+        },
+        {
+          "location": null,
+          "title": "What are some of the factors one needs to keep in mind before purchasing flats in Gurgaon? ",
+          "body": "One needs to keep in mind the following factors before purchasing flats in Gurgaon -location, connectivity to the airport and metro, proximity to hospitals, markets and educational institutions in the vicinity.\n"
+        },
+        {
+          "location": null,
+          "title": "How to get a home loan to buy a flat in Gurgaon?",
+          "body": "Adani Realty has exclusive tie-ups with leading banks that could help you with your home loan options."
+        },
+        {
+          "location": null,
+          "title": "Which are the ready-to-move projects in Gurgaon that offer residential flats?",
+          "body": "There are many ready-to-move in flats available in Gurgaon. You can find various options in every budget with good connectivity plus all the modern amenities. Adani Realty offers many options for apartments in Gurgaon. At present, Oyster Grande and Samsara (M Block) by Adani Realty offer ready-to-move in flats."
+        }
+      ]
+    }
+  },
+  "footer": [
+    {
+      "uid": "01d0b2d4-dc3d-4946-8536-b1098a24da1e",
+      "componentName": "Footer",
+      "dataSource": "{88FBCB35-2C52-47FD-B831-231327EF8B1A}",
+      "params": {},
+      "fields": {
+        "mainNavigations": [
+          {
+            "heading": "Company",
+            "items": [
+              {
+                "linkUrl": "https://www.adanirealty.com/about-us",
+                "target": "",
+                "linkTitle": "About Us"
+              },
+              {
+                "linkUrl": "https://www.adanirealty.com/why-adani",
+                "target": "",
+                "linkTitle": "Why Adani"
+              },
+              {
+                "linkUrl": "https://www.adanirealty.com/careers",
+                "target": "",
+                "linkTitle": "Careers"
+              },
+              {
+                "linkUrl": "https://www.adanirealty.com/accolades",
+                "target": "",
+                "linkTitle": "Accolades"
+              },
+              {
+                "linkUrl": "https://www.adanirealty.com/the-good-life",
+                "target": "",
+                "linkTitle": "The Good Life Community"
+              },
+              {
+                "linkUrl": "https://www.adanirealty.com/nri-corner",
+                "target": "",
+                "linkTitle": "NRI Corner"
+              },
+              {
+                "linkUrl": "https://www.adanirealty.com/certifications",
+                "target": "",
+                "linkTitle": "Certifications"
+              },
+              {
+                "linkUrl": "https://www.adanirealty.com/blogs",
+                "target": "",
+                "linkTitle": "Communication Corner"
+              },
+              {
+                "linkUrl": "https://www.adanirealty.com/news-and-media",
+                "target": "",
+                "linkTitle": "Media Coverage"
+              }
+            ]
+          },
+          {
+            "heading": "Residential & Commercial",
+            "items": [
+              {
+                "linkUrl": "https://www.adanirealty.com/property-in-ahmedabad",
+                "target": "",
+                "linkTitle": "Ahmedabad"
+              },
+              {
+                "linkUrl": "https://www.adanirealty.com/property-in-gurugram",
+                "target": "",
+                "linkTitle": "Gurugram"
+              },
+              {
+                "linkUrl": "https://www.adanirealty.com/property-in-mumbai",
+                "target": "",
+                "linkTitle": "Mumbai"
+              },
+              {
+                "linkUrl": "https://www.adanirealty.com/property-in-pune",
+                "target": "",
+                "linkTitle": "Pune"
+              }
+            ]
+          },
+          {
+            "heading": "Social Clubs",
+            "items": [
+              {
+                "linkUrl": "https://www.adanirealty.com/clubs",
+                "target": "",
+                "linkTitle": "The Belvedere Golf and Country Club, Ahmedabad"
+              },
+              {
+                "linkUrl": "https://www.adanirealty.com/clubs",
+                "target": "",
+                "linkTitle": "Belvedere Club, Gurugram"
+              }
+            ]
+          },
+          {
+            "heading": "Adani Businesses",
+            "items": [
+              {
+                "linkUrl": "https://www.adanione.com/",
+                "target": "_blank",
+                "linkTitle": "Airports"
+              },
+              {
+                "linkUrl": "https://www.adanicapital.in/",
+                "target": "_blank",
+                "linkTitle": "Adani Capital"
+              },
+              {
+                "linkUrl": "https://www.adanielectricity.com/",
+                "target": "_blank",
+                "linkTitle": "Adani Electricity"
+              },
+              {
+                "linkUrl": "https://www.adanihousing.in/",
+                "target": "_blank",
+                "linkTitle": "Adani Housing Finance"
+              },
+              {
+                "linkUrl": "https://www.adanirealty.com/",
+                "target": "_blank",
+                "linkTitle": "Adani Realty"
+              },
+              {
+                "linkUrl": "https://www.adanigas.com/",
+                "target": "_blank",
+                "linkTitle": "Adani Total Gas"
+              },
+              {
+                "linkUrl": "https://www.adaniwilmar.com/",
+                "target": "_blank",
+                "linkTitle": "Adani Wilmar"
+              }
+            ]
+          },
+          {
+            "heading": "Help & Support",
+            "items": [
+              {
+                "linkUrl": "https://www.adanirealty.com/faqs",
+                "target": "",
+                "linkTitle": "FAQs"
+              },
+              {
+                "linkUrl": "https://www.adanirealty.com/contact-us",
+                "target": "",
+                "linkTitle": "Contact Us"
+              },
+              {
+                "linkUrl": "mailto:care@adanirealty.com",
+                "target": "",
+                "linkTitle": "Customer Care Centre"
+              }
+            ]
+          }
+        ],
+        "copyRight": [
+          {
+            "heading": "Footer Copyright",
+            "subHeading": "2022 Adani Realty",
+            "items": [
+              {
+                "linkUrl": "https://www.adanirealty.com/privacy-policy",
+                "target": "",
+                "linkTitle": "Privacy Policy"
+              },
+              {
+                "linkUrl": "https://www.adanirealty.com/terms-and-conditions",
+                "target": "",
+                "linkTitle": "Terms & Conditions"
+              },
+              {
+                "linkUrl": "https://www.adanirealty.com/disclaimer",
+                "target": "",
+                "linkTitle": "Disclaimer"
+              },
+              {
+                "linkUrl": "https://www.adanirealty.com/sitemap",
+                "target": "",
+                "linkTitle": "Sitemap"
+              }
+            ]
+          }
+        ],
+        "socialLinks": [
+          {
+            "heading": "Footer Social Links",
+            "items": [
+              {
+                "linkUrl": "https://www.facebook.com/adanirealty",
+                "linkTitle": "Facebook",
+                "itemicon": "i-facebook",
+                "target": "_blank"
+              },
+              {
+                "linkUrl": "https://twitter.com/adanirealty",
+                "linkTitle": "Twitter",
+                "itemicon": "i-twitter",
+                "target": "_blank"
+              },
+              {
+                "linkUrl": "https://www.linkedin.com/company/adanirealty",
+                "linkTitle": "Linkedin",
+                "itemicon": "i-linkedin",
+                "target": "_blank"
+              },
+              {
+                "linkUrl": "https://www.youtube.com/channel/UCy13h-75Nb2m6FtUDV0e4lg",
+                "linkTitle": "Youtube",
+                "itemicon": "i-youtube",
+                "target": "_blank"
+              },
+              {
+                "linkUrl": "https://www.instagram.com/adanirealty",
+                "linkTitle": "Instagram",
+                "itemicon": "i-instagram",
+                "target": "_blank"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

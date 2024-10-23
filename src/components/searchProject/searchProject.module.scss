@@ -1,0 +1,389 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.searchbox {
+  @include center(horizontal);
+  border-radius: 3.125rem;
+  bottom: 0;
+  max-width: 100%;
+  z-index: 1;
+  width: 100%;
+  transition: ease all 0.6s;
+
+  &:global(.searchwidget) {
+    form {
+      :global(.col-lg-3) {
+        :global(.btn-lg) {
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    :global(.errorContainer) {
+      opacity: 1;
+
+      p {
+        display: none;
+      }
+    }
+  }
+
+  div {
+    @media (max-width: 767px) {
+      padding: 0;
+      opacity: 1;
+      font-family: $font-medium;
+    }
+  }
+
+  form {
+    @media (min-width: 992px) {
+      max-width: 55rem;
+      margin: auto;
+      background: $white;
+      border-radius: 2.375rem;
+      width: 100%;
+      transition: ease all 0.3s;
+      @include center(horizontal);
+      bottom: 4rem;
+    }
+
+    @media screen and (max-width: 991px) {
+      background: $white;
+      position: relative;
+      margin: 0 -1rem;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin: 0;
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1366px) and (hover: none) {
+      bottom: 4rem;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    min-width: 90%;
+    bottom: unset;
+    top: 0rem;
+    position: relative;
+  }
+
+  .mobilesearch {
+    display: none;
+
+    button {
+      width: 100%;
+      background: $white;
+      border-color: $white;
+      padding: 0;
+      margin: 0;
+      color: $dark;
+      text-align: left;
+    }
+
+    @media screen and (max-width: 991px) {
+      display: block;
+      padding-bottom: 1rem;
+
+      svg,
+      i {
+        max-width: 1.5rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .searchboxrow {
+    @media (min-width: 992px) {
+      --bs-gutter-x: 0;
+    }
+
+    @media (max-width: 991px) {
+      padding: 0 0.5rem;
+    }
+
+    > div:first-child {
+      button {
+        &:before {
+          width: 103%;
+          transform: unset;
+          left: 0;
+        }
+      }
+    }
+
+    .searchboxcol {
+      position: relative;
+
+      :global(.dropdown) {
+        :global(.dropdownMenu) {
+          &:global(.show) {
+            @media (min-width: 992px) {
+              -webkit-animation-name: dropdownActive;
+              animation-name: dropdownActive;
+              -webkit-animation-duration: 0.8s;
+              animation-duration: 0.8s;
+            }
+
+            @keyframes dropdownActive {
+              0% {
+                opacity: 0;
+              }
+
+              100% {
+                opacity: 1;
+              }
+            }
+
+            @-webkit-keyframes dropdownActive {
+              0% {
+                opacity: 0;
+              }
+
+              100% {
+                opacity: 1;
+              }
+            }
+
+            :global(.dropdown-item) {
+              @media (min-width: 992px) {
+                padding: 1rem 1.25rem;
+              }
+
+              &:global(.active) {
+                background-color: $alice-Blue;
+
+                &:after {
+                  content: '';
+                  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M19.5565977,5.46781719 L8.02955453,16.5728515 C7.43838012,17.1423828 6.50251159,17.1423828 5.91133719,16.5728515 L0.443380802,11.3050788 C-0.147793601,10.7355475 -0.147793601,9.83394143 0.443380802,9.26441012 C1.03455521,8.69487881 1.97042374,8.69487881 2.56159814,9.26441012 L6.97044586,13.5118485 L17.4383804,3.42714848 C18.0295548,2.85761717 18.9654233,2.85761717 19.5565977,3.42714848 C20.1477721,3.9966798 20.1477721,4.89845536 19.5567695,5.46781719 L19.5565977,5.46781719 Z'%3E%3C/path%3E%3C/svg%3E");
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  background-position:
+                    bottom center,
+                    50%,
+                    50%;
+                  position: absolute;
+                  width: 1rem;
+                  height: 1rem;
+                  right: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &:hover {
+        .searchClose {
+          display: block;
+        }
+
+        &:after {
+          background: transparent;
+        }
+      }
+
+      &:after {
+        content: '';
+        right: 0;
+        width: 0.065rem;
+        background: $platinum;
+        min-height: 2rem;
+        @include center(vertical);
+
+        @media screen and (max-width: 991px) {
+          display: none;
+        }
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+
+      & > div {
+        input {
+          padding-top: 0.7rem;
+          border-color: $white;
+          font-size: 0.875rem;
+
+          @media screen and (min-width: 992px) {
+            padding-bottom: 0;
+          }
+
+          @media screen and (max-width: 991px) {
+            border-color: $platinum;
+            border-radius: 3rem;
+          }
+        }
+
+        select {
+          border-color: $white;
+          font-size: 0.875rem;
+
+          @media screen and (min-width: 992px) {
+            padding-bottom: 0.4rem;
+          }
+
+          @media screen and (max-width: 991px) {
+            border-color: $platinum;
+            border-radius: 3rem;
+          }
+        }
+      }
+
+      .searchClose {
+        display: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0.5rem;
+        z-index: 1;
+
+        i {
+          font-size: 1.25rem;
+        }
+
+        @media (max-width: 991px) {
+          display: block;
+          z-index: 2;
+        }
+
+        button {
+          padding: 0;
+          background: transparent;
+
+          @media (max-width: 991px) {
+            height: 2.25rem;
+          }
+
+          &:hover {
+            background: $antiFlashWhiteHover;
+          }
+
+          &:before {
+            display: none;
+          }
+
+          opacity: 1;
+
+          svg,
+          i {
+            width: 1.1875rem;
+          }
+        }
+      }
+
+      button {
+        font-size: 1rem;
+        padding: 0.9rem 2rem;
+        background: $white;
+        position: relative;
+
+        @media (min-width: 992px) {
+          border: none;
+          border-radius: 2.375rem;
+        }
+
+        > div {
+          position: relative;
+          z-index: 2;
+        }
+
+        &:before {
+          content: '';
+          @include center(horizontal);
+          top: 0;
+          width: 105%;
+          height: 100%;
+          border-radius: 2.375rem;
+          z-index: 1;
+          transition: ease all 0.3s;
+
+          @media screen and (max-width: 991px) {
+            display: none;
+          }
+        }
+
+        @media screen and (max-width: 991px) {
+          margin-bottom: 1.5rem;
+          height: 3.75rem;
+          padding: 0.8rem 1.2rem;
+          border-color: $platinum;
+          transform: unset;
+
+          > div {
+            > svg,
+            i {
+              display: none;
+            }
+          }
+        }
+
+        &:hover,
+        &[aria-expanded='true'] {
+          &:before {
+            content: '';
+            background: $surface;
+            transition: ease all 0.3s;
+          }
+        }
+
+        &.btnsearch {
+          width: 90%;
+          margin: 0.75rem 0;
+          background: $blue;
+
+          &:hover {
+            background: $darkblue;
+            transition: ease all 0.3s;
+          }
+
+          @media screen and (max-width: 991px) {
+            width: 100%;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.showWidget {
+  display: block;
+  z-index: 9999;
+  border-bottom: 1px solid $platinum;
+  border-top: 1px solid $white;
+  position: fixed;
+  bottom: unset;
+  padding-bottom: 1rem;
+  top: 5rem;
+  width: 100%;
+  border-radius: 0;
+  max-width: 100%;
+  background: $white;
+
+  form {
+    transition: ease all 0.6s;
+    max-width: 54.813rem;
+  }
+
+  button[type='button'] {
+    background-color: $lotion !important;
+  }
+}
+
+.isHidden {
+  :global(.searchwidget) {
+    form {
+      transition: ease all 0.28ms;
+      max-width: 40rem;
+      opacity: 0;
+    }
+  }
+}

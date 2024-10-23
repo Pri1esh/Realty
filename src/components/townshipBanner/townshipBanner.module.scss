@@ -1,0 +1,156 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.pageheading {
+  position: absolute;
+  bottom: 2.5rem;
+  width: 100%;
+  color: $white;
+
+  @media screen and (min-width: 1024px) and (max-width: 1366px) and (hover: none) {
+    bottom: 6rem;
+  }
+
+  h1 {
+    font-size: 2.75rem;
+    margin-bottom: 0.75rem;
+    font-weight: bold;
+
+    @media (max-width: 991px) {
+      font-size: 2rem;
+      margin-bottom: 0.813rem;
+    }
+  }
+
+  p {
+    font-size: 0.875rem;
+    line-height: unset;
+    max-width: 15rem;
+    position: relative;
+
+    @media (max-width: 991px) {
+      font-size: 0.875rem;
+    }
+
+    i {
+      font-size: 1.25rem;
+      margin-right: 0.565rem;
+    }
+  }
+
+  .projectThumb {
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    background-color: $white;
+    position: relative;
+    margin-bottom: 1.375rem;
+
+    @media (max-width: 991px) {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    img {
+      max-width: 90%;
+      @include center(both);
+    }
+  }
+
+  .ButtonSection {
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
+
+    right: 0;
+    position: absolute;
+    bottom: 1rem;
+
+    .downloadIcon {
+      i {
+        margin-right: 0.5rem;
+        font-size: 1rem;
+        vertical-align: text-top;
+      }
+    }
+
+    .shareIcon {
+      i {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+        vertical-align: text-top;
+      }
+    }
+
+    button,
+    a {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      border-color: $silverSand;
+      line-height: 1;
+      color: $secondary;
+      background-color: $white;
+
+      &:first-child {
+        margin-right: 1rem;
+      }
+
+      &:hover {
+        background-color: $antiFlashWhiteHover;
+      }
+
+      &.active {
+        border-color: $blue;
+        background-color: $aliceBlue1;
+      }
+    }
+  }
+}
+
+.mainBanner {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  min-height: 100vh;
+
+  @media screen and (max-width: 767px) {
+    min-height: 88vh;
+    height: 88vh;
+  }
+}
+
+.bannerWrapper {
+  position: relative;
+
+  &:after {
+    content: '';
+    background-image: linear-gradient(to right, #1c84a6, #386bb2 25%, #7356a3 49%, #903b94 72%, #c54961);
+    border-image-slice: 1;
+    position: absolute;
+    height: 0.375rem;
+    bottom: 0.375rem;
+    width: 100%;
+    left: 0;
+    opacity: 1;
+  }
+
+  &:before {
+    content: '';
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 37%, rgb(0 0 0 / 50%));
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 16rem;
+    opacity: 0.5;
+    position: absolute;
+  }
+}
+
+.imgType {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  color: $white;
+  font-size: 0.75rem;
+  z-index: 1;
+}

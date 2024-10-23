@@ -1,0 +1,10 @@
+{
+  "nriVideo": {
+    "data": [
+      {
+        "isVideoTestimonial": "true",
+        "iframesrc": "https://www.youtube.com/embed/EoUtuQcP8-I?controls=0"
+      }
+    ]
+  }
+}

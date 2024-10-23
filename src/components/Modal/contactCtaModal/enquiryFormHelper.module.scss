@@ -1,0 +1,11 @@
+@media screen and (max-width: 767px) {
+  .otpOffcanvas {
+    min-height: 100%;
+  }
+}
+
+.completedProjectsCanvas {
+  :global(.offcanvas-header) {
+    padding-bottom: 0;
+  }
+}

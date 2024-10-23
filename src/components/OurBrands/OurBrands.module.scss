@@ -1,0 +1,53 @@
+.col {
+  margin-bottom: 2rem;
+  padding: 0;
+  width: 14%;
+  margin-left: 7.4%;
+
+  &:nth-child(5n + 1) {
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 50%;
+    margin-bottom: 2rem;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  img {
+    max-width: 100%;
+    transition: ease all 0.3s;
+
+    @media screen and (max-width: 767px) {
+      max-width: 9rem;
+    }
+  }
+}
+
+.brandAnimation {
+  > div {
+    opacity: 0;
+    animation: slideDown 0.5s ease-out;
+    animation-fill-mode: forwards;
+    position: relative;
+
+    @for $i from 1 through 50 {
+      &:nth-child(#{$i}) {
+        animation-delay: 100ms * $i;
+      }
+    }
+  }
+}
+
+@keyframes slideDown {
+  from {
+    top: -50px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,51 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.quicklinks {
+  @media (max-width: 991px) {
+    li {
+      a {
+        padding: 1rem 1.25rem;
+        font-weight: 100;
+        color: $gray-600;
+
+        &.active {
+          background-color: rgba(13, 103, 202, 0.05);
+        }
+
+        &:focus {
+          background: $antiFlashWhiteHover;
+        }
+      }
+    }
+  }
+
+  li {
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    position: relative;
+
+    span {
+      width: 0.8125rem;
+      float: right;
+      fill: $davyGray;
+      position: absolute;
+      right: 1.25rem;
+      @include center(vertical);
+      font-size: 0.8rem;
+
+      &.notActive {
+        display: none;
+      }
+
+      &.active {
+        display: block;
+      }
+    }
+
+    a {
+      display: block;
+    }
+  }
+}

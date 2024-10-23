@@ -1,0 +1,19 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.ReadMore {
+  .btnReadMore {
+    cursor: pointer;
+    font-family: $font-bold;
+    text-decoration: underline;
+    color: $gray-600;
+
+    &:hover {
+      text-decoration: none;
+
+      @media screen and (max-width: 1180px) {
+        text-decoration: underline;
+      }
+    }
+  }
+}

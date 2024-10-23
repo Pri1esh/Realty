@@ -1,0 +1,40 @@
+{
+  "configurations": {
+    "fields": [
+      {
+        "heading": "heading",
+        "link": "/url",
+        "linkTarget": "_blank",
+        "links": [
+          {
+            "link": "/url",
+            "linkText": "link",
+            "linkTarget": ""
+          },
+          {
+            "link": "/url",
+            "linkText": "link",
+            "linkTarget": ""
+          }
+        ]
+      },
+      {
+        "heading": "heading",
+        "link": "",
+        "linkTarget": "",
+        "links": [
+          {
+            "link": "/url",
+            "linkText": "link",
+            "linkTarget": ""
+          },
+          {
+            "link": "/url",
+            "linkText": "link",
+            "linkTarget": ""
+          }
+        ]
+      }
+    ]
+  }
+}

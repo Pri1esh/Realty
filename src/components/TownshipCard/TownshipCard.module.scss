@@ -1,0 +1,148 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.townshipCard {
+  padding: 0;
+  cursor: default;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 0 !important;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    color: $gray-600;
+    font-family: $font-bold;
+  }
+
+  p {
+    padding: 1.875rem 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: $gray-600;
+  }
+
+  @media screen and (min-width: 992px) {
+    a {
+      min-width: 9.8rem;
+    }
+  }
+
+  .townshipMobile {
+    position: relative;
+
+    @media (min-width: 992px) {
+      padding: 0;
+    }
+
+    > a {
+      height: 22rem;
+      border-radius: $borderRadius;
+      overflow: hidden;
+      position: relative;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+
+      @media (max-width: 991px) {
+        height: 24rem;
+      }
+
+      @media (max-width: 767px) {
+        height: 33.5rem;
+      }
+
+      @media (max-width: 991px) {
+        &:after {
+          content: '';
+          background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          min-height: 19rem;
+          opacity: 0.8;
+        }
+      }
+    }
+
+    a {
+      position: relative;
+      display: block;
+      width: 100%;
+
+      .imgTag {
+        position: absolute;
+        bottom: 0.875rem;
+        right: 0.875rem;
+        color: $white;
+        font-size: 0.75rem;
+        z-index: 1;
+        opacity: 0.8;
+      }
+    }
+
+    img {
+      object-fit: cover;
+      width: fit-content;
+      transition: ease-in-out all 2600ms;
+
+      &:hover {
+        @media (min-width: 992px) {
+          transform: scale(1.1);
+        }
+
+        @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+          transform: scale(1);
+          transition: unset;
+        }
+
+        @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+          transform: scale(1);
+          transition: unset;
+        }
+      }
+
+      @media (max-width: 767px) {
+        max-height: 33.5rem;
+        width: 100%;
+      }
+
+      @media (min-width: 991px) {
+        height: 22rem;
+      }
+    }
+
+    > div {
+      position: absolute;
+      bottom: 1.25rem;
+      left: 2rem;
+
+      h2 {
+        font-size: 1.375rem;
+        color: $white;
+        font-weight: 600;
+        margin-bottom: 1.25rem;
+
+        @media (max-width: 991px) {
+          font-size: 1.625rem;
+        }
+      }
+
+      a {
+        background-color: $white;
+        color: $gray-600;
+        border-color: $white;
+
+        @media (max-width: 991px) {
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+
+  .townshipInfo {
+    padding: 0 6rem 0 5rem;
+  }
+}

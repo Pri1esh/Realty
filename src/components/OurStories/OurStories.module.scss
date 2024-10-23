@@ -1,0 +1,42 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.sectionStories {
+  .cardTitle {
+    @include toRem(font-size, 24);
+    @include toRem(line-height, 32);
+    font-family: $font-bold;
+    color: $gray-600;
+
+    @media screen and (max-width: 991px) {
+      @include toRem(font-size, 20);
+      @include toRem(line-height, 28);
+    }
+  }
+
+  .cardDesc {
+    @include toRem(font-size, 16);
+    @include toRem(margin-top, 8);
+    color: $dark;
+
+    @media screen and (max-width: 991px) {
+      @include toRem(font-size, 14);
+    }
+  }
+
+  figure {
+    @include toRem(margin-bottom, 20);
+    overflow: hidden;
+    position: relative;
+
+    img {
+      @include toRem(min-height, 284);
+      border-radius: $borderRadius;
+      object-fit: cover;
+
+      @media screen and (min-width: 992px) {
+        @include toRem(min-height, 316);
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+@import '../../scss/partials/mixins';
+@import '../../scss/partials/variable';
+
+.facebookGrid {
+  background: $lotion;
+  margin-top: 1.563rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  height: 30.438rem;
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    background: $platinum;
+    padding: 2rem 0;
+  }
+
+  @media (max-width: 991px) {
+    max-height: 21.438rem;
+    margin-top: 0;
+  }
+}

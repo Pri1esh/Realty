@@ -1,0 +1,92 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.townshipBanner {
+  position: relative;
+
+  .projectAction {
+    position: absolute;
+    top: 6rem;
+    width: 100%;
+
+    @media (max-width: 991px) {
+      top: 1rem;
+    }
+
+    ul {
+      margin: 0 0.5rem;
+    }
+
+    li {
+      background-color: $white;
+      border-radius: 50%;
+      width: 2.25rem;
+      height: 2.25rem;
+      text-align: center;
+
+      &:last-child {
+        margin-left: 0.5rem;
+        margin-right: 0;
+      }
+    }
+
+    button {
+      padding: 0;
+    }
+  }
+
+  video {
+    height: 100vh;
+    min-height: unset;
+
+    @media (max-width: 991px) {
+      height: calc(100vh - 145px);
+      min-height: calc(100vh - 145px);
+    }
+
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.townshipMaster {
+  padding-top: 6.25rem;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 3.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .AmenitiesSlider {
+    :global(.slick-slider) {
+      padding: 0 0.7rem;
+    }
+
+    .slick-slider {
+      margin-left: 0;
+    }
+  }
+}
+
+.tabMobile {
+  margin-bottom: 2rem;
+}
+
+.AmenitiesSlider {
+  .disclaimer {
+    margin-top: 1.5rem;
+    font-size: 0.688rem;
+    color: $sonicSilver;
+    font-family: $font-medium;
+    font-style: italic;
+  }
+}
+
+.headerStyle {
+  @include toRem(margin-bottom, 40);
+
+  @media (max-width: 767px) {
+    @include toRem(margin-bottom, 24);
+  }
+}

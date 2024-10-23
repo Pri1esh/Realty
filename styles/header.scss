@@ -1,0 +1,1030 @@
+.headerMain {
+  margin-bottom: 0.75rem;
+  background-color: $white;
+  transition: transform 0.2s ease-in-out;
+
+  @media (max-width: 991px) {
+    display: none;
+  }
+
+  > .container-fluid {
+    max-width: 1600px;
+    padding: 0 1.25rem;
+  }
+
+  &.sticky {
+    &:not(.floatingHeader) {
+      position: sticky;
+      top: 0;
+    }
+
+    &.scrollOnAbsolute {
+      position: fixed;
+    }
+
+    &.borderBottom {
+      border-bottom: solid 0 $platinum;
+    }
+
+    &.floatingHeader {
+      top: var(--top-nav-height);
+      border-bottom: solid 1px $platinum;
+    }
+
+    &:not(.noAnimate) {
+      animation: slide-down 0.4s;
+    }
+
+    background-color: $white;
+    z-index: 199;
+    left: 0;
+    right: 0;
+  }
+
+  &.static {
+    position: static;
+  }
+
+  &.floatingHeader {
+    margin: 0;
+
+    &:not(.scrollOnAbsolute) {
+      position: fixed;
+    }
+
+    .menu {
+      i {
+        color: $gray-600;
+        @include toRem(font-size, 19);
+      }
+    }
+
+    &:not(.sticky) {
+      &.scrollOnAbsolute {
+        position: absolute;
+      }
+
+      .menu {
+        i {
+          color: $white;
+        }
+      }
+
+      background-color: transparent;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 3;
+
+      .backLink {
+        color: $white;
+        text-decoration: none;
+
+        :hover {
+          text-decoration: underline;
+        }
+      }
+
+      .whiteLogo {
+        display: block;
+      }
+
+      .colorLogo {
+        display: none;
+      }
+
+      svg {
+        fill: $white;
+      }
+
+      .navItem {
+        > a {
+          color: $white;
+          display: flex;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.1);
+          }
+        }
+
+        .dropdown-menu .dropdown-item {
+          .iconBox {
+            svg {
+              fill: $secondary;
+            }
+          }
+
+          svg {
+            fill: $secondary;
+          }
+        }
+      }
+
+      .mainNav {
+        background-color: transparent;
+        border-color: transparent;
+        position: static;
+
+        .brand {
+          .menu svg {
+            fill: $white;
+          }
+
+          .brandBox {
+            .selectLocation {
+              a {
+                > svg {
+                  fill: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .hamburgerMenu {
+      button:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+
+    &.sticky {
+      .hamburgerMenu {
+        button:hover {
+          background-color: $antiFlashWhiteHover;
+        }
+      }
+    }
+  }
+
+  .topNav {
+    @media (max-width: 991px) {
+      display: none !important;
+    }
+
+    a {
+      svg {
+        @include toRem(margin-right, 8);
+      }
+    }
+  }
+
+  .navItem {
+    .iconBox {
+      @include toRem(margin-left, 8);
+
+      i {
+        font-size: 0.6rem;
+      }
+    }
+
+    svg {
+      @include toRem(width, 18);
+      fill: $secondary;
+    }
+
+    > a {
+      padding: 0.38rem 1rem;
+      cursor: pointer;
+      @include toRem(font-size, 16);
+      display: block;
+      @include toRem(border-radius, 20);
+      text-align: center;
+      color: $secondary;
+      text-decoration: none;
+
+      &.basicDropdown {
+        &:after {
+          display: none;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        padding: 0.38rem 0.375rem;
+      }
+
+      &:hover {
+        background: $antiFlashWhiteHover;
+      }
+
+      &.active {
+        background: $antiFlashWhiteHover;
+        color: $secondary;
+      }
+
+      & ~ div {
+        margin-top: -2px;
+      }
+    }
+
+    .dropdown-menu {
+      &.realtyMenuList {
+        width: 350px;
+      }
+
+      .dropdown-item {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+
+        i {
+          font-size: 1.5rem;
+          margin: 0 0.5rem 0 0;
+
+          &.icon-Tick {
+            font-size: 0.75rem;
+            color: $blue;
+            margin-left: auto;
+            margin-right: 0;
+          }
+        }
+
+        .iconBox {
+          @include circle(36px);
+          background-color: $antiFlashWhiteHover;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0;
+
+          i {
+            @include toRem(width, 20);
+          }
+        }
+
+        p {
+          padding-left: 1rem;
+
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .mainNav {
+    @include toRem(height, 70);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    column-gap: 1.5rem;
+
+    @media (min-width: 992px) {
+      justify-content: space-between;
+      column-gap: 1.5rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      line-height: normal;
+
+      .menu {
+        @include toRem(margin-right, 12);
+        text-align: center;
+        cursor: pointer;
+
+        &.backArrow {
+          @include toRem(margin-left, -10);
+
+          button {
+            display: inline-block;
+            padding: 0;
+
+            svg {
+              flex: 1;
+            }
+          }
+        }
+
+        svg {
+          fill: $secondary;
+          @include toRem(width, 19);
+          position: relative;
+        }
+      }
+
+      .brandBox {
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        a {
+          display: flex;
+          align-items: center;
+        }
+
+        .brandLogo {
+          max-width: 55px;
+          margin-right: 1rem;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .selectLocation {
+          img {
+            width: 190px;
+          }
+
+          a {
+            > svg {
+              fill: $black;
+              @include toRem(height, 30);
+            }
+
+            .tick {
+              @include toRem(width, 16);
+              margin-left: auto;
+            }
+          }
+
+          .location-arrow {
+            margin-left: 1rem;
+            margin-bottom: 0;
+            position: relative;
+
+            svg {
+              fill: $gray-600;
+              @include toRem(width, 14);
+              transition: transform 0.5s;
+              position: relative;
+            }
+
+            &::before {
+              content: '';
+              @include circle(32px);
+              @include center(both);
+            }
+          }
+
+          &:hover {
+            .location-arrow::before {
+              background-color: $antiFlashWhiteHover;
+            }
+          }
+
+          .dropdown {
+            display: flex;
+
+            > a {
+              @include toRem(font-size, 14);
+              color: $gray-600;
+              text-decoration: none;
+              line-height: normal;
+            }
+
+            &.show {
+              .location-arrow {
+                svg {
+                  transform: rotate(180deg);
+                }
+              }
+            }
+          }
+
+          .locationLayer {
+            min-width: 360px;
+            padding: 0;
+            overflow: hidden;
+
+            .dropdown-item {
+              border-bottom: 1px solid $brightGray;
+              padding: 0.875rem 1rem;
+              color: $secondary;
+              display: flex;
+
+              h5 {
+                font-size: 1rem;
+                font-family: $font-medium;
+                margin-bottom: 0.25rem;
+              }
+
+              p {
+                @include toRem(font-size, 12);
+              }
+
+              &:last-child {
+                border: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .navbarNav {
+      flex-direction: row;
+    }
+
+    .search-box {
+      width: 100%;
+      @include toRem(height, 54);
+      display: flex;
+      align-items: center;
+      background: $white;
+      border-bottom: 1px solid #eaeaea;
+      padding: 1rem 10px 1rem 20px;
+      border-radius: $borderRadius $borderRadius 0 0;
+
+      svg {
+        cursor: pointer;
+        fill: $black;
+        width: 1.1rem;
+      }
+
+      &__field {
+        background: transparent;
+        padding: 0.75rem 0.875rem;
+        flex: 1;
+        border: 0;
+        font-size: 1rem;
+        color: $gray-600;
+      }
+    }
+
+    .search-layer {
+      width: 654px;
+      padding: 0;
+      transform: translate3d(0px, -10px, 0px) !important;
+
+      .search-suggester {
+        padding: 1.5rem 0 1rem;
+
+        h5 {
+          color: $color-999;
+          @include toRem(font-size, 10);
+          text-transform: uppercase;
+          font-family: $font-medium;
+          @include toRem(margin-bottom, 18);
+          padding: 0 1.25rem;
+
+          svg {
+            @include toRem(width, 12);
+            fill: $color-999;
+            margin-right: 0.5rem;
+          }
+        }
+
+        li {
+          a {
+            padding: 0.5rem 1.25rem;
+            display: flex;
+            align-items: center;
+            color: $secondary;
+
+            svg {
+              margin-right: 1rem;
+            }
+          }
+
+          &:hover {
+            background-color: $antiFlashWhiteHover;
+          }
+        }
+      }
+
+      .recentSearches {
+        margin-bottom: 2rem;
+        padding: 0 1.25rem;
+
+        .btn {
+          background: $brightGray;
+          padding: 0.375rem 1.25rem;
+          @include toRem(font-size, 14);
+          color: $secondary;
+          @include toRem(margin-bottom, 12);
+          border: 1px solid transparent;
+
+          &:hover,
+          &.active {
+            border-color: $secondary;
+          }
+        }
+      }
+    }
+  }
+
+  .dropdown-menu.columns-3 {
+    min-width: 780px;
+  }
+
+  .dropdown-menu.columns-2 {
+    min-width: 400px;
+  }
+
+  .featherLogo {
+    @include toRem(max-width, 40);
+    margin-right: 0.5rem;
+
+    &.adaniOne {
+      width: 7.5rem;
+      max-width: 7.5rem;
+      margin-right: 0;
+
+      .featherLogo {
+        max-width: 7.5rem;
+      }
+    }
+
+    a {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .whiteLogo {
+    display: none;
+  }
+
+  &.headerMain {
+    &:not(.sticky) {
+      .searchOutline {
+        .headersearch {
+          .false {
+            .normalSearch {
+              color: $white;
+              background: transparent;
+
+              svg {
+                fill: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.floatingHeader {
+      margin-bottom: 0.4rem !important;
+      z-index: 1040;
+
+      &.hideTopNav {
+        &.borderBottom {
+          top: 0;
+        }
+      }
+
+      .brandBox {
+        a {
+          img {
+            filter: grayscale(2) contrast(0) brightness(100);
+            width: 8.75rem;
+          }
+        }
+      }
+
+      &.sticky {
+        top: -3.25rem;
+        transition: ease all 0.3s;
+
+        .stickyMenu {
+          opacity: 1;
+        }
+
+        @media (max-width: 991px) {
+          top: -100%;
+        }
+
+        .brandBox {
+          a {
+            img {
+              filter: unset;
+            }
+          }
+        }
+
+        .navbarMenu {
+          > div {
+            &:last-child {
+              border: 1px solid $gray-600;
+              border-radius: 1.125rem;
+            }
+          }
+        }
+      }
+
+      .navbarMenu {
+        > div {
+          &:last-child {
+            background-color: rgb(255 255 255 / 80%);
+            border-radius: 1.125rem;
+            border: none;
+
+            a {
+              color: $gray-600 !important;
+              transition: ease all 0.3s;
+
+              &:hover {
+                transition: ease all 0.3s;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.hideTopNav {
+      &.borderBottom {
+        top: -3rem;
+        position: sticky;
+      }
+    }
+
+    .mainNav {
+      .brand {
+        .brandBox,
+        .menu {
+          position: relative;
+          z-index: 1041;
+        }
+
+        .menu {
+          svg {
+            width: 1.1875rem;
+            top: 0;
+          }
+        }
+      }
+    }
+
+    .navItem {
+      .dropdown-menu {
+        .dropdown-item {
+          .iconBox {
+            background-color: transparent;
+
+            i {
+              font-size: 1.25rem;
+              margin: 0;
+            }
+          }
+        }
+      }
+
+      .realtyMainNav {
+        svg {
+          fill: $secondary;
+        }
+      }
+    }
+  }
+
+  .headerNav {
+    display: none;
+
+    @media (min-width: 992px) {
+      margin-left: auto;
+    }
+
+    .navbarNav {
+      .navbarMenu {
+        position: relative;
+
+        .navItem {
+          @media (max-width: 1180px) {
+            display: none;
+
+            &:last-child {
+              display: block;
+            }
+          }
+
+          &.dropdown {
+            display: block;
+
+            @media (max-width: 1180px) {
+              display: none;
+            }
+          }
+        }
+
+        .dropdown {
+          .basicDropdown {
+            ~ .dropdown-menu {
+              p {
+                font-family: $font-medium;
+                font-size: 0.875em;
+                color: $gray-600;
+
+                span {
+                  font-family: $font-regular;
+                  font-size: 0.815rem;
+                }
+              }
+            }
+          }
+
+          .realtyMainNav {
+            .tabContent {
+              height: auto;
+            }
+
+            .nav-pills {
+              height: auto;
+
+              .navLink {
+                color: $gray-600;
+              }
+
+              @media (min-width: 992px) {
+                flex: 0 0 230px;
+              }
+            }
+
+            .navlink {
+              float: left;
+              @include toRem(margin-bottom, 16);
+
+              a {
+                color: $gray-600;
+                padding: 6px 1rem;
+
+                &.linkHeading {
+                  &:nth-of-type(n + 2) {
+                    margin-top: 0;
+                  }
+
+                  font-size: 0.85rem;
+                }
+              }
+            }
+          }
+
+          position: unset;
+
+          .dropdown-menu {
+            top: 100%;
+            transform: unset !important;
+            inset: 40px auto auto !important;
+            right: 0 !important;
+            overflow: hidden;
+
+            @media (max-width: 1199px) {
+              max-width: 54rem;
+            }
+          }
+        }
+      }
+
+      .navItem.dropdown {
+        display: none;
+      }
+    }
+  }
+
+  .navbarMenu {
+    display: flex;
+
+    > div {
+      &:last-child {
+        border: 1px solid $gray-600;
+        border-radius: 1.125rem;
+
+        a {
+          font-size: 0.875rem;
+          padding: 0.45rem 0.875rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .headerMain {
+    left: 0;
+    right: 0;
+    top: 0;
+    margin-bottom: 1.625rem;
+
+    > .container-fluid {
+      padding: 0 1.75rem;
+    }
+
+    .mainNav {
+      @include toRem(height, 80);
+      padding: 0;
+      position: relative;
+    }
+
+    .headerStepper {
+      @include center(horizontal);
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .headerNav {
+      display: block;
+
+      .badge {
+        label {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .topNav {
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 0.625rem;
+      margin-top: 0.5rem;
+      min-height: 2.1875rem;
+
+      i {
+        @include toRem(font-size, 12);
+        @include toRem(line-height, 12);
+        @include toRem(margin-top, 4);
+        @include toRem(margin-right, 8);
+      }
+
+      a {
+        display: flex;
+        @include toRem('font-size', 14);
+        padding-left: 0.65rem;
+        padding-right: 0.65rem;
+        align-items: center;
+
+        &.dropdown-item {
+          svg {
+            height: 1.5rem;
+            width: auto;
+
+            &.tick {
+              margin-left: auto;
+              margin-right: 0;
+              fill: $primary;
+              width: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.fatmenuDD {
+  .dropdown-menu {
+    right: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    min-width: 60rem;
+  }
+
+  .realtyMainNav {
+    display: flex;
+    justify-content: flex-start;
+
+    .nav-pills {
+      flex-direction: column;
+      flex: 0 0 305px;
+      text-align: left;
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+      margin: 0;
+      height: 470px;
+      overflow: auto;
+
+      .navLink {
+        text-align: left;
+
+        &:after {
+          z-index: 1;
+        }
+
+        @include toRem(font-size, 14);
+        padding: 10px 1rem;
+        justify-content: space-between;
+        display: flex;
+
+        .arrowRight {
+          display: none;
+          font-size: 0.9rem;
+        }
+
+        &:hover,
+        &.active {
+          background-color: $lightgrayCultured;
+
+          .arrowRight {
+            display: block;
+            font-size: 0.5rem;
+            line-height: 1.25rem;
+
+            i {
+              color: $gray2;
+            }
+          }
+        }
+      }
+    }
+
+    .tabContent {
+      flex-grow: 1;
+      padding: 1rem 1rem 1rem 0;
+      height: 470px;
+      overflow: auto;
+
+      .col-md-8 {
+        display: block;
+      }
+
+      .columnScroll {
+        max-height: 31.25rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+
+      .navlink {
+        @include toRem(font-size, 14);
+        width: 50%;
+
+        h3 {
+          font-weight: bold;
+          padding: 0.5rem 1rem;
+          display: block;
+          @include toRem(font-size, 14);
+        }
+
+        a {
+          padding: 10px 1rem;
+          display: block;
+
+          &:hover {
+            background-color: #f5f5f5;
+          }
+
+          &.linkHeading {
+            font-weight: bold;
+
+            &[href='#'],
+            &[href=''] {
+              cursor: default;
+              pointer-events: none;
+            }
+          }
+
+          &.navSectionTitleLink {
+            font-weight: bold;
+          }
+        }
+      }
+
+      .navProjectfigure {
+        color: transparent;
+        font-size: 0.063rem;
+        position: relative;
+
+        .navProjectfigureLogoWrapper {
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          width: 3.5rem;
+          height: 3.5rem;
+          border-radius: 50%;
+          overflow: hidden;
+        }
+
+        .navProjectfigureLogo {
+          position: absolute;
+          top: 0rem;
+          left: 0rem;
+          width: 3.5rem;
+          height: 3.5rem;
+          background: $white;
+          border-radius: 50%;
+          border: 0.063rem solid transparent;
+          z-index: 1;
+
+          &[src=''] {
+            display: none;
+          }
+        }
+
+        .navProjectfigureImage {
+          width: 100%;
+          height: 14rem;
+          object-fit: cover;
+          border-radius: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.subText {
+  font-size: 15px;
+  color: gray;
+}
+
+@media screen and (min-width: 992px) {
+  .floatingHeader {
+    z-index: 2;
+  }
+}

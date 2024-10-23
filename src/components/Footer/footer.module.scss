@@ -1,0 +1,387 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.footerWrapper {
+  margin-top: 2.5rem;
+  padding: 0 0 5.5rem 0;
+  background: $footer-bg;
+
+  a:link,
+  a:visited,
+  a:active {
+    color: $dark;
+  }
+
+  a:hover {
+    color: $secondary;
+    text-decoration: underline;
+  }
+}
+
+.footerNav {
+  padding-top: 2rem;
+
+  li {
+    flex: 0 0 100%;
+  }
+
+  .footerNavGrid {
+    flex: 0 0 100%;
+    padding-bottom: 1rem;
+
+    .footerLinkHeading {
+      svg,
+      i {
+        display: none;
+      }
+    }
+  }
+}
+
+.footerNav,
+.footerLinkList,
+.copyrightLinksList,
+.footerSubLinkList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.copyrightLinksList {
+  padding-top: 2rem;
+  flex-direction: row;
+
+  li {
+    color: $dark;
+    @include toRem('font-size', 14);
+    position: relative;
+    @include toRem('padding-left', 26);
+    margin-left: 0.5rem;
+
+    a {
+      color: $dark;
+      display: block;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &::before {
+      top: 50%;
+      @include toRem('left', 8);
+      content: '';
+      margin: -3px 0 0;
+      position: absolute;
+      background: $color-999;
+      @include circle(4px);
+    }
+
+    &:first-child {
+      padding-left: 0;
+      margin-left: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.footerLinkHeading {
+  color: $secondary;
+  padding-bottom: 0.625rem;
+  font-family: $font-bold;
+  @include toRem('font-size', 16);
+}
+
+.footerLink,
+.footerSubLink {
+  a {
+    color: $dark;
+    @include toRem('font-size', 15);
+    display: inline-block;
+    padding: 0.5rem 0;
+  }
+
+  .footerLinkItem {
+    text-decoration: none;
+  }
+
+  .footerLinkItem:hover {
+    color: $secondary;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.socialLinkWrapper {
+  display: flex;
+  padding: 0 0 1rem 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.socialLinkList {
+  display: flex;
+
+  li {
+    margin-right: 0.75rem;
+
+    a {
+      @include circle(2.25rem);
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+      border: 1px solid $gainsBoro;
+
+      &:hover {
+        border-color: $color-999;
+        text-decoration: none;
+      }
+
+      svg {
+        width: 1.15rem;
+        fill: $secondary;
+      }
+
+      i {
+        &::before {
+          font-size: 1.15rem;
+          color: $secondary;
+        }
+      }
+    }
+  }
+}
+
+.footerSubLinkHeading {
+  display: flex;
+  justify-content: space-between;
+  color: $dark;
+  @include toRem('font-size', 15);
+  padding: 0.5rem 0;
+  text-decoration: none;
+
+  &:hover {
+    color: $secondary;
+    cursor: pointer;
+  }
+
+  &.active {
+    color: $secondary;
+
+    svg,
+    i {
+      transform: rotate(180deg);
+      transition: all 0.3s;
+      @include toRem(width, 13);
+    }
+  }
+
+  svg,
+  i {
+    display: block;
+    transition: all 0.3s;
+  }
+
+  i:before {
+    @include toRem(font-size, 13);
+  }
+}
+
+.footerSubLinkList {
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
+
+  &:global(.active) {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in;
+  }
+}
+
+@include screen(600) {
+  .footerNav .footerNavGrid {
+    flex: 0 0 33.3%;
+    padding-bottom: 2rem;
+  }
+}
+
+@include screen(700) {
+  .socialLinkWrapper {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@include screen(900) {
+  .footerCopyright {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .socialLinkWrapper {
+    padding: 1rem 0;
+    border-top: 1px solid $color-ddd;
+    @include toRem('margin-top', 15);
+    border-bottom: 1px solid $color-ddd;
+    flex-direction: row;
+  }
+
+  .footerWrapper {
+    @include toRem(margin-top, 80);
+  }
+
+  .footerNav .footerNavGrid {
+    flex: 0 0 20%;
+  }
+}
+
+@media (max-width: 767px) {
+  .copyrightLinksList {
+    li {
+      &:first-child {
+        width: 100%;
+        margin-bottom: 0.75rem;
+      }
+
+      &:nth-child(2) {
+        margin-left: 0;
+        padding-left: 0;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .footerNav {
+    padding: 1rem 0 1.5rem 0;
+
+    .footerNavGrid {
+      padding: 0;
+
+      .footerLinkHeading {
+        padding: 1.5rem 1.25rem;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 -1.25rem;
+        font-family: $font-medium;
+
+        &.active {
+          svg,
+          i {
+            transform: rotate(180deg);
+            transition: all 0.3s;
+            @include toRem(width, 13);
+          }
+        }
+
+        svg,
+        i {
+          display: block;
+          transition: all 0.3s;
+        }
+
+        i:before {
+          @include toRem(font-size, 13);
+        }
+      }
+    }
+
+    .footerLinkList {
+      max-height: 0;
+      transition: max-height 0.5s ease-out;
+      overflow: hidden;
+
+      &:global(.active) {
+        max-height: 2000px;
+        transition: max-height 0.5s ease-in;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .footerWrapper {
+    padding: 0 0 2rem 0;
+  }
+}
+
+.footerRealty {
+  .footerWrapper {
+    margin-top: 0;
+    overflow-x: hidden;
+    position: relative;
+
+    @media (max-width: 991px) {
+      padding-bottom: 4.5rem;
+    }
+
+    @media (max-width: 767px) {
+      padding-bottom: 7rem;
+    }
+  }
+
+  .footerNav {
+    .footerLinkHeading {
+      svg {
+        max-height: 1rem;
+      }
+    }
+  }
+
+  .footerCopyright {
+    .copyrightLinksList {
+      li {
+        padding-left: 1rem;
+        margin-left: 0;
+        line-height: 2;
+
+        a {
+          padding-right: 0.5rem;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        &:first-child {
+          padding-left: 0;
+          padding-right: 1rem;
+
+          &::before {
+            display: none;
+          }
+        }
+
+        &:before {
+          background: $color-999;
+          border-radius: 0.125rem;
+          content: '';
+          height: 0.25rem;
+          left: 0;
+          position: absolute;
+          top: 50%;
+          width: 0.25rem;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .footerNav li {
+      padding-right: 2rem;
+    }
+  }
+}

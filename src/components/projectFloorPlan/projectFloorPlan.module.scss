@@ -1,0 +1,42 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.propertyFloorPlan {
+  border-radius: 0.81rem;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid $gainsboro;
+
+  figure {
+    display: block;
+  }
+
+  img {
+    width: 100%;
+    cursor: pointer;
+    min-height: 25rem;
+  }
+}
+
+.modal {
+  img {
+    max-width: 100%;
+  }
+}
+
+.propertyFloorPlanThumb {
+  @media (max-width: 767px) {
+    margin: 0 -1.25rem;
+  }
+
+  @media (max-width: 991px) {
+    position: relative;
+    overflow: auto;
+  }
+
+  img {
+    @media (max-width: 991px) {
+      max-height: 60vh;
+    }
+  }
+}

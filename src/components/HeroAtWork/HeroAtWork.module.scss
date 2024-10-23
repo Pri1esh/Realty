@@ -1,0 +1,74 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.HeroatWork {
+  background-color: $antiFlashWhite;
+  padding: 4.625rem 0;
+
+  div {
+    background: transparent;
+  }
+
+  img {
+    width: auto !important;
+    padding-top: 3rem;
+    height: auto !important;
+    max-width: 100% !important;
+  }
+
+  h3 {
+    display: none;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  .slickDots {
+    ul {
+      bottom: -2.5rem;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    padding: 2rem 0;
+
+    .slickDots {
+      ul {
+        bottom: 1.5rem;
+      }
+    }
+  }
+
+  :global(.slick-list) {
+    :global(.slick-track) {
+      :global(.slick-slide) {
+        div {
+          iframe {
+            @media (max-width: 991px) {
+              min-height: 14rem;
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  :global(.slick-slider) {
+    :global(.slick-arrow) {
+      border-radius: 100%;
+
+      &:global(.slick-prev) {
+        right: 3.5rem;
+        top: -7.6rem;
+        left: unset;
+      }
+
+      &:global(.slick-next) {
+        right: 0.6rem;
+        top: -7.6rem;
+      }
+    }
+  }
+}

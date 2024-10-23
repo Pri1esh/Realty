@@ -1,0 +1,43 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.cityFeatures {
+  margin-top: 2.5rem;
+
+  @media screen and (max-width: 991px) {
+    margin-top: 1.7rem;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      width: 25%;
+      margin-bottom: 1.5rem;
+
+      @media screen and (max-width: 991px) {
+        width: 33%;
+      }
+
+      @media screen and (max-width: 767px) {
+        width: 100%;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      i {
+        font-size: 1.563rem;
+        color: $gray-600;
+        margin-right: 1rem;
+      }
+
+      small {
+        color: $secondary;
+        font-size: 1rem;
+      }
+    }
+  }
+}

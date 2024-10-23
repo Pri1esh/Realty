@@ -1,0 +1,88 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  img {
+    @include toRem(border-radius, 8);
+  }
+
+  .content {
+    @include toRem(bottom, 40);
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    text-align: center;
+    padding: 0 2rem;
+    position: absolute;
+    right: auto;
+
+    @media (min-width: 768px) {
+      @include toRem(right, 16);
+      max-width: 40%;
+      padding: 0;
+      bottom: auto;
+      text-align: left;
+    }
+
+    @media (min-width: 992px) {
+      @include toRem(padding-right, 80);
+      @include toRem(right, 16);
+      bottom: auto;
+      text-align: left;
+    }
+
+    h2 {
+      @include toRem(margin-bottom, 24);
+      font-family: $font-bold;
+      text-shadow: 0 0 transparent;
+
+      &.textGradient {
+        @include toRem(font-size, 28);
+        background: -webkit-linear-gradient(0deg, #279887, #9a05ce, red);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @media (min-width: 1200px) {
+          @include toRem(font-size, 36);
+        }
+      }
+    }
+
+    p {
+      @include toRem(margin-bottom, 48);
+
+      @media (min-width: 768px) {
+        @include toRem(margin-bottom, 16);
+      }
+
+      @media (min-width: 992px) {
+        @include toRem(margin-bottom, 48);
+      }
+    }
+
+    > a {
+      @include toRem(font-size, 16);
+      @include toRem(border-radius, 24);
+      padding: 0.55rem 1.5rem;
+      text-align: center;
+      color: $secondary;
+      text-decoration: none;
+      border: 0.0625rem solid $secondary;
+      margin: auto;
+
+      &:hover {
+        background-color: $antiFlashWhiteHover;
+      }
+
+      @media (min-width: 768px) {
+        @include toRem(width, 140);
+        margin: 0;
+      }
+    }
+  }
+}

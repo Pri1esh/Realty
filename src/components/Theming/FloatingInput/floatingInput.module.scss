@@ -1,0 +1,42 @@
+@import '/src/scss/partials/mixins';
+@import '/src/scss/partials/variable';
+
+.wrapper {
+  .withIcon {
+    padding-right: 2.9rem;
+
+    ~ label {
+      @include toRem(font-size, 14);
+    }
+  }
+
+  .inputPadding {
+    padding-right: 3.938rem;
+    text-overflow: ellipsis;
+  }
+
+  .clearIcon {
+    color: $gray-600;
+    font-size: 1.25rem;
+    text-decoration: none;
+    cursor: pointer;
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 0.938rem;
+    top: 0.9375rem;
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    right: 0.5rem;
+
+    i {
+      line-height: 0;
+
+      &::before {
+        color: $gray-600;
+        font-size: 1rem;
+      }
+    }
+  }
+}

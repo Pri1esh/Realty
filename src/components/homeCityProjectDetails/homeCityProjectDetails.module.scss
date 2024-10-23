@@ -1,0 +1,168 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+@media (min-width: 992px) {
+  .blockmain {
+    .row {
+      justify-content: space-between;
+
+      .col {
+        width: auto;
+        margin: 0;
+      }
+
+      .cardblock {
+        .cardblockthumb {
+          img {
+            max-width: 11.25rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  .col {
+    width: 50%;
+  }
+}
+
+.cardblock {
+  padding-top: 1rem;
+  text-align: center;
+
+  @media screen and (max-width: 991px) {
+    margin-bottom: 1.5rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 1.5rem;
+  }
+
+  .cardblockthumb {
+    margin-bottom: 1.063rem;
+    max-width: 11.25rem;
+    border-radius: 100%;
+    width: 180px;
+    overflow: hidden;
+    position: relative;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+
+    @media screen and (max-width: 991px) {
+      margin: 0 auto 0.75rem auto;
+    }
+
+    @media screen and (max-width: 767px) {
+      max-width: 80%;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      border-radius: 100%;
+
+      @media (min-width: 992px) {
+        transform: scale(1);
+        transition: ease-in-out all 2600ms;
+      }
+    }
+  }
+
+  .cardblockdescription {
+    text-align: center;
+    cursor: pointer;
+
+    h3 {
+      font-size: 1.125rem;
+      color: $gray-600;
+      font-weight: bold;
+
+      @media (max-width: 767px) {
+        font-size: 1rem;
+      }
+    }
+
+    h4 {
+      margin-top: 0.375rem;
+      font-size: 0.875rem;
+      color: $dark;
+      font-weight: 400;
+    }
+  }
+
+  &:hover {
+    .cardblockthumb {
+      img {
+        @media (min-width: 992px) {
+          transform: scale(1.1);
+          transition: ease-in-out all 2600ms;
+        }
+
+        @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+          transform: scale(1);
+          transition: unset;
+        }
+
+        @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+          transform: scale(1);
+          transition: unset;
+        }
+
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.projectLocation {
+  > div {
+    -webkit-animation: slideDown 0.5s ease-out;
+    animation: slideDown 0.5s ease-out;
+    animation-delay: 0s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    position: relative;
+    opacity: 0;
+
+    &:nth-child(1) {
+      -webkit-animation-delay: 100ms;
+      animation-delay: 100ms;
+    }
+
+    &:nth-child(2) {
+      -webkit-animation-delay: 200ms;
+      animation-delay: 200ms;
+    }
+
+    &:nth-child(3) {
+      -webkit-animation-delay: 300ms;
+      animation-delay: 300ms;
+    }
+
+    &:nth-child(4) {
+      -webkit-animation-delay: 400ms;
+      animation-delay: 400ms;
+    }
+  }
+}
+
+@keyframes slideDown {
+  from {
+    top: -50px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}

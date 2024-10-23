@@ -1,0 +1,174 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+@import '../../scss/partials/mixins';
+
+.similarprojectsbox {
+  position: relative;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  overflow: hidden;
+  border-radius: $borderRadius;
+
+  img {
+    transition: ease-in-out all 2600ms;
+  }
+
+  &:hover {
+    img {
+      transition: ease-in-out all 2600ms;
+      transform: scale(1.1);
+    }
+  }
+
+  .similarprojectsboxthumb {
+    overflow: hidden;
+    position: relative;
+    border-radius: $borderRadius;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      min-height: 16.5rem;
+
+      @media screen and (max-width: 767px) {
+        min-height: 20rem;
+      }
+    }
+
+    p {
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      bottom: 0.75rem;
+      right: 0.75rem;
+      padding: 0 0.75rem 0.25rem;
+      border-radius: 1rem;
+
+      a {
+        color: $white;
+        font-size: 0.688rem;
+      }
+    }
+  }
+
+  .similarprojectslogo {
+    position: absolute;
+    top: 1.063rem;
+    left: 1.25rem;
+    border-radius: 100%;
+    border: 1px solid $white;
+    overflow: hidden;
+    width: 3.635rem;
+    height: 3.635rem;
+    background: $white;
+
+    a {
+      display: block;
+      position: relative;
+      height: 100%;
+      width: 100%;
+
+      img {
+        max-width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .similarprojectsdetails {
+    width: 100%;
+    padding-top: 1.5rem;
+
+    span {
+      background: $white;
+      color: $dark;
+      font-size: 0.688rem;
+      padding: 0.375rem 0.813rem 0.313rem 1.5rem;
+      border-radius: 0.25rem;
+      margin-bottom: 0.5rem;
+      display: inline-block;
+      font-weight: 400;
+      position: relative;
+      line-height: 1;
+      border: 0.0625rem solid $gainsboro;
+
+      i {
+        color: $denim;
+        position: absolute;
+        left: 0.5rem;
+        @include center(vertical);
+      }
+    }
+
+    h3 a {
+      color: $gray-600;
+      font-size: 1.75rem;
+      font-family: $font-medium;
+
+      @media screen and (max-width: 991px) {
+        font-size: 1.25rem;
+        font-family: $font-bold;
+        display: block;
+        word-break: break-word;
+      }
+    }
+
+    p a {
+      background: rgb(0 0 0 / 60%);
+      position: absolute;
+      right: 1.25rem;
+      bottom: 1.25rem;
+      color: $white;
+      font-size: 0.65rem;
+      padding: 0.375rem 0.8rem;
+      border-radius: 0.8rem;
+
+      @media (max-width: 991px) {
+        font-size: 0.688rem;
+      }
+    }
+
+    .new_launch {
+      i {
+        background-color: $denim;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        @include center(vertical);
+        left: 0.5rem;
+        vertical-align: middle;
+      }
+    }
+
+    .readytoMove {
+      i {
+        background-color: $plum;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        @include center(vertical);
+        left: 0.5rem;
+        vertical-align: middle;
+      }
+    }
+
+    .underConstruction {
+      i {
+        background-color: $royalOrange;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        @include center(vertical);
+        left: 0.5rem;
+        vertical-align: middle;
+      }
+    }
+  }
+}

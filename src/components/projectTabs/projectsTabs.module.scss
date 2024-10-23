@@ -1,0 +1,192 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+@media (min-width: 992px) {
+  .cardmain {
+    .card {
+      .cardthumb {
+        .cardFigure {
+          pointer-events: none;
+          display: block;
+          max-height: 23rem;
+
+          img {
+            min-height: 23rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.card {
+  cursor: pointer;
+
+  &:hover {
+    .cardFigure {
+      img {
+        @media (min-width: 992px) {
+          transition: ease-in-out all 2600ms;
+          transform: scale(1.1);
+        }
+
+        @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+          transform: scale(1);
+          transition: unset;
+        }
+
+        @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+          transform: scale(1);
+          transition: unset;
+        }
+      }
+    }
+  }
+
+  .cardthumb {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    border-radius: $borderRadius;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1.5rem;
+
+    @media screen and (max-width: 992px) {
+      margin-bottom: 0.8rem;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 1rem;
+    }
+
+    .cardFigure {
+      position: relative;
+      overflow: hidden;
+
+      @media screen and (max-width: 991px) {
+        height: 15.75rem;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+
+        @media screen and (max-width: 767px) {
+          min-height: 16rem;
+        }
+
+        @media screen and (max-width: 767px) {
+          min-height: 12rem;
+        }
+      }
+
+      p {
+        background: rgb(0 0 0 / 60%);
+        position: absolute;
+        bottom: 1.25rem;
+        right: 1.25rem;
+        padding: 0.25rem 0.375rem;
+        border-radius: 1rem;
+        color: $white;
+        font-size: 0.813rem;
+      }
+
+      & > span {
+        border-radius: $borderRadius;
+        overflow: hidden;
+      }
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .imgtype {
+      background: rgb(0 0 0 / 60%);
+      position: absolute;
+      bottom: 0.875rem;
+      right: 0.875rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 1rem;
+      color: $white;
+      font-size: 0.6rem;
+
+      @media screen and (max-width: 992px) {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    .thumblogo {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      height: 3.625rem;
+      width: 3.625rem;
+      background: $white;
+      border-radius: 100%;
+
+      @media screen and (max-width: 992px) {
+        height: 3.25rem;
+        width: 3.25rem;
+        left: 1rem;
+        top: 1rem;
+      }
+
+      img {
+        max-width: 96%;
+        @include center(both);
+      }
+    }
+  }
+}
+
+.cardbody {
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.438rem;
+    line-height: 2.25rem;
+    color: $gray-600;
+    font-weight: 600;
+
+    @media screen and (max-width: 992px) {
+      line-height: 1.125rem;
+      font-size: 1.125rem;
+      font-family: $font-medium;
+      margin-bottom: 0.438rem;
+    }
+  }
+
+  p {
+    font-size: 0.875rem;
+    color: $gray-600;
+    padding: 0 0;
+    margin-bottom: 0.375rem;
+  }
+
+  span {
+    color: $dark;
+  }
+}
+
+.cardthumb {
+  position: relative;
+  margin-bottom: 1.5rem;
+
+  .cardFigure {
+    border-radius: $borderRadius;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

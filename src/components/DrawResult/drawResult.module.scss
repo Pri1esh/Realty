@@ -1,0 +1,12 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.draw {
+  img {
+    max-width: 100%;
+
+    @media (min-width: 768px) {
+      @include toRem(max-width, 434);
+    }
+  }
+}

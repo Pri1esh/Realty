@@ -1,0 +1,100 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.amenitiesHeader {
+  > header {
+    h1 {
+      @media (max-width: 991px) {
+        @include toRem(padding-left, 40);
+        @include toRem(padding-top, 20);
+      }
+
+      @media (max-width: 767px) {
+        @include toRem(padding-bottom, 8);
+        @include toRem(padding-top, 0);
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    border-radius: 0.5rem;
+    min-height: auto;
+  }
+}
+
+.amenitiesWrapper {
+  :global(.stickyTop) {
+    top: 0;
+
+    @media screen and (min-width: 992px) {
+      top: 4.8rem;
+      @include toRem(margin-top, 64);
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    :global(.slick-slider) {
+      :global(.slick-slide) {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.cardWrapper {
+  @include toRem(margin-bottom, 60);
+
+  @media (min-width: 768px) {
+    @include toRem(margin-bottom, 100);
+  }
+
+  &:first-child {
+    @include toRem(margin-top, 40);
+
+    @media (min-width: 768px) {
+      @include toRem(margin-top, 60);
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.amenities {
+  @media (max-width: 767px) {
+    @include toRem(margin-right, -20);
+    @include toRem(margin-bottom, 60);
+    @include toRem(margin-left, -20);
+    @include toRem(padding-top, 24);
+    @include toRem(padding-right, 20);
+    @include toRem(padding-left, 20);
+    display: flex;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    > div {
+      @include toRem(margin-bottom, 8);
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    background-color: $aliceLightBlue;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    @include toRem(padding-top, 24);
+
+    > div {
+      @include toRem(padding-left, 20);
+      @include toRem(max-width, 720);
+      margin: auto;
+    }
+
+    :global(.mobSlider) {
+      border-radius: 0;
+    }
+  }
+}

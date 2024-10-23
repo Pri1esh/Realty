@@ -1,0 +1,81 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.aboutGoodLife {
+  @include toRem(padding-top, 60);
+
+  h2 {
+    @include toRem(margin-bottom, 40);
+    font-family: $font-bold;
+
+    &.textGradient {
+      @include toRem(font-size, 32);
+
+      span {
+        background: -webkit-linear-gradient(0deg, #289987, #9a05ce, red);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      @media screen and (min-width: 992px) {
+        @include toRem(font-size, 48);
+      }
+
+      sup {
+        @include toRem(font-size, 10);
+        vertical-align: revert;
+        -webkit-text-fill-color: $dark;
+      }
+    }
+
+    @media screen and (min-width: 992px) {
+      @include toRem(margin-bottom, 60);
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    @include toRem(padding-top, 100);
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  h3 {
+    @include toRem(font-size, 16);
+    @include toRem(line-height, 24);
+    @include toRem(margin-bottom, 16);
+    font-family: $font-bold;
+
+    @media screen and (min-width: 992px) {
+      @include toRem(font-size, 26);
+      @include toRem(line-height, 34);
+      @include toRem(margin-bottom, 24);
+    }
+  }
+
+  .description {
+    @include toRem(font-size, 16);
+
+    @media screen and (min-width: 992px) {
+      @include toRem(font-size, 18);
+    }
+  }
+
+  .eventHeading {
+    h2 {
+      text-align: left;
+    }
+  }
+}
+
+.thegoodlife {
+  header {
+    h1 {
+      @media (max-width: 991px) {
+        @include toRem(padding-left, 48);
+        @include toRem(padding-top, 20);
+      }
+    }
+  }
+}

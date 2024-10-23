@@ -1,0 +1,104 @@
+@import '/src/scss/partials/mixins';
+@import '/src/scss/partials/variable';
+
+.adl-button {
+  align-items: center;
+  display: flex;
+}
+
+.btnClose {
+  width: 0.9375rem;
+  margin-right: 0.375rem;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-success,
+.btn-dark,
+.btn-primary-orange,
+.btn-outline-light {
+  .btnClose {
+    fill: $white;
+  }
+}
+
+.btn-outline-primary {
+  .btnClose {
+    fill: $blue;
+  }
+}
+
+.btn-outline-danger {
+  .btnClose {
+    fill: $error;
+  }
+}
+
+.btn-outline-success {
+  .btnClose {
+    fill: $success;
+  }
+}
+
+.btn-outline-warning {
+  .btnClose {
+    fill: $warning;
+  }
+}
+
+.btn-outline-info {
+  .btnClose {
+    fill: $info;
+  }
+}
+
+.btn-outline-warning,
+.btn-outline-danger,
+.btn-outline-info,
+.btn-outline-light {
+  &:hover,
+  &:active {
+    .btnClose {
+      fill: $secondary;
+    }
+  }
+}
+
+.btn-outline-primary,
+.btn-outline-success,
+.btn-outline-dark {
+  &:hover,
+  &:active {
+    .btnClose {
+      fill: $white;
+    }
+  }
+}
+
+.button-Text_With_Icon {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  @include transition(background-color 0.5s);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &.left {
+    flex-direction: row-reverse;
+
+    & span:nth-child(2) {
+      width: 0.95rem;
+      @include toRem(margin-right, 4);
+    }
+  }
+
+  &.right {
+    flex-direction: row;
+
+    & span:nth-child(2) {
+      width: 0.95rem;
+      @include toRem(margin-left, 4);
+    }
+  }
+}

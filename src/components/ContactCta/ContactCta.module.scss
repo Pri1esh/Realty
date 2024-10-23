@@ -1,0 +1,31 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.contactCta {
+  text-align: center;
+  background-color: $aliceBlue;
+  padding: 5.7rem 0;
+
+  h2 {
+    margin: 0 auto 1.2rem;
+    font-size: 2.25rem;
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    text-align: left;
+    padding: 2.5rem 0;
+
+    h2 {
+      font-size: 1.75rem;
+      line-height: 2.375rem;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+      font-family: $font-medium;
+    }
+  }
+}

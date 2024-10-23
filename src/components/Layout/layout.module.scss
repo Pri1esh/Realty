@@ -1,0 +1,52 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.backArrow {
+  padding-top: 0.875rem;
+  position: absolute;
+  width: 100%;
+
+  button {
+    svg {
+      width: 1.1875rem;
+    }
+  }
+
+  > div {
+    position: relative;
+  }
+
+  header {
+    position: absolute;
+    height: unset;
+    left: 0;
+    z-index: 3;
+
+    @media screen and (min-width: 577px) and (max-width: 991px) {
+      padding-left: 0;
+    }
+
+    button {
+      background: $white;
+      border-radius: 100%;
+
+      svg {
+        width: 1.1875rem;
+        margin-left: -0.188rem;
+      }
+    }
+  }
+}
+
+.mobileLogo {
+  @media (max-width: 991px) {
+    width: 100%;
+    top: 1rem;
+    z-index: 1;
+    position: absolute;
+
+    img {
+      filter: grayscale(2) contrast(0) brightness(100);
+    }
+  }
+}

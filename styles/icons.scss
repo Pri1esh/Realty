@@ -1,0 +1,321 @@
+@font-face {
+  font-family: 'iconfont';
+  src:
+    url('/assets/fonts/iconfont.ttf?f22ed1bfca1ee581efdee9b2f112bc47') format('truetype'),
+    url('/assets/fonts/iconfont.woff?f22ed1bfca1ee581efdee9b2f112bc47') format('woff'),
+    url('/assets/fonts/iconfont.woff2?f22ed1bfca1ee581efdee9b2f112bc47') format('woff2'),
+    url('/assets/fonts/iconfont.svg?f22ed1bfca1ee581efdee9b2f112bc47#iconfont') format('svg'),
+    url('/assets/fonts/iconfont.eot?f22ed1bfca1ee581efdee9b2f112bc47#iefix') format('embedded-opentype');
+}
+
+.iconfonts:before {
+  font-family: iconfont !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconfonts.icon-aboutus:before {
+  content: '\f101';
+}
+.iconfonts.icon-accolades:before {
+  content: '\f102';
+}
+.iconfonts.icon-adaniOne:before {
+  content: '\f103';
+}
+.iconfonts.icon-ahemdabad:before {
+  content: '\f104';
+}
+.iconfonts.icon-airport:before {
+  content: '\f105';
+}
+.iconfonts.icon-AngleLeft:before {
+  content: '\f106';
+}
+.iconfonts.icon-AngleRight:before {
+  content: '\f107';
+}
+.iconfonts.icon-Architecture:before {
+  content: '\f108';
+}
+.iconfonts.icon-ArrowBottom:before {
+  content: '\f109';
+}
+.iconfonts.icon-arrowdown:before {
+  content: '\f10a';
+}
+.iconfonts.icon-ArrowLeft:before {
+  content: '\f10b';
+}
+.iconfonts.icon-ArrowRight:before {
+  content: '\f10c';
+}
+.iconfonts.icon-ArrowRightTail:before {
+  content: '\f10d';
+}
+.iconfonts.icon-ArrowUp:before {
+  content: '\f10e';
+}
+.iconfonts.icon-AwardIcon:before {
+  content: '\f10f';
+}
+.iconfonts.icon-BadgeIcon:before {
+  content: '\f110';
+}
+.iconfonts.icon-blogsearch:before {
+  content: '\f111';
+}
+.iconfonts.icon-businesses:before {
+  content: '\f112';
+}
+.iconfonts.icon-calender:before {
+  content: '\f113';
+}
+.iconfonts.icon-call:before {
+  content: '\f114';
+}
+.iconfonts.icon-callback:before {
+  content: '\f115';
+}
+.iconfonts.icon-capital:before {
+  content: '\f116';
+}
+.iconfonts.icon-careers:before {
+  content: '\f117';
+}
+.iconfonts.icon-carpetAreaIcon:before {
+  content: '\f118';
+}
+.iconfonts.icon-certificate:before {
+  content: '\f119';
+}
+.iconfonts.icon-checkmark:before {
+  content: '\f11a';
+}
+.iconfonts.icon-CitybasedMetroRail:before {
+  content: '\f11b';
+}
+.iconfonts.icon-CivicAmenities:before {
+  content: '\f11c';
+}
+.iconfonts.icon-Close:before {
+  content: '\f11d';
+}
+.iconfonts.icon-clubs:before {
+  content: '\f11e';
+}
+.iconfonts.icon-commercial:before {
+  content: '\f11f';
+}
+.iconfonts.icon-CommercialHub:before {
+  content: '\f120';
+}
+.iconfonts.icon-communicationcorner:before {
+  content: '\f121';
+}
+.iconfonts.icon-ContactUs:before {
+  content: '\f122';
+}
+.iconfonts.icon-Copy:before {
+  content: '\f123';
+}
+.iconfonts.icon-CopyIcon:before {
+  content: '\f124';
+}
+.iconfonts.icon-Cross:before {
+  content: '\f125';
+}
+.iconfonts.icon-CulturallyDiverse:before {
+  content: '\f126';
+}
+.iconfonts.icon-DisclaimerIcon:before {
+  content: '\f127';
+}
+.iconfonts.icon-doubleBedIcon:before {
+  content: '\f128';
+}
+.iconfonts.icon-Download:before {
+  content: '\f129';
+}
+.iconfonts.icon-electricity:before {
+  content: '\f12a';
+}
+.iconfonts.icon-emailhelpdesk:before {
+  content: '\f12b';
+}
+.iconfonts.icon-enquirenow:before {
+  content: '\f12c';
+}
+.iconfonts.icon-error:before {
+  content: '\f12d';
+}
+.iconfonts.icon-facebook:before {
+  content: '\f12e';
+}
+.iconfonts.icon-FacebookColoured:before {
+  content: '\f12f';
+}
+.iconfonts.icon-FamilyIcon:before {
+  content: '\f130';
+}
+.iconfonts.icon-Filter:before {
+  content: '\f131';
+}
+.iconfonts.icon-gallery:before {
+  content: '\f132';
+}
+.iconfonts.icon-gas:before {
+  content: '\f133';
+}
+.iconfonts.icon-goodlife:before {
+  content: '\f134';
+}
+.iconfonts.icon-grids:before {
+  content: '\f135';
+}
+.iconfonts.icon-Growth:before {
+  content: '\f136';
+}
+.iconfonts.icon-gurugram:before {
+  content: '\f137';
+}
+.iconfonts.icon-HamburgerIcon:before {
+  content: '\f138';
+}
+.iconfonts.icon-home:before {
+  content: '\f139';
+}
+.iconfonts.icon-housing:before {
+  content: '\f13a';
+}
+.iconfonts.icon-instagram:before {
+  content: '\f13b';
+}
+.iconfonts.icon-InternationalAirport:before {
+  content: '\f13c';
+}
+.iconfonts.icon-InvestorFriendly:before {
+  content: '\f13d';
+}
+.iconfonts.icon-LeadingBrand:before {
+  content: '\f13e';
+}
+.iconfonts.icon-linkedin:before {
+  content: '\f13f';
+}
+.iconfonts.icon-LocationPin:before {
+  content: '\f140';
+}
+.iconfonts.icon-mediacoverage:before {
+  content: '\f141';
+}
+.iconfonts.icon-mumbai:before {
+  content: '\f142';
+}
+.iconfonts.icon-nricorner:before {
+  content: '\f143';
+}
+.iconfonts.icon-partner:before {
+  content: '\f144';
+}
+.iconfonts.icon-PDF:before {
+  content: '\f145';
+}
+.iconfonts.icon-pdficon:before {
+  content: '\f146';
+}
+.iconfonts.icon-Planning:before {
+  content: '\f147';
+}
+.iconfonts.icon-possesionTimeIcon:before {
+  content: '\f148';
+}
+.iconfonts.icon-Print:before {
+  content: '\f149';
+}
+.iconfonts.icon-projectAreaIcon:before {
+  content: '\f14a';
+}
+.iconfonts.icon-PropertyIcon:before {
+  content: '\f14b';
+}
+.iconfonts.icon-pune:before {
+  content: '\f14c';
+}
+.iconfonts.icon-Quotation:before {
+  content: '\f14d';
+}
+.iconfonts.icon-QuotationBlog:before {
+  content: '\f14e';
+}
+.iconfonts.icon-realty:before {
+  content: '\f14f';
+}
+.iconfonts.icon-residential:before {
+  content: '\f150';
+}
+.iconfonts.icon-Search:before {
+  content: '\f151';
+}
+.iconfonts.icon-SearchIcon:before {
+  content: '\f152';
+}
+.iconfonts.icon-Share:before {
+  content: '\f153';
+}
+.iconfonts.icon-ShareIcon:before {
+  content: '\f154';
+}
+.iconfonts.icon-SlideArrowLeft:before {
+  content: '\f155';
+}
+.iconfonts.icon-SlideArrowRight:before {
+  content: '\f156';
+}
+.iconfonts.icon-SocioEconomicGrowth:before {
+  content: '\f157';
+}
+.iconfonts.icon-ThreeDot:before {
+  content: '\f158';
+}
+.iconfonts.icon-Tick:before {
+  content: '\f159';
+}
+.iconfonts.icon-tollfree:before {
+  content: '\f15a';
+}
+.iconfonts.icon-Tour:before {
+  content: '\f15b';
+}
+.iconfonts.icon-twitter:before {
+  content: '\f15c';
+}
+.iconfonts.icon-TwitterColoured:before {
+  content: '\f15d';
+}
+.iconfonts.icon-UnderDevelopment:before {
+  content: '\f15e';
+}
+.iconfonts.icon-Video:before {
+  content: '\f15f';
+}
+.iconfonts.icon-whatsapp:before {
+  content: '\f160';
+}
+.iconfonts.icon-WhatsappColoured:before {
+  content: '\f161';
+}
+.iconfonts.icon-whyadani:before {
+  content: '\f162';
+}
+.iconfonts.icon-wilmar:before {
+  content: '\f163';
+}
+.iconfonts.icon-youtube:before {
+  content: '\f164';
+}

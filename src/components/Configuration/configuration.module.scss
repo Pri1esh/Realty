@@ -1,0 +1,39 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.wrapper {
+  @include toRem(margin-bottom, 28);
+
+  .item {
+    @media (max-width: 991px) {
+      @include toRem(margin-bottom, 24);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    h6 {
+      @include toRem(margin-bottom, 12);
+      @include toRem(font-size, 16);
+      font-family: $font-medium;
+
+      a {
+        color: $gray-600;
+      }
+    }
+
+    ul {
+      li {
+        padding: 0.5rem 0;
+        @include toRem(font-size, 14);
+
+        a {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

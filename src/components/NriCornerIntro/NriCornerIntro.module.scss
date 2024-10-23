@@ -1,0 +1,36 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.sectionNricorner {
+  max-width: 60.75rem;
+  margin: 0 auto;
+  text-align: center;
+
+  @media screen and (max-width: 991px) {
+    text-align: left;
+  }
+
+  h2 {
+    font-family: $font-bold;
+    font-size: 2.75rem;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+    @include toRem(margin-top, 100);
+
+    @media screen and (max-width: 991px) {
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 1.5rem;
+      line-height: 2.1rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    div {
+      line-height: 2rem;
+    }
+  }
+}

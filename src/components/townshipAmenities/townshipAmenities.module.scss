@@ -1,0 +1,198 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.highlightWrapper {
+  position: relative;
+
+  h2 {
+    @include toRem(margin-bottom, 24);
+    font-family: $font-bold;
+  }
+
+  .cardBlockWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include toRem(border-radius, 8);
+
+    img {
+      width: 80%;
+    }
+
+    .cardblockdescription {
+      @include toRem(padding-bottom, 16);
+
+      @media (min-width: 992px) {
+        @include toRem(padding-left, 0);
+      }
+    }
+
+    &.bgColor {
+      @media (max-width: 991px) {
+        border-radius: 0;
+
+        .cardblockthumb {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
+  .cardblockthumb {
+    width: 50%;
+    height: 26rem;
+    align-self: baseline;
+    position: relative;
+    border-radius: $borderRadius;
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-color: $platinum;
+      transition: ease-in-out all 2600ms;
+      transform: scale(1);
+
+      @media (max-width: 767px) {
+        @include toRem(min-height, 160);
+      }
+    }
+
+    &:hover {
+      img {
+        @media (min-width: 992px) {
+          transition: ease-in-out all 2600ms;
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .imgType {
+      @include toRem(border-radius, 16);
+      @include toRem(font-size, 12);
+      color: $white;
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      padding: 0.25rem 0.8rem;
+      z-index: 1;
+    }
+
+    @media screen and (max-width: 991px) {
+      @include toRem(margin-bottom, 18);
+      @include toRem(height, 232);
+      width: 100%;
+    }
+  }
+
+  .cardblockdescription {
+    width: 48%;
+    color: $gray-600;
+
+    .heading {
+      @include toRem(line-height, 36);
+      @include toRem(font-size, 24);
+      font-family: $font-bold;
+
+      @media screen and (max-width: 991px) {
+        @include toRem(font-size, 22);
+        @include toRem(line-height, 28);
+      }
+    }
+
+    .subText {
+      @include toRem(font-size, 18);
+      @include toRem(margin-bottom, 12);
+      @include toRem(margin-top, 12);
+      font-family: $font-bold;
+
+      @media screen and (max-width: 767px) {
+        @include toRem(font-size, 16);
+        @include toRem(margin-bottom, 16);
+        @include toRem(margin-top, 8);
+      }
+    }
+
+    p {
+      @include toRem(font-size, 16);
+      @include toRem(line-height, 24);
+
+      @media screen and (min-width: 768px) {
+        @include toRem(line-height, 28);
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      width: 100%;
+    }
+
+    a {
+      @include toRem(padding-top, 12);
+      display: block;
+      cursor: pointer;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+
+        @media screen and (max-width: 767px) {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      @include toRem(padding-right, 20);
+    }
+  }
+
+  .slideNumbering {
+    display: none;
+
+    @media screen and (min-width: 1024px) {
+      @include toRem(font-size, 12);
+      display: block;
+      position: absolute;
+      right: 6rem;
+      top: 1rem;
+    }
+  }
+
+  :global(.slick-slider) {
+    margin: 0;
+
+    :global(.slick-prev) {
+      position: absolute;
+      left: auto;
+      right: 3rem;
+      top: -2.25rem;
+      opacity: 1;
+    }
+
+    :global(.slick-next) {
+      position: absolute;
+      top: -2.25rem;
+      opacity: 1;
+      right: 0;
+    }
+  }
+
+  :global(.mobSlider) {
+    > div {
+      flex-basis: 70%;
+
+      @media screen and (min-width: 768px) {
+        flex-basis: 40%;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "goodnessBanner": {
+    "srcMobile": "/assets/images/Banner-image-mobile.png",
+    "src": "/assets/images/Banner-image-desktop.png",
+    "alt": "imageAlt",
+    "heading": "#AddressOfGoodness",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut dolores molestiae animi iusto autem fugiat velit repellendus reiciendis provident minima impedit, repellat rerum sed hic",
+    "link": "/url",
+    "target": "_self",
+    "linkTitle": "Know More"
+  }
+}

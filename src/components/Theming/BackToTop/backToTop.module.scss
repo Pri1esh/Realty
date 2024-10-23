@@ -1,0 +1,76 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/mixins.scss';
+
+.backToTop {
+  position: fixed;
+  top: auto;
+  transform: none;
+  bottom: 6.5rem;
+  right: 1.7%;
+  z-index: 9;
+  border-radius: 4rem;
+
+  &.ripple_root {
+    position: fixed;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1366px) {
+    bottom: 12rem;
+  }
+
+  cursor: pointer;
+
+  .inner {
+    background-color: $lightgrayCultured;
+    border-radius: 4rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    min-width: 3rem;
+    padding: 0 0.5rem;
+
+    i {
+      transition: margin 250ms ease-in-out;
+    }
+
+    i:before {
+      @include toRem(font-size, 16);
+      color: $gray-600;
+    }
+
+    span {
+      @include toRem(font-size, 12);
+      max-width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      transition: max-width 250ms ease;
+      transform-origin: left;
+      clip: initial;
+      font-family: $font-medium;
+    }
+
+    &:hover {
+      padding-right: 1.2rem;
+
+      i {
+        margin: 0 0.3125rem;
+      }
+
+      span {
+        max-width: 12.5rem;
+      }
+    }
+  }
+
+  &.active {
+    .inner {
+      background-color: $secondary;
+      color: $white;
+
+      i:before {
+        color: $white;
+      }
+    }
+  }
+}

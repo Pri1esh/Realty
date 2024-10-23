@@ -1,0 +1,139 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+@media (min-width: 992px) {
+  .sectionFeaturesThumb {
+    p {
+      padding: 0.25rem 0.375rem;
+      font-size: 0.81rem;
+      bottom: 1.25rem;
+      right: 1.25rem;
+    }
+  }
+}
+
+.sectionFeatures {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+
+  > div {
+    margin-bottom: 5rem;
+
+    &:last-child {
+      margin-bottom: 1rem;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  figure {
+    display: block;
+  }
+
+  > div:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  > div:nth-child(even) .alignMiddle {
+    @media (min-width: 992px) {
+      justify-content: flex-start;
+      padding-left: 0;
+    }
+  }
+}
+
+.alignMiddle {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 1.25rem 3.125rem;
+
+  @media (max-width: 991px) {
+    padding: 1.25rem 0;
+  }
+
+  .highlightHeading {
+    font-size: 1.5rem;
+    margin-bottom: 1.875rem;
+    color: $gray-600;
+    font-family: $font-bold;
+
+    span {
+      font-size: 0.875rem;
+      font-family: $font-regular;
+      color: $gray;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 1.125rem;
+      margin-bottom: 0.438rem;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    color: $gray-600;
+  }
+
+  @media screen and (max-width: 767px) {
+    &.noPad {
+      padding-bottom: 0;
+    }
+
+    p {
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.sectionFeaturesThumb {
+  position: relative;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+
+  &:hover > img {
+    @media (min-width: 992px) {
+      transition: ease-in-out all 2600ms;
+      transform: scale(1.1);
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: ease-in-out all 2600ms;
+    transform: scale(1);
+    margin-bottom: 0;
+
+    @media (min-width: 992px) {
+      @include toRem(min-height, 375);
+    }
+  }
+
+  .caption {
+    background: rgb(0 0 0 / 60%);
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.25rem 0.8rem;
+    border-radius: 1rem;
+    color: $white;
+    font-size: 0.75rem;
+  }
+}

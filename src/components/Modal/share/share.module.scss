@@ -1,0 +1,129 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.shareModal {
+  padding-top: 1rem;
+
+  ul {
+    li {
+      &:first-child {
+        margin-top: 0;
+      }
+
+      margin-top: 1.5rem;
+
+      i {
+        font-size: 2rem;
+        line-height: 1;
+        color: $black;
+
+        @media (max-width: 767px) {
+          font-size: 1.875rem;
+        }
+      }
+
+      div {
+        width: 6rem;
+        text-align: center;
+        display: inline-block;
+        margin-right: 1rem;
+
+        .copyitem {
+          width: inherit;
+          margin: 0 auto;
+        }
+
+        i,
+        label {
+          cursor: pointer;
+          color: #000;
+        }
+
+        @media screen and (max-width: 991px) {
+          margin-right: 0;
+        }
+
+        a {
+          display: inline-block;
+
+          .twitter {
+            i {
+              color: $twitterBlue;
+            }
+          }
+
+          .facebook {
+            i {
+              color: $facebookBlue;
+            }
+          }
+
+          .whatsapp {
+            i {
+              color: $whatsappGreen;
+            }
+          }
+        }
+      }
+
+      label {
+        display: block;
+        font-size: 1rem;
+        color: $gray-600;
+        margin-top: 0.5rem;
+      }
+
+      ul {
+        display: inline-block;
+        vertical-align: top;
+
+        li {
+          font-size: 0.875rem;
+
+          label {
+            font-size: 1.25rem;
+            color: $gray-600;
+            margin-top: 0;
+            font-weight: 600;
+
+            @media (max-width: 991px) {
+              padding-top: 0.3rem;
+            }
+          }
+        }
+      }
+    }
+
+    .shareIcons {
+      margin: 3rem 0 0 0;
+
+      @media (max-width: 991px) {
+        padding-bottom: 1.25rem;
+      }
+
+      i {
+        font-size: 3.875rem;
+
+        @media (max-width: 767px) {
+          font-size: 2.625rem;
+        }
+      }
+    }
+  }
+
+  .projectThumb {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: $white;
+    position: relative;
+    border: 0.0625rem solid $platinum2;
+    margin-right: 1rem;
+    cursor: inherit;
+
+    img {
+      max-width: 96%;
+      @include center(both);
+    }
+  }
+}

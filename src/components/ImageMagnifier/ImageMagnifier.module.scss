@@ -1,0 +1,43 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.zooming {
+  position: absolute;
+  left: 103%;
+  top: 0;
+  z-index: 99;
+  width: 112%;
+}
+
+.magnifierValue {
+  height: 35rem;
+  border: 1px solid lightgray;
+  background-color: white;
+  background-repeat: no-repeat;
+  border-radius: 0.5rem;
+  opacity: 1;
+}
+
+.magnifierWrapper {
+  height: 100%;
+
+  .overlay {
+    background-color: $silverChinese;
+    opacity: 0.3;
+    width: 200px;
+    height: 100px;
+    display: block;
+    position: absolute;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.imgContainer {
+  @include center(both);
+  text-align: center;
+  cursor: crosshair;
+}

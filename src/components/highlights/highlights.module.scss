@@ -1,0 +1,213 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.locationheadline {
+  margin-bottom: 1.5rem;
+}
+
+.highlights {
+  h1 {
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    letter-spacing: 0.019rem;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.75rem;
+    color: $gray-600;
+
+    > span {
+      cursor: initial;
+    }
+
+    .selectedCity {
+      cursor: pointer;
+
+      i {
+        font-size: 1rem;
+        position: relative;
+        top: -0.1rem;
+        margin-left: 0.25rem;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .selectedCity {
+        border-bottom: 0.063rem dashed;
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      font-size: 1.375rem;
+      margin-bottom: 1.625rem;
+      margin-left: 2.5rem;
+      padding-top: 1.25rem;
+      font-family: $font-bold;
+    }
+
+    @media screen and (max-width: 360px) {
+      font-size: 1.25rem;
+    }
+
+    svg {
+      width: 1rem;
+      margin-left: 0.2rem;
+      fill: $black;
+    }
+
+    & > div {
+      > span {
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .city_dropdown_Box {
+    box-shadow: 0 0 0.3125rem rgb(0 0 0 / 20%);
+    position: absolute;
+    width: 16rem;
+    color: $black;
+    background: $white;
+    padding: 1.5rem 0;
+    border-radius: $borderRadius;
+    z-index: 99;
+    display: none;
+    top: 94%;
+
+    &:global(.show) {
+      display: block;
+    }
+
+    a {
+      padding: 0.625rem 1.5rem;
+      color: $black;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+
+      span {
+        vertical-align: middle;
+      }
+
+      strong {
+        margin-left: 1.25rem;
+      }
+
+      &:hover,
+      &.selected_city {
+        background-color: $antiFlashWhiteHover;
+        cursor: pointer;
+      }
+
+      .cityThumb {
+        width: 3.125rem;
+        height: 3.125rem;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .moretext {
+    overflow: hidden;
+    transition: ease all 0.6s;
+  }
+
+  .readmore {
+    transition: ease all 3s;
+  }
+
+  @media screen and (max-width: 767px) {
+    .moretext {
+      overflow: hidden;
+      transition: ease all 0.6s;
+    }
+
+    .readmore {
+      transition: ease all 3s;
+    }
+  }
+}
+
+.cityNameDropdown {
+  opacity: 1;
+}
+
+.highlightsMobile {
+  &:global(.show) {
+    display: block;
+  }
+
+  color: $black;
+  display: block;
+  font-size: 1rem;
+
+  a {
+    display: flex;
+    padding: 0.875rem 1rem;
+    position: relative;
+    align-items: center;
+
+    &.activerow {
+      background: $aliceBlue;
+    }
+
+    &.inactiverow {
+      background-color: $white;
+    }
+
+    &:hover {
+      background-color: $antiFlashWhiteHover;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .active {
+      width: 1rem;
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+
+      i {
+        font-size: 0.75rem;
+        color: $gray-600;
+      }
+    }
+  }
+
+  img {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+  }
+
+  strong {
+    margin-left: 1.25rem;
+    color: $gray-600;
+  }
+}
+
+.wrapper {
+  @include toRem(margin-bottom, 46);
+
+  @media screen and (max-width: 991px) {
+    @include toRem(margin-bottom, 32);
+  }
+
+  h1 {
+    @include toRem(font-size, 28);
+    @include toRem(margin-bottom, 14);
+    letter-spacing: 0.019rem;
+    font-weight: 600;
+    color: $gray-600;
+
+    @media screen and (max-width: 991px) {
+      @include toRem(font-size, 22);
+      @include toRem(margin-bottom, 40);
+      margin-left: 2.5rem;
+      padding-top: 1.25rem;
+      font-family: $font-bold;
+    }
+  }
+}

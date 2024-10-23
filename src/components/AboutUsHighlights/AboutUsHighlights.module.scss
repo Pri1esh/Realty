@@ -1,0 +1,68 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.highlightsblock {
+  background: $surface;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+
+  .highlightsblockcontent {
+    padding: 2.563rem;
+
+    @media screen and (max-width: 767px) {
+      padding: 0.75rem 1.5rem 1rem;
+    }
+
+    ul {
+      li {
+        padding-bottom: 2rem;
+        margin-bottom: 1.4rem;
+        border-bottom: 0.063rem solid $platinum;
+
+        @media screen and (max-width: 767px) {
+          padding-bottom: 0.75rem;
+          margin-bottom: 0.75rem;
+        }
+
+        .countUp {
+          color: $gray-600;
+          font-size: 1rem;
+
+          span {
+            font-size: 1.25rem;
+            display: block;
+            font-family: $font-bold;
+          }
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .highlightsblockthumb {
+    height: 100%;
+    position: relative;
+
+    .imgType {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      border-radius: 1rem;
+      color: $white;
+      font-size: 0.75rem;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}

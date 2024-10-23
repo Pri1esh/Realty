@@ -1,0 +1,69 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.contactData {
+  font-size: 0.875rem;
+
+  @media screen and (max-width: 991px) {
+    margin-bottom: 3.25rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+    font-family: $font-bold;
+    color: $gray-600;
+
+    @media screen and (max-width: 991px) {
+      padding-left: 3rem;
+      padding-top: 1.25rem;
+      font-family: $font-bold;
+      font-size: 1.375rem;
+    }
+  }
+
+  p {
+    color: $davyGray;
+    line-height: 1.5rem;
+    font-weight: 600;
+
+    @media screen and (max-width: 767px) {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+
+  ul {
+    margin-top: 2rem;
+
+    li {
+      margin-bottom: 1rem;
+
+      label {
+        font-size: 1rem;
+        color: $gray-600;
+        font-weight: 400;
+        display: block;
+      }
+
+      a {
+        font-size: 1.4rem;
+        text-decoration: underline;
+        color: $gray-600;
+        font-family: $font-bold;
+      }
+
+      @media screen and (max-width: 767px) {
+        margin-bottom: 0.3rem;
+
+        label {
+          @include toRem(font-size, 15);
+        }
+
+        a {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}

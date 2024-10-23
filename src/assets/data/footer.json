@@ -1,0 +1,237 @@
+[
+  {
+    "uid": "01d0b2d4-dc3d-4946-8536-b1098a24da1e",
+    "componentName": "Footer",
+    "dataSource": "{88FBCB35-2C52-47FD-B831-231327EF8B1A}",
+    "params": {},
+    "fields": {
+      "mainNavigations": [
+        {
+          "heading": "Company adani",
+          "isSeoFooter": false,
+          "items": [
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/about-us",
+              "target": "",
+              "linkTitle": "About Us"
+            },
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/why-adani",
+              "target": "",
+              "linkTitle": "Why Adani"
+            },
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/careers",
+              "target": "",
+              "linkTitle": "Careers"
+            },
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/accolades",
+              "target": "",
+              "linkTitle": "Accolades"
+            },
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/the-good-life",
+              "target": "",
+              "linkTitle": "Address Of Goodness"
+            },
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/nri-corner",
+              "target": "",
+              "linkTitle": "NRI Corner"
+            },
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/certifications",
+              "target": "",
+              "linkTitle": "Certifications"
+            },
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/blogs",
+              "target": "",
+              "linkTitle": "Communication Corner"
+            },
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/news-and-media",
+              "target": "",
+              "linkTitle": "Media Coverage"
+            }
+          ]
+        },
+        {
+          "heading": "Residential & Commercial",
+          "isSeoFooter": false,
+          "items": [
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/property-in-ahmedabad",
+              "target": "",
+              "linkTitle": "Ahmedabad"
+            },
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/property-in-gurugram",
+              "target": "",
+              "linkTitle": "Gurugram"
+            },
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/property-in-mumbai",
+              "target": "",
+              "linkTitle": "Mumbai"
+            },
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/property-in-pune",
+              "target": "",
+              "linkTitle": "Pune"
+            },
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/completed-projects",
+              "target": "",
+              "linkTitle": "All Completed Projects"
+            }
+          ]
+        },
+        {
+          "heading": "Social Clubs",
+          "isSeoFooter": false,
+          "items": [
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/clubs",
+              "target": "",
+              "linkTitle": "The Belvedere Golf and Country Club, Ahmedabad"
+            },
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/clubs",
+              "target": "",
+              "linkTitle": "Belvedere Club, Gurugram"
+            }
+          ]
+        },
+        {
+          "heading": "Adani Businesses",
+          "isSeoFooter": false,
+          "items": [
+            {
+              "linkUrl": "https://www.adanione.com/",
+              "target": "_blank",
+              "linkTitle": "Airports"
+            },
+            {
+              "linkUrl": "https://www.adanicapital.in/",
+              "target": "_blank",
+              "linkTitle": "Adani Capital"
+            },
+            {
+              "linkUrl": "https://www.adanielectricity.com/",
+              "target": "_blank",
+              "linkTitle": "Adani Electricity"
+            },
+            {
+              "linkUrl": "https://www.adanihousing.in/",
+              "target": "_blank",
+              "linkTitle": "Adani Housing Finance"
+            },
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/",
+              "target": "_blank",
+              "linkTitle": "Adani Realty"
+            },
+            {
+              "linkUrl": "https://www.adanigas.com/",
+              "target": "_blank",
+              "linkTitle": "Adani Total Gas"
+            },
+            {
+              "linkUrl": "https://www.adaniwilmar.com/",
+              "target": "_blank",
+              "linkTitle": "Adani Wilmar"
+            }
+          ]
+        },
+        {
+          "heading": "Help & Support",
+          "isSeoFooter": false,
+          "items": [
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/faqs",
+              "target": "",
+              "linkTitle": "FAQs"
+            },
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/contact-us",
+              "target": "",
+              "linkTitle": "Contact Us"
+            },
+            {
+              "linkUrl": "mailto:care@adanirealty.com",
+              "target": "",
+              "linkTitle": "Customer Care Centre"
+            }
+          ]
+        }
+      ],
+      "copyRight": [
+        {
+          "heading": "Footer Copyright",
+          "subHeading": "2023 Adani Realty",
+          "items": [
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/privacy-policy",
+              "target": "",
+              "linkTitle": "Privacy Policy"
+            },
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/terms-and-conditions",
+              "target": "",
+              "linkTitle": "Terms & Conditions"
+            },
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/disclaimer",
+              "target": "",
+              "linkTitle": "Disclaimer"
+            },
+            {
+              "linkUrl": "https://www.uat.adanirealty.com/sitemap",
+              "target": "",
+              "linkTitle": "Sitemap"
+            }
+          ]
+        }
+      ],
+      "socialLinks": [
+        {
+          "heading": "Footer Social Links",
+          "items": [
+            {
+              "linkUrl": "https://www.facebook.com/adanirealty",
+              "linkTitle": "Facebook",
+              "itemicon": "i-facebook",
+              "target": "_blank"
+            },
+            {
+              "linkUrl": "https://twitter.com/adanirealty",
+              "linkTitle": "Twitter",
+              "itemicon": "i-twitter",
+              "target": "_blank"
+            },
+            {
+              "linkUrl": "https://www.linkedin.com/company/adanirealty",
+              "linkTitle": "Linkedin",
+              "itemicon": "i-linkedin",
+              "target": "_blank"
+            },
+            {
+              "linkUrl": "https://www.youtube.com/channel/UCy13h-75Nb2m6FtUDV0e4lg",
+              "linkTitle": "Youtube",
+              "itemicon": "i-youtube",
+              "target": "_blank"
+            },
+            {
+              "linkUrl": "https://www.instagram.com/adanirealty",
+              "linkTitle": "Instagram",
+              "itemicon": "i-instagram",
+              "target": "_blank"
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

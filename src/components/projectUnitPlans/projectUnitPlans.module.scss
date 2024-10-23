@@ -1,0 +1,122 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.unitPlans {
+  border: 1px solid $gainsboro;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  position: relative;
+
+  @media (max-width: 767px) {
+    padding-bottom: 3rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $gray-600;
+    margin-bottom: 0.5rem;
+
+    @media (max-width: 767px) {
+      font-size: 1.125rem;
+      font-family: $font-bold;
+    }
+  }
+
+  p {
+    font-size: 0.875rem;
+    margin-bottom: 0.9rem;
+    min-height: 2.8rem;
+
+    @media (max-width: 991px) {
+      min-height: 2.625rem;
+    }
+  }
+
+  .unitPlansThumb {
+    min-height: 10rem;
+    display: flex;
+
+    @media (max-width: 767px) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    margin: 0 auto 1.25rem;
+    max-height: 7.75rem;
+  }
+
+  button {
+    background: transparent;
+    width: 60%;
+    font-size: 1rem;
+    color: $gray-600;
+    line-height: 1.75rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 1.75rem;
+    border: solid 0.063rem $gray-600;
+    transition: ease all 0.3s;
+    display: inherit;
+    margin: 0 auto 0.6rem auto;
+
+    @media (max-width: 767px) {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 0;
+      right: 0;
+    }
+
+    &:hover {
+      transition: ease all 0.3s;
+      background: $antiFlashWhiteHover;
+      color: $gray-600;
+      border: solid 0.063rem $gray-600;
+    }
+
+    &:global(.btn) {
+      &:active {
+        transition: ease all 0.3s;
+        background: $antiFlashWhiteHover;
+        color: $gray-600;
+        border: solid 0.063rem $gray-600;
+      }
+    }
+  }
+}
+
+.specsPopup {
+  :global(.modal-footer) {
+    padding-top: 0;
+    display: block;
+  }
+
+  :global(.nav-item) {
+    min-width: auto !important;
+
+    a {
+      white-space: normal;
+      padding: 0.875rem 1rem;
+    }
+
+    :global(.active) {
+      text-align: left;
+    }
+  }
+}
+
+.unitPlanMobile {
+  :global(.nav-tabs) {
+    :global(.nav-item) {
+      display: block;
+      min-width: 45% !important;
+      white-space: normal;
+
+      a {
+        padding: 0.875rem 1rem;
+        text-align: left;
+      }
+    }
+  }
+}

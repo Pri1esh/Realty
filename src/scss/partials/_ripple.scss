@@ -1,0 +1,23 @@
+.ripple_root {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  .ripple_waves {
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(0);
+    animation: ripple_waves 0.5s linear;
+
+    &.primary_waves {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  @keyframes ripple_waves {
+    to {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
+}

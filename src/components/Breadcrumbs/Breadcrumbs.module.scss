@@ -1,0 +1,23 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.sectionBreadcrumb {
+  margin-bottom: 1.25rem;
+  color: $gray-600;
+
+  a {
+    color: $gray-600;
+  }
+
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+}
+
+.mobileBreadcrumb {
+  @media (max-width: 991px) {
+    border-top: 0.0625rem solid $platinum;
+    @include toRem(margin-bottom, 8);
+    @include toRem(padding-top, 20.6);
+  }
+}

@@ -1,0 +1,31 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+div {
+  &.search {
+    position: relative;
+
+    @media (max-width: 991px) {
+      margin-bottom: 2.5rem;
+    }
+
+    > i {
+      max-width: 1rem;
+      z-index: 1;
+      @include center(vertical);
+      left: 1rem;
+      opacity: 0.3;
+    }
+
+    div {
+      input {
+        max-height: 3.3rem;
+        border-radius: 2rem;
+      }
+
+      button {
+        opacity: 1;
+      }
+    }
+  }
+}

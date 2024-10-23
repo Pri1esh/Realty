@@ -1,0 +1,26 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.backHeader {
+  height: 70px;
+  padding-left: 0.5rem;
+
+  &.sticky {
+    position: sticky;
+    top: 0;
+    background: $white;
+    z-index: 11;
+  }
+
+  button {
+    text-decoration: none;
+
+    i {
+      @include toRem(font-size, 19);
+      @include toRem(margin-top, 2);
+      transform: rotate(90deg);
+      line-height: 0;
+      color: $black;
+    }
+  }
+}
