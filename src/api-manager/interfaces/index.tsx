@@ -2213,6 +2213,32 @@ export interface ITextInput {
   allowedMaxLength?: number;
 }
 
+export interface GRITextInput {
+  control: Control<any, any>;
+  errors: any;
+  errorMsg: string;
+  placeholder:string;
+  label?: string;
+  getValues: UseFormGetValues<any>;
+  controlName: string;
+  allowedMaxLength?: number;
+  type : string;
+}
+
+export interface GRIMobileInput {
+  control: Control<any, any>;
+  errors: any;
+  errorMsg: string;
+  placeholder:string;
+  label?: string;
+  getValues: UseFormGetValues<any>;
+  setValue: UseFormSetValue<any>;
+  controlNameCode: string;
+  controlNamePhone: string;
+  allowedMaxLength?: number;
+  defaultValue:string;
+}
+
 export interface IMultipleOptionSingleInput {
   heading: string;
   control: Control<any, any>;

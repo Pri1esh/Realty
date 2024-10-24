@@ -1,0 +1,52 @@
+@import '/src/scss/partials/variable.scss';
+@import '/src/scss/partials/_mixins.scss';
+
+.grievanceForm {
+    padding: 2rem 0;
+
+    .title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .stats {
+        margin: 1.5rem 0;
+    }
+
+    input,
+    textarea {
+        background: 0 0;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid #c2c2c3;
+        box-shadow: 0 0 !important;
+        width: 100%;
+        outline: none;
+    }
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+        background: var(--wpr-bg-af21d949-4856-42b3-a920-ee9ff17ab376) no-repeat;
+        background-size: 12px;
+        background-position: 98% center;
+        border: none;
+        padding: 10px 30px 10px 0;
+        border-bottom: 1px solid #c2c2c3;
+        text-transform: uppercase;
+        border-radius: 0;
+        color: #3c4042;
+        font-size: 15px;
+        min-width: 50%;
+        outline: none;
+        box-shadow: 0 0 !important;
+    }
+}

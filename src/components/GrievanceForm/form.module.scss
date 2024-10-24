@@ -1,0 +1,44 @@
+.textInput {
+    background: 0 0;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #c2c2c3;
+    box-shadow: 0 0 !important;
+    width: 100%;
+    outline: none;
+    padding-left: 0;
+
+    &::placeholder {
+        color: #AAAAAA;
+    }
+}
+
+.selectInput {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    background-size: 12px;
+    background-position: 98% center;
+    border: none;
+    padding: 16px 30px 16px 0;
+    border-bottom: 1px solid #c2c2c3;
+    text-transform: uppercase;
+    border-radius: 0;
+    color: #3c4042;
+    line-height: 1.5;
+    min-width: 50%;
+    outline: none;
+    box-shadow: 0 0 !important;
+
+    &::placeholder {
+        color: #AAAAAA;
+    }
+}
+
+.mobileInput {
+    input {
+        padding-left: 10px;
+    }
+
+}

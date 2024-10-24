@@ -6,7 +6,7 @@
     "source.organizeImports": "explicit"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "svipas.prettier-plus"
   },
   "[scss]": {
     "editor.defaultFormatter": "vscode.css-language-features"
