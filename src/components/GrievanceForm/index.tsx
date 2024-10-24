@@ -1,6 +1,6 @@
 import { IGoodnessBanner } from "@interfaces";
 import { getIconFromIconName, useDeviceType } from "@utils";
-import { Col, Form, Row } from "react-bootstrap";
+import { Button, Col, Form, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { GriEmailInput, GriMobileInput, GriTextareaInput } from "./FormFields";
 import GriTextInput from "./FormFields/GriTextInput";
@@ -32,7 +32,7 @@ const GrievanceForm = (props: { compData: IGoodnessBanner }) => {
   return (
     <>
       {
-        <Form onSubmit={handleSubmit(onSubmit)}>
+        <Form className="my-5" onSubmit={handleSubmit(onSubmit)}>
           <Row>
             <Col md={4}>
               <GriTextInput
@@ -104,11 +104,63 @@ const GrievanceForm = (props: { compData: IGoodnessBanner }) => {
             </Col>
           </Row>
 
-          <div className="d-grid">
-            <button type="submit" className="btn btn-primary btn-lg ">
-              Submit
-            </button>
+          <div className={styles.stats}>
+            <p>Total number of complaints/grievances received: 0</p>
+            <p>Total number of complaints/grievances settled: 0</p>
           </div>
+
+          <div className={styles.subtitle}>Grievance Redressal Officer</div>
+
+          <Row>
+            <Col md={4}>
+              <GriTextInput
+                control={control}
+                controlName={"officerName"}
+                errors={errors}
+                type={"text"}
+                placeholder={"Name *"}
+                errorMsg={"Invalid message"}
+                getValues={getValues}
+              />
+            </Col>
+            <Col md={4}>
+              <GriMobileInput
+                control={control}
+                errors={errors}
+                placeholder={"Mobile number"}
+                errorMsg={"please enter a valid mobile number"}
+                getValues={getValues}
+                setValue={setValue}
+                controlNameCode={"officerCode"}
+                controlNamePhone={"officerPhone"}
+                defaultValue={"+1"}
+              />
+            </Col>
+            <Col md={4}>
+              <GriEmailInput
+                control={control}
+                type={"email"}
+                controlName={"officerEmail"}
+                errors={errors}
+                placeholder={"Email"}
+                errorMsg={"Please enter valid email address"}
+                getValues={getValues}
+              />
+            </Col>
+          </Row>
+
+          <Row className="justify-content-center">
+            <Col md={4}>
+              <Button
+                variant="primary"
+                size="lg"
+                type="submit"
+                className={`my-3 w-100 ${styles.griButton}`}
+              >
+                Submit
+              </Button>
+            </Col>
+          </Row>
         </Form>
       }
       {false && (
@@ -167,11 +219,6 @@ const GrievanceForm = (props: { compData: IGoodnessBanner }) => {
               rows={4}
               placeholder="Complaint Message"
             ></textarea>
-          </div>
-
-          <div className={styles.stats}>
-            <p>Total number of complaints/grievances received: 0</p>
-            <p>Total number of complaints/grievances settled: 0</p>
           </div>
 
           <h2 className={styles.subtitle}>Grievance Redressal Officer</h2>
