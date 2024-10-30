@@ -2715,6 +2715,20 @@ export interface IGoodnessBanner {
   linkTitle: string;
 }
 
+export interface IGrievanceForm {
+  srcMobile?: string;
+  src: string;
+  alt: string;
+  heading: string;
+  description: string;
+  link: string;
+  target?: string;
+  linkTitle: string;
+  formFields: any;
+  formHeading: string;
+  subHeading:string;
+}
+
 export interface IEnviromentComponent {
   envInfo: IEnvData;
   pageUrl?: string;

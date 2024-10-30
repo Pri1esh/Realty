@@ -28,6 +28,7 @@ export default class ENDPOINT {
   static townshipAmenitiesLayout = `${process.env.NEXT_PUBLIC_SITECORE_API_HOST}/sitecore/api/layout/render/jss?item={FF08AE9B-F71F-4353-A518-BF6950242BFC}&sc_apikey={FEE76367-7BAD-4F4B-B7CD-2F47999B8BC7}&sc_site=adani-realty`;
   static nriCornerUaePageLayout = `${process.env.NEXT_PUBLIC_SITECORE_API_HOST}/sitecore/api/layout/render/jss?item={812174E6-739D-4250-B8E1-B00A7ADD2B55}&sc_apikey={FEE76367-7BAD-4F4B-B7CD-2F47999B8BC7}&sc_site=adani-realty`;
   static seoPageLayout = `${process.env.NEXT_PUBLIC_SITECORE_API_HOST}/sitecore/api/layout/render/jss?sc_apikey={FEE76367-7BAD-4F4B-B7CD-2F47999B8BC7}&sc_site=adani-realty&item=/SEO`;
+  static grievancePageLayout = `${process.env.NEXT_PUBLIC_SITECORE_API_HOST}/sitecore/api/layout/render/jss?item={30822425-8D22-446F-B5C4-1436DB3FCA39}&sc_apikey={FEE76367-7BAD-4F4B-B7CD-2F47999B8BC7}`;
 
   // Client side APIs
   static otpPostApi = `${process.env.NEXT_PUBLIC_SITECORE_API_HOST_CLIENT}/api/sitecore/Header/POSTOTP`;

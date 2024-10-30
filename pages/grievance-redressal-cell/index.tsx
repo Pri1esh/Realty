@@ -12,7 +12,6 @@ import { IPage } from "@interfaces";
 import { filterData } from "@utils";
 import dynamic from "next/dynamic";
 import { Container } from "react-bootstrap";
-import styles from "./index.module.scss";
 const EnquiryFormHelper = dynamic(() =>
   import("src/components/Modal/contactCtaModal/enquiryFormHelper")
 );
@@ -29,7 +28,7 @@ const GrievanceRedressalCell: NextPage<IPage> = (props) => {
   // ImagewithText
   const {
     officesData,
-    PageData,
+    Greivance,
     Achievements: achievements,
     breadCrumbList,
     footer,
@@ -58,15 +57,7 @@ const GrievanceRedressalCell: NextPage<IPage> = (props) => {
             <Breadcrumbs list={breadCrumbList?.fields} />
           )}
 
-          <div className="heading">
-            <h1 className={styles.title}>Grievance Redressal Cell</h1>
-
-            <h2 className={styles.subtitle}>
-              Home Buyer / Allottee Grievance Redressal Cell
-            </h2>
-          </div>
-
-          <GrievanceForm compData={seoData} />
+          <GrievanceForm compData={Greivance?.fields} />
         </Container>
       </Layout>
     </div>
@@ -75,7 +66,7 @@ const GrievanceRedressalCell: NextPage<IPage> = (props) => {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
-    const res = await getAllAPI([ENDPOINT.contactusLayout]);
+    const res = await getAllAPI([ENDPOINT.grievancePageLayout]);
     const data = filterData(res);
 
     return {

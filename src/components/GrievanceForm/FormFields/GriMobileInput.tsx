@@ -18,15 +18,15 @@ const CountryInput = (props: any) => {
             <Form.Select
               className={styles.selectInput}
               aria-label="Default select example"
-              value={getValues(controlName) || ""}
+              value={getValues(controlName) || defaultValue}
               disabled={false}
               onChange={(e: any) => {
                 onChange(e?.target?.value);
               }}
             >
-              <option value="1">+91</option>
-              <option value="2">+1</option>
-              <option value="3">+441</option>
+              <option value="+91">+91</option>
+              <option value="+1">+1</option>
+              <option value="+441">+441</option>
             </Form.Select>
           </Form.Group>
         </>

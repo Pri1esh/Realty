@@ -1,14 +1,73 @@
-import { IGoodnessBanner } from "@interfaces";
+import { ENDPOINT, postAPI } from "@api-manager";
+import { Loader, ModalPopup } from "@components";
+import { IGrievanceForm } from "@interfaces";
 import { getIconFromIconName, useDeviceType } from "@utils";
+import { useEffect, useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { GriEmailInput, GriMobileInput, GriTextareaInput } from "./FormFields";
+import { GriEmailInput, GriMobileInput } from "./FormFields";
 import GriTextInput from "./FormFields/GriTextInput";
 import styles from "./form.module.scss";
 
-const GrievanceForm = (props: { compData: IGoodnessBanner }) => {
+const ErrorMessage = (props: any) => {
+  const { message } = props;
+  return (
+    <>
+      <h3>Server Error</h3>
+      <br />
+      <p>{message}</p>
+    </>
+  );
+};
+
+const GrievanceForm = (props: { compData: IGrievanceForm }) => {
   const { compData } = props;
   const { deviceType } = useDeviceType();
+  const [showThankyou, setShowThankyou] = useState(false);
+  const [showError, setshowError] = useState<boolean>(false);
+  const [loading, setloading] = useState<boolean>(false);
+  const [errorMsg, setErrorMsg] = useState<string>();
+
+  console.log("data---", compData);
+
+  useEffect(() => {
+    __RECAPTCHA__ && addCaptcha();
+
+    return () => {
+      removeCaptcha();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    if (loading) {
+      document.querySelector("body")?.classList.remove("posFixed");
+    }
+    if (!loading) {
+      window.scrollTo(0, -1);
+      document.documentElement.style.scrollBehavior = "auto";
+    } else {
+      document.documentElement.style.scrollBehavior = "smooth";
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loading]);
+
+  const addCaptcha = () => {
+    if (!document.getElementById("recaptcha")) {
+      const script = document.createElement("script");
+      script.src = `https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_APP_SITE_KEY}`;
+      script.id = "recaptcha";
+      document.body.appendChild(script);
+      document.querySelector(".grecaptcha-badge")?.classList?.remove("d-none");
+    }
+  };
+
+  const removeCaptcha = () => {
+    if (sessionStorage?.getItem("enquiryInPage") !== "true") {
+      document.getElementById("recaptcha")?.remove();
+      document.querySelector(".grecaptcha-badge")?.classList?.add("d-none");
+    }
+  };
 
   const {
     control,
@@ -23,84 +82,181 @@ const GrievanceForm = (props: { compData: IGoodnessBanner }) => {
     defaultValues: {},
   });
 
+  const filterFields = (data: any) => {
+    const val: any = {};
+    data?.map((currData: any) => {
+      val[currData["fieldName"]] = currData;
+    });
+    return val;
+  };
+
+  const onHideError = () => {
+    setshowError(false);
+  };
+
+  const executeRecaptcha = async () => {
+    const token = await new Promise((resolve) => {
+      grecaptcha.ready(async () => {
+        const token = await grecaptcha.execute(
+          process.env.NEXT_PUBLIC_APP_SITE_KEY || "",
+          { action: "submit" }
+        );
+        resolve(token);
+      });
+    });
+
+    return token;
+  };
+
+  const formFields = filterFields(compData?.formFields);
+
   const onSubmit = async (data: any) => {
     try {
-      console.log("Form Submitted Successfully", data);
-    } catch (e) {}
+      setloading(true);
+      let postData: any = {
+        name: data?.name,
+        usermobile: data?.code + data?.usermobile,
+        email: data?.email,
+        projectname: data?.projectname,
+        flatnumber: data?.flatnumber,
+        complaintmessage: data?.complaintmessage,
+        officername: data?.officername,
+        officeremail: data?.officeremail,
+        officermobile: data?.officercode + data?.officermobile,
+      };
+
+      if (__RECAPTCHA__) {
+        const captchaResponse = await executeRecaptcha();
+        postData = {
+          ...postData,
+          reResponse: captchaResponse,
+        };
+      }
+
+      console.log("Form Submitted Successfully", postData);
+
+      const res = await postAPI(ENDPOINT.enquirePostApi, postData);
+      if (true) {
+        setloading(false);
+        setShowThankyou(true);
+      } else {
+      }
+    } catch (e) {
+      console.log("error>>>>>>", e);
+
+      setshowError(true);
+      setErrorMsg("Unable to submit request at the moment");
+      setloading(false);
+    }
+  };
+
+  const handleThankYouClick = () => {
+    resetForm && resetForm();
+    setShowThankyou(!showThankyou);
+  };
+
+  const onHideThankYou = () => {
+    setShowThankyou(!showThankyou);
+    resetForm();
+  };
+
+  const resetForm = () => {
+    const dataKeys = Object.keys(getValues());
+    dataKeys.forEach((item) =>
+      getValues(item) === true ? setValue(item, false) : setValue(item, null)
+    );
   };
 
   return (
     <>
+      {compData?.formHeading && (
+        <div
+          itemProp="mainEntity"
+          dangerouslySetInnerHTML={{ __html: compData?.formHeading }}
+        />
+      )}
       {
         <Form className="my-5" onSubmit={handleSubmit(onSubmit)}>
           <Row>
             <Col md={4}>
-              <GriTextInput
-                control={control}
-                controlName={"name"}
-                errors={errors}
-                type={"text"}
-                placeholder={"Name *"}
-                errorMsg={"Invalid message"}
-                getValues={getValues}
-              />
+              {formFields?.name && (
+                <GriTextInput
+                  control={control}
+                  controlName={formFields?.name?.fieldName}
+                  errors={errors}
+                  type={formFields?.name?.dataType}
+                  placeholder={formFields?.name?.placeholder}
+                  errorMsg={formFields?.name?.validation}
+                  getValues={getValues}
+                />
+              )}
             </Col>
             <Col md={4}>
-              <GriMobileInput
-                control={control}
-                errors={errors}
-                placeholder={"Mobile number"}
-                errorMsg={"please enter a valid mobile number"}
-                getValues={getValues}
-                setValue={setValue}
-                controlNameCode={"code"}
-                controlNamePhone={"phone"}
-                defaultValue={"+1"}
-              />
+              {formFields?.usermobile && (
+                <GriMobileInput
+                  control={control}
+                  errors={errors}
+                  placeholder={formFields?.usermobile?.placeholder}
+                  errorMsg={formFields?.usermobile?.validation}
+                  getValues={getValues}
+                  setValue={setValue}
+                  controlNameCode={"code"}
+                  controlNamePhone={formFields?.usermobile?.fieldName}
+                  defaultValue={"+91"}
+                />
+              )}
             </Col>
             <Col md={4}>
-              <GriEmailInput
-                control={control}
-                type={"email"}
-                controlName={"email"}
-                errors={errors}
-                placeholder={"Email"}
-                errorMsg={"Please enter valid email address"}
-                getValues={getValues}
-              />
+              {formFields?.email && (
+                <GriEmailInput
+                  control={control}
+                  controlName={formFields?.email?.fieldName}
+                  errors={errors}
+                  type={formFields?.email?.dataType}
+                  placeholder={formFields?.email?.placeholder}
+                  errorMsg={formFields?.email?.validation}
+                  getValues={getValues}
+                />
+              )}
             </Col>
             <Col md={8}>
-              <GriTextInput
-                type={"text"}
-                control={control}
-                controlName={"projectName"}
-                errors={errors}
-                placeholder={"Project Name"}
-                errorMsg={"Please enter valid Project Name"}
-                getValues={getValues}
-              />
+              {formFields?.projectname && (
+                <GriTextInput
+                  control={control}
+                  controlName={formFields?.projectname?.fieldName}
+                  errors={errors}
+                  type={formFields?.projectname?.dataType}
+                  placeholder={formFields?.projectname?.placeholder}
+                  errorMsg={formFields?.projectname?.validation}
+                  getValues={getValues}
+                />
+              )}
             </Col>
             <Col md={4}>
-              <GriTextInput
-                type={"text"}
-                control={control}
-                controlName={"flatNo"}
-                errors={errors}
-                placeholder={"Flat No"}
-                errorMsg={"Please enter valid Flat number"}
-                getValues={getValues}
-              />
+              {formFields?.flatnumber && (
+                <GriTextInput
+                  control={control}
+                  controlName={formFields?.flatnumber?.fieldName}
+                  errors={errors}
+                  type={formFields?.flatnumber?.dataType}
+                  placeholder={formFields?.flatnumber?.placeholder}
+                  errorMsg={formFields?.flatnumber?.validation}
+                  getValues={getValues}
+                />
+              )}
             </Col>
             <Col md={12}>
-              <GriTextareaInput
-                type={"text"}
-                control={control}
-                controlName={"message"}
-                errors={errors}
-                placeholder={"Complaint Message"}
-                errorMsg={"Please enter valid Complaint Message"}
-                getValues={getValues}
-              />
+              {formFields?.complaintmessage && (
+                <GriTextInput
+                  control={control}
+                  controlName={formFields?.complaintmessage?.fieldName}
+                  errors={errors}
+                  type={formFields?.complaintmessage?.dataType}
+                  placeholder={formFields?.complaintmessage?.placeholder}
+                  errorMsg={formFields?.complaintmessage?.validation}
+                  getValues={getValues}
+                />
+              )}
             </Col>
           </Row>
 
@@ -109,43 +265,51 @@ const GrievanceForm = (props: { compData: IGoodnessBanner }) => {
             <p>Total number of complaints/grievances settled: 0</p>
           </div>
 
-          <div className={styles.subtitle}>Grievance Redressal Officer</div>
+          {compData?.subHeading && (
+            <div className={styles.subtitle}>{compData?.subHeading}</div>
+          )}
 
           <Row>
             <Col md={4}>
-              <GriTextInput
-                control={control}
-                controlName={"officerName"}
-                errors={errors}
-                type={"text"}
-                placeholder={"Name *"}
-                errorMsg={"Invalid message"}
-                getValues={getValues}
-              />
+              {formFields?.officername && (
+                <GriTextInput
+                  control={control}
+                  controlName={formFields?.officername?.fieldName}
+                  errors={errors}
+                  type={formFields?.officername?.dataType}
+                  placeholder={formFields?.officername?.placeholder}
+                  errorMsg={formFields?.officername?.validation}
+                  getValues={getValues}
+                />
+              )}
             </Col>
             <Col md={4}>
-              <GriMobileInput
-                control={control}
-                errors={errors}
-                placeholder={"Mobile number"}
-                errorMsg={"please enter a valid mobile number"}
-                getValues={getValues}
-                setValue={setValue}
-                controlNameCode={"officerCode"}
-                controlNamePhone={"officerPhone"}
-                defaultValue={"+1"}
-              />
+              {formFields?.officermobile && (
+                <GriMobileInput
+                  control={control}
+                  errors={errors}
+                  placeholder={formFields?.officermobile?.placeholder}
+                  errorMsg={formFields?.officermobile?.validation}
+                  getValues={getValues}
+                  setValue={setValue}
+                  controlNameCode={"officercode"}
+                  controlNamePhone={formFields?.officermobile?.fieldName}
+                  defaultValue={"+91"}
+                />
+              )}
             </Col>
             <Col md={4}>
-              <GriEmailInput
-                control={control}
-                type={"email"}
-                controlName={"officerEmail"}
-                errors={errors}
-                placeholder={"Email"}
-                errorMsg={"Please enter valid email address"}
-                getValues={getValues}
-              />
+              {formFields?.officeremail && (
+                <GriEmailInput
+                  control={control}
+                  controlName={formFields?.officeremail?.fieldName}
+                  errors={errors}
+                  type={formFields?.officeremail?.dataType}
+                  placeholder={formFields?.officeremail?.placeholder}
+                  errorMsg={formFields?.officeremail?.validation}
+                  getValues={getValues}
+                />
+              )}
             </Col>
           </Row>
 
@@ -157,115 +321,62 @@ const GrievanceForm = (props: { compData: IGoodnessBanner }) => {
                 type="submit"
                 className={`my-3 w-100 ${styles.griButton}`}
               >
-                Submit
+                {!loading && <>Submit</>}
+                {loading && <Loader bg={"#000000"} />}
               </Button>
             </Col>
           </Row>
         </Form>
       }
-      {false && (
-        <form>
-          <div className="row mb-3">
-            <div className="col-md-4">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Name *"
-                required
-              />
-            </div>
-            <div className="col-md-2">
-              <select className="form-select">
-                <option value="India">+91</option>
-                {/* Add more country codes as needed */}
-              </select>
-            </div>
-            <div className="col-md-3">
-              <input
-                type="tel"
-                className="form-control"
-                placeholder="Mobile Number"
-              />
-            </div>
-            <div className="col-md-3">
-              <input
-                type="email"
-                className="form-control"
-                placeholder="Email Address"
-              />
-            </div>
-          </div>
 
-          <div className="row mb-3">
-            <div className="col-md-9">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Project Name"
-              />
-            </div>
-            <div className="col-md-3">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Flat No."
-              />
-            </div>
-          </div>
-
-          <div className="mb-3">
-            <textarea
-              className="form-control"
-              rows={4}
-              placeholder="Complaint Message"
-            ></textarea>
-          </div>
-
-          <h2 className={styles.subtitle}>Grievance Redressal Officer</h2>
-
-          <div className="row mb-3">
-            <div className="col-md-4">
-              <input
-                type="text"
-                className="form-control"
-                value="Lorem Ipsum"
-                readOnly
-              />
-            </div>
-
-            <div className="col-md-5">
-              <div className="d-flex">
-                <select className="form-select">
-                  <option>+91</option>
-                  {/* Add more country codes as needed */}
-                </select>
-                <span>{getIconFromIconName("arrowdown")}</span>
-                <input
-                  type="tel"
-                  className="form-control"
-                  value="9876543210"
-                  readOnly
-                />
+      {showThankyou && (
+        <ModalPopup
+          className=""
+          modalTitle=""
+          modalSize="lg"
+          show={showThankyou}
+          onHide={onHideThankYou}
+          modalBody={
+            <div>
+              <header className={`${styles.orderHeader}`}>
+                <ul>
+                  <li>
+                    <span className="no-print">
+                      {getIconFromIconName("Tick")}
+                    </span>
+                  </li>
+                  <li>
+                    <h3>Thank you!</h3>
+                    <p>
+                      Our customer representative will get back to you soon.
+                    </p>
+                  </li>
+                </ul>
+              </header>
+              <div className={`w-100 text-center`}>
+                <Button
+                  variant="primary"
+                  size="lg"
+                  aria-label="Close"
+                  onClick={handleThankYouClick}
+                >
+                  Continue
+                </Button>
               </div>
             </div>
-
-            <div className="col-md-3">
-              <input
-                type="email"
-                className="form-control"
-                value="lorem.ipsum@adani.com"
-                readOnly
-              />
-            </div>
-          </div>
-
-          <div className="d-grid">
-            <button type="submit" className="btn btn-primary btn-lg ">
-              Submit
-            </button>
-          </div>
-        </form>
+          }
+        />
       )}
+      {
+        <ModalPopup
+          className="enquireModal"
+          show={showError}
+          modalSize="md"
+          modalTitle={""}
+          onHide={onHideError}
+          modalBody={<ErrorMessage message={errorMsg} />}
+        />
+      }
     </>
   );
 };
