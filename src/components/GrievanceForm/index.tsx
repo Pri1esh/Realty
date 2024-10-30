@@ -30,6 +30,23 @@ const GrievanceForm = (props: { compData: IGrievanceForm }) => {
 
   console.log("data---", compData);
 
+  const addCaptcha = () => {
+    if (!document.getElementById("recaptcha")) {
+      const script = document.createElement("script");
+      script.src = `https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_APP_SITE_KEY}`;
+      script.id = "recaptcha";
+      document.body.appendChild(script);
+      document.querySelector(".grecaptcha-badge")?.classList?.remove("d-none");
+    }
+  };
+
+  const removeCaptcha = () => {
+    if (sessionStorage?.getItem("enquiryInPage") !== "true") {
+      document.getElementById("recaptcha")?.remove();
+      document.querySelector(".grecaptcha-badge")?.classList?.add("d-none");
+    }
+  };
+
   useEffect(() => {
     __RECAPTCHA__ && addCaptcha();
 
@@ -51,23 +68,6 @@ const GrievanceForm = (props: { compData: IGrievanceForm }) => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading]);
-
-  const addCaptcha = () => {
-    if (!document.getElementById("recaptcha")) {
-      const script = document.createElement("script");
-      script.src = `https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_APP_SITE_KEY}`;
-      script.id = "recaptcha";
-      document.body.appendChild(script);
-      document.querySelector(".grecaptcha-badge")?.classList?.remove("d-none");
-    }
-  };
-
-  const removeCaptcha = () => {
-    if (sessionStorage?.getItem("enquiryInPage") !== "true") {
-      document.getElementById("recaptcha")?.remove();
-      document.querySelector(".grecaptcha-badge")?.classList?.add("d-none");
-    }
-  };
 
   const {
     control,
@@ -172,6 +172,7 @@ const GrievanceForm = (props: { compData: IGrievanceForm }) => {
       {compData?.formHeading && (
         <div
           itemProp="mainEntity"
+          className={styles.head}
           dangerouslySetInnerHTML={{ __html: compData?.formHeading }}
         />
       )}
@@ -261,8 +262,18 @@ const GrievanceForm = (props: { compData: IGrievanceForm }) => {
           </Row>
 
           <div className={styles.stats}>
-            <p>Total number of complaints/grievances received: 0</p>
-            <p>Total number of complaints/grievances settled: 0</p>
+            {formFields?.receivedcount && (
+              <p>
+                {formFields?.receivedcount?.placeholder}{" "}
+                {formFields?.receivedcount?.defaultValue}
+              </p>
+            )}
+            {formFields?.settledcount && (
+              <p>
+                {formFields?.settledcount?.placeholder}{" "}
+                {formFields?.settledcount?.defaultValue}
+              </p>
+            )}
           </div>
 
           {compData?.subHeading && (

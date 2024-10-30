@@ -1,6 +1,9 @@
 @import '/src/scss/partials/variable.scss';
 @import '/src/scss/partials/_mixins.scss';
 
+
+
+
 .textInput {
     background: 0 0;
     border-radius: 0;
@@ -134,5 +137,12 @@
         p {
             font-size: 0.875rem;
         }
+    }
+}
+
+@media (max-width: 991px) {
+    .head {
+        padding-left: 2rem;
+        padding-top: 1rem;
     }
 }
