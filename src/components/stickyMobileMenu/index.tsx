@@ -1,17 +1,26 @@
-import { Button, ConnectBlock, CustomImage, Offcanvas, OffcanvasHeading, SearchProject } from '@components';
-import { IStickyMobileMenu } from '@interfaces';
-import { timeout, useDeviceType } from '@utils';
-import dynamic from 'next/dynamic';
-import React, { useEffect, useState } from 'react';
-import Hamburger from '../Header/Hamburger';
-import styles from './stickyMobileMenu.module.scss';
-const EnquiryFormHelper = dynamic(() => import('src/components/Modal/contactCtaModal/enquiryFormHelper'));
+import {
+  Button,
+  ConnectBlock,
+  CustomImage,
+  Offcanvas,
+  OffcanvasHeading,
+  SearchProject,
+} from "@components";
+import { IStickyMobileMenu } from "@interfaces";
+import { timeout, useDeviceType } from "@utils";
+import dynamic from "next/dynamic";
+import React, { useEffect, useState } from "react";
+import Hamburger from "../Header/Hamburger";
+import styles from "./stickyMobileMenu.module.scss";
+const EnquiryFormHelper = dynamic(() =>
+  import("src/components/Modal/contactCtaModal/enquiryFormHelper")
+);
 
 const StickyMobileMenu = (props: IStickyMobileMenu) => {
   const {
-    defaultActive = '',
+    defaultActive = "",
     setOpenSearch,
-    propertyType = '',
+    propertyType = "",
     data,
     searchData,
     hamburgerData,
@@ -21,14 +30,14 @@ const StickyMobileMenu = (props: IStickyMobileMenu) => {
     buLogoAltText,
     pageName,
   } = props;
-  const [activeTab, setActiveTab] = useState('');
+  const [activeTab, setActiveTab] = useState("");
   const [showHeader, setShowHeader] = useState(false);
   const [show, setShow] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const [scrollPos, setScrollPos] = useState(0);
-  const [canvasPlacement, setCanvasPlacement] = useState<any>('');
-  const [heading, setHeading] = useState<string>('');
-  const [component, setComponent] = useState<string>('');
+  const [canvasPlacement, setCanvasPlacement] = useState<any>("");
+  const [heading, setHeading] = useState<string>("");
+  const [component, setComponent] = useState<string>("");
 
   const handleClose = () => {
     setShow(false);
@@ -42,22 +51,36 @@ const StickyMobileMenu = (props: IStickyMobileMenu) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [defaultActive]);
 
-  const ConnectMenu = connectData?.filter((menu: any) => menu.headerText === 'Connect');
+  const ConnectMenu = connectData?.filter(
+    (menu: any) => menu.headerText === "Connect"
+  );
   const getCurrComponent = (clickedItem: any) => {
     switch (true) {
-      case clickedItem === 'Home':
+      case clickedItem === "Home":
         return <></>;
-      case clickedItem === 'Enquire':
-        return <EnquiryFormHelper isPopup={true} setShow={setShow} propertyType={propertyType} />;
-      case clickedItem === 'Search':
+      case clickedItem === "Enquire":
+        return (
+          <EnquiryFormHelper
+            isPopup={true}
+            setShow={setShow}
+            propertyType={propertyType}
+          />
+        );
+      case clickedItem === "Search":
         return (
           <div>
             <SearchProject searchProjectData={searchData} />
           </div>
         );
-      case clickedItem === 'Connect':
-        return <ConnectBlock canvasIsActive={setIsActive} setOpen={setShow} data={ConnectMenu} />;
-      case clickedItem === 'More':
+      case clickedItem === "Connect":
+        return (
+          <ConnectBlock
+            canvasIsActive={setIsActive}
+            setOpen={setShow}
+            data={ConnectMenu}
+          />
+        );
+      case clickedItem === "More":
         return (
           <Hamburger
             menuData={hamburgerData}
@@ -73,33 +96,38 @@ const StickyMobileMenu = (props: IStickyMobileMenu) => {
   };
   const handleHeading = (clickedItem: any) => {
     switch (true) {
-      case clickedItem === 'Home':
-        setHeading('');
+      case clickedItem === "Home":
+        setHeading("");
         break;
-      case clickedItem === 'Enquire':
-        setHeading('Enquire Now');
+      case clickedItem === "Enquire":
+        setHeading("Enquire Now");
         break;
-      case clickedItem === 'Search':
-        setHeading('Search');
+      case clickedItem === "Search":
+        setHeading("Search");
         break;
-      case clickedItem === 'Connect':
-        setHeading('Connect');
+      case clickedItem === "Connect":
+        setHeading("Connect");
         break;
-      case clickedItem === 'More':
-        setHeading('');
+      case clickedItem === "More":
+        setHeading("");
         break;
       default:
-        setHeading('');
+        setHeading("");
         break;
     }
   };
   const getCanvasPlacement = (clickedItem: any) => {
-    if (clickedItem === 'Home' || clickedItem === 'Enquire' || clickedItem === 'Search' || clickedItem === 'Connect') {
-      return 'bottom';
-    } else if (clickedItem === 'More') {
-      return 'start';
+    if (
+      clickedItem === "Home" ||
+      clickedItem === "Enquire" ||
+      clickedItem === "Search" ||
+      clickedItem === "Connect"
+    ) {
+      return "bottom";
+    } else if (clickedItem === "More") {
+      return "start";
     } else {
-      return '';
+      return "";
     }
   };
 
@@ -108,20 +136,20 @@ const StickyMobileMenu = (props: IStickyMobileMenu) => {
     setShowHeader(document.body.getBoundingClientRect().top > scrollPos);
   };
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   });
   const { deviceType } = useDeviceType();
 
   const handleClick = (item: { desc: React.SetStateAction<string> }) => {
-    if (item?.desc === '') return;
+    if (item?.desc === "") return;
     setActiveTab(item.desc);
     setIsActive(false);
     item?.desc === component ? setShow(!show) : setShow(true);
     show === false && setIsActive(false);
-    show === false && setComponent('');
+    show === false && setComponent("");
     setComponent(item?.desc);
     setCanvasPlacement(item?.desc);
     handleHeading(item?.desc);
@@ -129,36 +157,53 @@ const StickyMobileMenu = (props: IStickyMobileMenu) => {
 
   return (
     <div className={styles.stickyMenuWrapper}>
-      {component !== 'Home' && component.toLowerCase().includes('enquire') && show && (
-        <>
-          <EnquiryFormHelper isPopup={true} setShow={setShow} showForm={show} propertyType={propertyType} />
-        </>
-      )}
-      {deviceType === 'desktop' ? (
+      {component !== "Home" &&
+        component.toLowerCase().includes("enquire") &&
+        show && (
+          <>
+            <EnquiryFormHelper
+              isPopup={true}
+              setShow={setShow}
+              showForm={show}
+              propertyType={propertyType}
+            />
+          </>
+        )}
+      {deviceType === "desktop" ? (
         <></>
       ) : (
         <>
           <div
             itemScope
             itemType="https://schema.org/Menu"
-            className={`${styles.stickymenu} && ${showHeader ? styles.menuvisible : styles.menuhidden}`}
+            className={`${styles.stickymenu} && ${
+              showHeader ? styles.menuvisible : styles.menuhidden
+            }`}
           >
             <ul>
               {data?.map((item: object | any, index: number) => (
                 <li key={`${item.link + index}`} itemProp="hasMenuItem">
-                  {item.desc === 'Home' ? (
+                  {item.desc === "Home" ? (
                     <Button
                       itemProp="thumbnailUrl"
                       href={item.link}
                       onClick={() => {
                         handleClick(item);
                       }}
-                      className={`${activeTab === item?.desc ? styles.active : styles.inactive}`}
+                      className={`${
+                        activeTab === item?.desc
+                          ? styles.active
+                          : styles.inactive
+                      }`}
                     >
                       <span>
                         <CustomImage
                           itemProp="image"
-                          src={`${activeTab === item?.desc ? item?.gifsrc : item.iconsrc}`}
+                          src={`${
+                            activeTab === item?.desc
+                              ? item?.gifsrc
+                              : item.iconsrc
+                          }`}
                           alt={item.alt}
                           title={item.title}
                         />
@@ -170,12 +215,20 @@ const StickyMobileMenu = (props: IStickyMobileMenu) => {
                       onClick={() => {
                         handleClick(item);
                       }}
-                      className={`${activeTab === item?.desc && show ? styles.active : styles.inactive}`}
+                      className={`${
+                        activeTab === item?.desc && show
+                          ? styles.active
+                          : styles.inactive
+                      }`}
                     >
                       <span>
                         <CustomImage
                           itemProp="image"
-                          src={`${activeTab === item?.desc ? item?.gifsrc : item.iconsrc}`}
+                          src={`${
+                            activeTab === item?.desc
+                              ? item?.gifsrc
+                              : item.iconsrc
+                          }`}
                           alt={item.alt}
                           title={item.title}
                         />
@@ -187,25 +240,28 @@ const StickyMobileMenu = (props: IStickyMobileMenu) => {
               ))}
             </ul>
           </div>
-          {component !== 'Home' && !component.toLowerCase().includes('enquire') && (
-            <Offcanvas
-              className={`${styles.stickyMenuOffCanvas} && ${
-                isActive ? styles.offCanvasActive : styles.offCanvasHidden
-              }`}
-              placement={getCanvasPlacement(canvasPlacement)}
-              showCanvas={show}
-              onHide={() => {
-                handleClose();
-                setActiveTab('Home');
-              }}
-              closeButton={true}
-              bodySpacing={true}
-              titleProps={{ className: 'mobile-offcanvas-title' }}
-              header={<OffcanvasHeading>{heading} </OffcanvasHeading>}
-            >
-              <div className={styles.canvasBody}>{getCurrComponent(component)}</div>
-            </Offcanvas>
-          )}
+          {component !== "Home" &&
+            !component.toLowerCase().includes("enquire") && (
+              <Offcanvas
+                className={`${styles.stickyMenuOffCanvas} && ${
+                  isActive ? styles.offCanvasActive : styles.offCanvasHidden
+                }`}
+                placement={getCanvasPlacement(canvasPlacement)}
+                showCanvas={show}
+                onHide={() => {
+                  handleClose();
+                  setActiveTab("Home");
+                }}
+                closeButton={true}
+                bodySpacing={true}
+                titleProps={{ className: "mobile-offcanvas-title" }}
+                header={<OffcanvasHeading>{heading} </OffcanvasHeading>}
+              >
+                <div className={styles.canvasBody}>
+                  {getCurrComponent(component)}
+                </div>
+              </Offcanvas>
+            )}
         </>
       )}
     </div>

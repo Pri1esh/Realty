@@ -12,7 +12,6 @@ const GriTextareaInput = (props: GRITextInput) => {
     errors,
     controlName,
     placeholder,
-    type,
     allowedMaxLength = 50,
     getValues,
   } = props;

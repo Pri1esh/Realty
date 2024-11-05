@@ -35,6 +35,7 @@ export default class ENDPOINT {
   static countryFlagsApi = `${process.env.NEXT_PUBLIC_SITECORE_API_HOST_CLIENT}/sitecore/api/layout/render/jss?placeholderName=main&lists=country&item={E9EC4B8C-CF13-4820-A1DB-CCF85203C5C6}&sc_lang=en&sc_apikey={FEE76367-7BAD-4F4B-B7CD-2F47999B8BC7}&sc_site=adani-realty`;
   static blogCategoryClientLayout = `${process.env.NEXT_PUBLIC_SITECORE_API_HOST_CLIENT}/sitecore/api/layout/render/jss?item=%7BDFFAFAC1-F6A6-4707-8BE6-C2A194B50CEF%7D&sc_apikey={FEE76367-7BAD-4F4B-B7CD-2F47999B8BC7}&sc_site=adani-realty`;
   static enquirePostApi = `${process.env.NEXT_PUBLIC_SITECORE_API_HOST_CLIENT}/api/sitecore/Header/postSfdcWrapper`;
+  static grievancePostApi = `${process.env.NEXT_PUBLIC_SITECORE_API_HOST_CLIENT}/formsapi/GrievanceForm/SubmitGrievance`;
   static enquireFormLayout = `${process.env.NEXT_PUBLIC_SITECORE_API_HOST_CLIENT}/sitecore/api/layout/render/jss?item=%7BECDBC163-B9BA-4CD4-B272-6B8230F9A7BB%7D&sc_apikey={FEE76367-7BAD-4F4B-B7CD-2F47999B8BC7}&sc_site=adani-realty`;
   static searchProjectLayout = `${process.env.NEXT_PUBLIC_SITECORE_API_HOST_CLIENT}/sitecore/api/layout/render/jss?item=%7B53F22404-6A63-41BD-865F-B4B1E7B4328E%7D&sc_apikey={FEE76367-7BAD-4F4B-B7CD-2F47999B8BC7}&sc_site=adani-realty`;
   static locationLayoutClient = `${process.env.NEXT_PUBLIC_SITECORE_API_HOST_CLIENT}/sitecore/api/layout/render/jss?item=%7B57AFF2A6-2113-4E27-8A0B-8F9E4CEA645C%7D&sc_apikey={FEE76367-7BAD-4F4B-B7CD-2F47999B8BC7}&sc_site=adani-realty`;

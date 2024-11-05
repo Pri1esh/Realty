@@ -10,12 +10,7 @@ import type { GetServerSideProps, NextPage } from "next";
 import { ENDPOINT, getAllAPI } from "@api-manager";
 import { IPage } from "@interfaces";
 import { filterData } from "@utils";
-import dynamic from "next/dynamic";
 import { Container } from "react-bootstrap";
-const EnquiryFormHelper = dynamic(() =>
-  import("src/components/Modal/contactCtaModal/enquiryFormHelper")
-);
-
 const GrievanceRedressalCell: NextPage<IPage> = (props) => {
   const { data, error, errorMessage } = props;
   if (error) return <ErrorFallback error={error} errorMessage={errorMessage} />;
@@ -27,16 +22,13 @@ const GrievanceRedressalCell: NextPage<IPage> = (props) => {
     );
   // ImagewithText
   const {
-    officesData,
     Greivance,
-    Achievements: achievements,
     breadCrumbList,
     footer,
     header,
     mMenu,
     seoData = {},
     searchData,
-    AboutAdaniHome,
   } = data;
   return (
     <div

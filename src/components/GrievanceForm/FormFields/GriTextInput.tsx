@@ -1,5 +1,4 @@
 import { GRITextInput } from "@interfaces";
-import { allValidRegex, nameValidatorRegex } from "@utils";
 import { Form, FormControl } from "react-bootstrap";
 import { Controller } from "react-hook-form";
 import styles from "../form.module.scss";
@@ -15,6 +14,7 @@ const GriTextInput = (props: GRITextInput) => {
     type,
     allowedMaxLength = 50,
     getValues,
+    validationRegex,
   } = props;
   return (
     <Controller
@@ -23,9 +23,7 @@ const GriTextInput = (props: GRITextInput) => {
       rules={{
         required: errorMsg,
         pattern: {
-          value: controlName.includes("name")
-            ? nameValidatorRegex
-            : allValidRegex,
+          value: validationRegex,
           message: errorMsg,
         },
       }}

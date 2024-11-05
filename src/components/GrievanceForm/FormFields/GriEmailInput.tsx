@@ -1,5 +1,4 @@
 import { GRITextInput } from "@interfaces";
-import { emailValidatorRegex } from "@utils";
 import { Form, FormControl } from "react-bootstrap";
 import { Controller } from "react-hook-form";
 import styles from "../form.module.scss";
@@ -14,6 +13,7 @@ const GriEmailInput = (props: GRITextInput) => {
     placeholder,
     type,
     allowedMaxLength = 50,
+    validationRegex,
     getValues,
   } = props;
   return (
@@ -23,7 +23,7 @@ const GriEmailInput = (props: GRITextInput) => {
       rules={{
         required: errorMsg,
         pattern: {
-          value: emailValidatorRegex,
+          value: validationRegex,
           message: errorMsg,
         },
       }}

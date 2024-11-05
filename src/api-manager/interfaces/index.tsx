@@ -2223,6 +2223,7 @@ export interface GRITextInput {
   controlName: string;
   allowedMaxLength?: number;
   type : string;
+  validationRegex:RegExp;
 }
 
 export interface GRIMobileInput {

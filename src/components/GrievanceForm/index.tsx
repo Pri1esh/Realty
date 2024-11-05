@@ -1,7 +1,12 @@
 import { ENDPOINT, postAPI } from "@api-manager";
 import { Loader, ModalPopup } from "@components";
 import { IGrievanceForm } from "@interfaces";
-import { getIconFromIconName, useDeviceType } from "@utils";
+import {
+  allValidRegex,
+  emailValidatorRegex,
+  getIconFromIconName,
+  nameValidatorRegex,
+} from "@utils";
 import { useEffect, useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
@@ -22,13 +27,10 @@ const ErrorMessage = (props: any) => {
 
 const GrievanceForm = (props: { compData: IGrievanceForm }) => {
   const { compData } = props;
-  const { deviceType } = useDeviceType();
   const [showThankyou, setShowThankyou] = useState(false);
   const [showError, setshowError] = useState<boolean>(false);
   const [loading, setloading] = useState<boolean>(false);
   const [errorMsg, setErrorMsg] = useState<string>();
-
-  console.log("data---", compData);
 
   const addCaptcha = () => {
     if (!document.getElementById("recaptcha")) {
@@ -75,7 +77,6 @@ const GrievanceForm = (props: { compData: IGrievanceForm }) => {
     getValues,
     formState: { errors },
     setValue,
-    setError,
   } = useForm<any>({
     mode: "onSubmit",
     reValidateMode: "onChange",
@@ -115,14 +116,14 @@ const GrievanceForm = (props: { compData: IGrievanceForm }) => {
       setloading(true);
       let postData: any = {
         name: data?.name,
-        usermobile: data?.code + data?.usermobile,
-        email: data?.email,
-        projectname: data?.projectname,
-        flatnumber: data?.flatnumber,
-        complaintmessage: data?.complaintmessage,
-        officername: data?.officername,
-        officeremail: data?.officeremail,
-        officermobile: data?.officercode + data?.officermobile,
+        MobileNumber: data?.code + data?.usermobile,
+        EmailAddress: data?.email,
+        ProjectName: data?.projectname,
+        FlatNo: data?.flatnumber,
+        ComplaintMessage: data?.complaintmessage,
+        OfficerName: data?.officername,
+        OfficerEmailAddress: data?.officeremail,
+        OfficerMobileNumber: data?.officercode + data?.officermobile,
       };
 
       if (__RECAPTCHA__) {
@@ -133,17 +134,13 @@ const GrievanceForm = (props: { compData: IGrievanceForm }) => {
         };
       }
 
-      console.log("Form Submitted Successfully", postData);
-
-      const res = await postAPI(ENDPOINT.enquirePostApi, postData);
-      if (true) {
+      const res = await postAPI(ENDPOINT.grievancePostApi, postData);
+      if (res) {
         setloading(false);
         setShowThankyou(true);
       } else {
       }
     } catch (e) {
-      console.log("error>>>>>>", e);
-
       setshowError(true);
       setErrorMsg("Unable to submit request at the moment");
       setloading(false);
@@ -189,6 +186,7 @@ const GrievanceForm = (props: { compData: IGrievanceForm }) => {
                   placeholder={formFields?.name?.placeholder}
                   errorMsg={formFields?.name?.validation}
                   getValues={getValues}
+                  validationRegex={nameValidatorRegex}
                 />
               )}
             </Col>
@@ -217,6 +215,7 @@ const GrievanceForm = (props: { compData: IGrievanceForm }) => {
                   placeholder={formFields?.email?.placeholder}
                   errorMsg={formFields?.email?.validation}
                   getValues={getValues}
+                  validationRegex={emailValidatorRegex}
                 />
               )}
             </Col>
@@ -230,6 +229,7 @@ const GrievanceForm = (props: { compData: IGrievanceForm }) => {
                   placeholder={formFields?.projectname?.placeholder}
                   errorMsg={formFields?.projectname?.validation}
                   getValues={getValues}
+                  validationRegex={allValidRegex}
                 />
               )}
             </Col>
@@ -243,6 +243,7 @@ const GrievanceForm = (props: { compData: IGrievanceForm }) => {
                   placeholder={formFields?.flatnumber?.placeholder}
                   errorMsg={formFields?.flatnumber?.validation}
                   getValues={getValues}
+                  validationRegex={allValidRegex}
                 />
               )}
             </Col>
@@ -256,6 +257,7 @@ const GrievanceForm = (props: { compData: IGrievanceForm }) => {
                   placeholder={formFields?.complaintmessage?.placeholder}
                   errorMsg={formFields?.complaintmessage?.validation}
                   getValues={getValues}
+                  validationRegex={allValidRegex}
                 />
               )}
             </Col>
@@ -291,6 +293,7 @@ const GrievanceForm = (props: { compData: IGrievanceForm }) => {
                   placeholder={formFields?.officername?.placeholder}
                   errorMsg={formFields?.officername?.validation}
                   getValues={getValues}
+                  validationRegex={nameValidatorRegex}
                 />
               )}
             </Col>
@@ -319,6 +322,7 @@ const GrievanceForm = (props: { compData: IGrievanceForm }) => {
                   placeholder={formFields?.officeremail?.placeholder}
                   errorMsg={formFields?.officeremail?.validation}
                   getValues={getValues}
+                  validationRegex={emailValidatorRegex}
                 />
               )}
             </Col>
