@@ -128,7 +128,7 @@ const PageContentFaq = (props: IPageContentFaq) => {
       );
       setisDisplay(matchedFaq.length == 0 ? false : true);
     } else {
-      setsearchStringlist(filteredCategory === null ?? faqData);
+      setsearchStringlist(filteredCategory ?? faqData);
       setisDisplay(true);
     }
   };
