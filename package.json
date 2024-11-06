@@ -50,6 +50,7 @@
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "svgo": "^3.0.2",
+    "win-node-env": "^0.6.1",
     "yarn": "^1.22.19"
   },
   "devDependencies": {
